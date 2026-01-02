@@ -1,47 +1,82 @@
 <!-- src/views/EventView.vue -->
 <script setup>
-import { ref, computed } from 'vue'
+import { ref, computed, onMounted } from 'vue'
+
 import FlightSection from '@/components/event/FlightSection.vue'
-
-import eventJson from '@/data/events/madmen-event.json'
-import courseManifest from '@/data/courses/moon_valley_course.json'
-
 import { buildFlightPrizeSummary } from '@/utils/prizeReducer'
 
-/* ---------- Course / Tee ---------- */
+/* ---------- Hardcoded for this weekend ---------- */
+const EVENT_ID = 45
+const COURSE_ID = 45
 
-const teeSetId = '1'
+/* ---------- State ---------- */
+const eventJson = ref(null)
+const courseManifest = ref(null)
+const loading = ref(true)
+const error = ref(false)
 
-const teeSet = computed(() =>
-  courseManifest.tee_sets?.[teeSetId] ?? { holes: {} }
-)
-
-// STATE
 const scoreMode = ref('gross') // 'gross' | 'net'
 const prizeView = ref(false)
 
-// DERIVED
-const scoreModeLabel = computed(() => (scoreMode.value === 'net' ? 'Net' : 'Gross'))
+/* ---------- Fetch data ---------- */
+onMounted(async () => {
+  try {
+    const eventRes = await fetch(`/data/events/${EVENT_ID}.json`)
+    if (!eventRes.ok) throw new Error('Failed to load event')
+    eventJson.value = await eventRes.json()
 
-// These assume your eventJson still has the same shape you had before:
-const flights = computed(() => {
-  const set = new Set()
-  for (const p of eventJson.players || []) {
-    if (p.flight) set.add(p.flight)
+    const courseRes = await fetch(`/data/courses/${COURSE_ID}.json`)
+    if (!courseRes.ok) throw new Error('Failed to load course')
+    courseManifest.value = await courseRes.json()
+  } catch (e) {
+    console.error(e)
+    error.value = true
+  } finally {
+    loading.value = false
   }
-  return Array.from(set)
 })
 
-const players = computed(() => eventJson.players || [])
+/* ---------- Course / Tee ---------- */
+/*
+  TEMP:
+  Fixed tee set for leaderboard display.
+  Later: driven by selected player.
+*/
+const teeSetId = '1'
 
-const prizeSummaries = computed(() => buildFlightPrizeSummary(eventJson))
+const teeSet = computed(() =>
+  courseManifest.value?.courses?.[0]?.tee_sets?.[teeSetId] ?? { holes: {} }
+)
+// const teeSet = computed(() =>
+//   courseManifest.value?.tee_sets?.[teeSetId] ?? { holes: {} }
+// )
 
+/* ---------- Derived ---------- */
+const scoreModeLabel = computed(() =>
+  scoreMode.value === 'net' ? 'Net' : 'Gross'
+)
+
+const flights = computed(() => {
+  if (!eventJson.value?.players) return []
+  return [...new Set(eventJson.value.players.map(p => p.flight))]
+})
+
+const players = computed(() =>
+  eventJson.value?.players ?? []
+)
+
+const prizeSummaries = computed(() =>
+  eventJson.value ? buildFlightPrizeSummary(eventJson.value) : {}
+)
 </script>
 
 <template>
-
   <section class="leaderboard-page">
+    <div v-if="loading">Loading…</div>
+    <div v-else-if="error">Failed to load event</div>
+
     <FlightSection
+      v-else
       v-for="flight in flights"
       :key="flight"
       :flight="flight"
@@ -64,6 +99,6 @@ const prizeSummaries = computed(() => buildFlightPrizeSummary(eventJson))
   display: flex;
   flex-direction: column;
   gap: 32px;
-  min-width: 0;  
+  min-width: 0;
 }
 </style>
