@@ -1,0 +1,109 @@
+{
+  "meta": {
+    "family": "madmen",
+    "event_count": 9,
+    "generated_at": "2026-01-03T01:44:22.866165",
+    "schema_version": 1
+  },
+  "events": [
+    {
+      "id": 49,
+      "date": "2026-01-04",
+      "name": "MadMen",
+      "details": "",
+      "course_file": "49.course.json",
+      "total_purse": 600,
+      "player_count": 20,
+      "results_file": "49.json",
+      "default_buy_in": 30
+    },
+    {
+      "id": 47,
+      "date": "2026-01-03",
+      "name": "MadMen",
+      "details": "",
+      "course_file": "47.course.json",
+      "total_purse": 660,
+      "player_count": 22,
+      "results_file": "47.json",
+      "default_buy_in": 30
+    },
+    {
+      "id": 45,
+      "date": "2025-12-28",
+      "name": "MadMen",
+      "details": "",
+      "course_file": "45.course.json",
+      "total_purse": 510,
+      "player_count": 17,
+      "results_file": "45.json",
+      "default_buy_in": 30
+    },
+    {
+      "id": 44,
+      "date": "2025-12-27",
+      "name": "MadMen",
+      "details": "",
+      "course_file": "44.course.json",
+      "total_purse": 750,
+      "player_count": 25,
+      "results_file": "44.json",
+      "default_buy_in": 30
+    },
+    {
+      "id": 42,
+      "date": "2025-12-21",
+      "name": "MadMen",
+      "details": "",
+      "course_file": "42.course.json",
+      "total_purse": 360,
+      "player_count": 12,
+      "results_file": "42.json",
+      "default_buy_in": 30
+    },
+    {
+      "id": 41,
+      "date": "2025-12-20",
+      "name": "MadMen",
+      "details": "",
+      "course_file": "41.course.json",
+      "total_purse": 540,
+      "player_count": 18,
+      "results_file": "41.json",
+      "default_buy_in": 30
+    },
+    {
+      "id": 2,
+      "date": "2025-12-14",
+      "name": "MadMen",
+      "details": "Flighted based on participation count. \nGross and net skins, C2Ps, low net total score, final four holes net score.",
+      "course_file": "2.course.json",
+      "total_purse": 570,
+      "player_count": 19,
+      "results_file": "2.json",
+      "default_buy_in": 30
+    },
+    {
+      "id": 10,
+      "date": "2025-12-07",
+      "name": "MadMen",
+      "details": "",
+      "course_file": "10.course.json",
+      "total_purse": 570,
+      "player_count": 19,
+      "results_file": "10.json",
+      "default_buy_in": 30
+    },
+    {
+      "id": 5,
+      "date": "2025-12-06",
+      "name": "MadMen",
+      "details": "",
+      "course_file": "5.course.json",
+      "total_purse": 600,
+      "player_count": 20,
+      "results_file": "5.json",
+      "default_buy_in": 30
+    }
+  ]
+}

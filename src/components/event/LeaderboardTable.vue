@@ -507,70 +507,42 @@ tfoot tr:first-child td {
 }
 
 /* ------- PRIZES / SKINS CELLS --------- */
-.gross-skin,
-.net-skin,
-.both-skins {
-  background-size: 3px 3px;
-  background-position: 0 0, 1.5px 1.5px;
+/* NOTE: must beat any td { background: ... } shorthand rules */
+.scorecard td.gross-skin,
+.scorecard td.net-skin,
+.scorecard td.both-skins {
+  background-size: 3px 3px !important;
+  background-position: 0 0, 1.5px 1.5px !important;
+  background-repeat: repeat !important;
 }
 
-.gross-skin {
-  background-color: #c1f873;
-  background-image:
-    radial-gradient(rgba(255, 255, 255, 0.078) 1px, transparent 1px),
-    radial-gradient(rgba(0,0,0,0.12) 1px, transparent 1px);
-}
-
-.net-skin {
-  background-color: #52b9fd80;
-  background-image:
-    radial-gradient(rgba(255, 255, 255, 0.078) 1px, transparent 1px),
-    radial-gradient(rgba(0,0,0,0.12) 1px, transparent 1px);
-}
-
-.both-skins {
-  background-color: #b61604ed;
-  background-image:
-    radial-gradient(rgba(255,255,255,0.12) 1px, transparent 1px),
-    radial-gradient(rgba(0,0,0,0.12) 1px, transparent 1px);
-}
-
-/* Keep hover from wiping prize fills */
-.scorecard tbody tr:hover td.gross-skin,
-.scorecard tbody tr:hover td.net-skin,
-.scorecard tbody tr:hover td.both-skins {
-  background-image: inherit;
-}
-
-/* Keep hover from wiping prize fills (re-assert full background) */
-.scorecard tbody tr:hover td.gross-skin {
+.scorecard td.gross-skin {
   background-color: #c1f873 !important;
   background-image:
     radial-gradient(rgba(255, 255, 255, 0.078) 1px, transparent 1px),
-    radial-gradient(rgba(0,0,0,0.12) 1px, transparent 1px) !important;
+    radial-gradient(rgba(0, 0, 0, 0.12) 1px, transparent 1px) !important;
 }
 
-.scorecard tbody tr:hover td.net-skin {
+.scorecard td.net-skin {
   background-color: #52b9fd80 !important;
   background-image:
     radial-gradient(rgba(255, 255, 255, 0.078) 1px, transparent 1px),
-    radial-gradient(rgba(0,0,0,0.12) 1px, transparent 1px) !important;
+    radial-gradient(rgba(0, 0, 0, 0.12) 1px, transparent 1px) !important;
 }
 
-.scorecard tbody tr:hover td.both-skins {
+.scorecard td.both-skins {
   background-color: #b61604ed !important;
   background-image:
-    radial-gradient(rgba(255,255,255,0.12) 1px, transparent 1px),
-    radial-gradient(rgba(0,0,0,0.12) 1px, transparent 1px) !important;
+    radial-gradient(rgba(255, 255, 255, 0.12) 1px, transparent 1px),
+    radial-gradient(rgba(0, 0, 0, 0.12) 1px, transparent 1px) !important;
 }
 
-
-
-/* White score number on both-skins */
-.both-skins .hole-score {
-  color: #ffffff;
+.scorecard td.both-skins .hole-score {
+  color: #ffffff !important;
   font-weight: 700;
 }
+
+
 
 /* FINAL 4 NET grouping (✅ zero layout width change) */
 .final4 {

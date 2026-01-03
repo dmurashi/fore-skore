@@ -75,7 +75,7 @@ const safePlayerCount = computed(() => Number(props.playerCount ?? 0))
   flex-wrap: wrap;           /* ✅ allow right side to drop if needed */
 
   border: 1px solid #d1d5db;
-  background: #f3f4f6;
+  background-color: #eaecee !important;
   border-radius: 14px;
 
   padding: 12px 16px 12px 12px; /* reduce right padding; 28px is huge on mobile */
@@ -152,6 +152,7 @@ const safePlayerCount = computed(() => Number(props.playerCount ?? 0))
   border-radius: 14px;
   padding: 12px;
   background: #ffffff;
+  color: #111827;
 }
 
 .mr-top {
@@ -189,6 +190,7 @@ const safePlayerCount = computed(() => Number(props.playerCount ?? 0))
   flex: 0 0 auto;      /* ✅ amount stays readable */
   white-space: nowrap; /* ✅ prevents weird wraps */
   font-weight: 900;
+  color: #111827; 
 }
 
 
@@ -207,6 +209,7 @@ const safePlayerCount = computed(() => Number(props.playerCount ?? 0))
 @media (max-width: 420px) {
   .mobile-header {
     align-items: flex-start;
+    background: #e5e7eb;
   }
   .mh-right {
     width: 100%;

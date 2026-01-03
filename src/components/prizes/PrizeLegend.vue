@@ -41,7 +41,7 @@
   gap: 12px 18px;
   margin: 10px 0 14px;
   font-size: 12px;
-  color: #374151;
+  color: #374151; /* light default */
 }
 
 .legend-item {
@@ -58,9 +58,8 @@
 }
 
 /* SKINS STYLING (legend samples use same classes) */
-
 .gross-skin {
-  background-color: #c1f873; 
+  background-color: #c1f873;
   background-image:
     radial-gradient(rgba(255, 255, 255, 0.078) 1px, transparent 1px),
     radial-gradient(rgba(0,0,0,0.12) 1px, transparent 1px);
@@ -69,7 +68,7 @@
 }
 
 .net-skin {
-  background-color: #52b9fd80; 
+  background-color: #52b9fd80;
   background-image:
     radial-gradient(rgba(255, 255, 255, 0.078) 1px, transparent 1px),
     radial-gradient(rgba(0,0,0,0.12) 1px, transparent 1px);
@@ -78,14 +77,13 @@
 }
 
 .both-skins {
-  background-color: #b61604ed; 
+  background-color: #b61604ed;
   background-image:
     radial-gradient(rgba(255,255,255,0.12) 1px, transparent 1px),
     radial-gradient(rgba(0,0,0,0.12) 1px, transparent 1px);
   background-size: 3px 3px;
   background-position: 0 0, 1.5px 1.5px;
 }
-
 
 /* FINAL 4 outline sample */
 .legend-sample.final4-box {
@@ -108,5 +106,19 @@
   height: auto;
   border: none;
 }
-</style>
 
+/* ✅ Dark mode: make legend text readable + give it a subtle backing */
+@media (prefers-color-scheme: dark) {
+  .prize-legend {
+    color: #cbd5e1;            /* readable slate */
+    background: #2d3748;       /* subtle bar (lighter than page) */
+    border: 1px solid #465365;
+    border-radius: 5px;
+    padding: 8px 10px;
+  }
+
+  .legend-sample {
+    border-color: #6b7280;     /* soften border on dark */
+  }
+}
+</style>

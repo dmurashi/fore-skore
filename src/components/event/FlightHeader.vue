@@ -12,14 +12,13 @@ const emit = defineEmits(['set-gross', 'set-net', 'toggle-prizes'])
 <template>
   <div class="flight-header">
     <h2 class="flight-title">
-        Scorecards – Flight {{ flight }}
-        <span class="mode-paren">(</span>
-        <span class="mode-label" :style="{ color: scoreModeLabel === 'Net' ? 'red' : 'green' }">
-            {{ scoreModeLabel }}
-        </span>
-        <span class="mode-paren">)</span>
+      Scorecards – Flight {{ flight }}
+      <span class="mode-paren">(</span>
+      <span class="mode-label" :style="{ color: scoreModeLabel === 'Net' ? 'red' : 'green' }">
+        {{ scoreModeLabel }}
+      </span>
+      <span class="mode-paren">)</span>
     </h2>
-
 
     <div class="mode-toggle">
       <button
@@ -50,38 +49,35 @@ const emit = defineEmits(['set-gross', 'set-net', 'toggle-prizes'])
   </div>
 </template>
 
-
-
 <style scoped>
-/* Toggle */
-
-.mode-toggle {
-  display: inline-flex;
-  gap: 6px;
-  margin-bottom: 10px;
-  margin-left: auto;
-}
-
+/* Layout */
 .flight-header {
   display: flex;
   align-items: center;
-  flex-wrap: wrap;   /* allow wrapping */
+  flex-wrap: wrap;
   gap: 12px;
+
+  /* ✅ dark-mode friendly header backing */
+  padding: 10px 12px;
+  border-radius: 5px;
 }
 
 .flight-title {
   white-space: nowrap;
   flex-shrink: 0;
   font-size: 18px;
+  color: #111827; /* default */
 }
 
 .mode-toggle {
-  margin-left: auto; /* push toggles right on wide screens */
+  display: inline-flex;
+  gap: 6px;
+  margin-bottom: 10px;
+  margin-left: auto;
   flex-shrink: 0;
 }
 
-.flight-title { white-space: nowrap; }
-
+/* Buttons (light default) */
 .mode-btn {
   padding: 6px 14px;
   border: 1px solid #e5e7eb;
@@ -107,6 +103,7 @@ const emit = defineEmits(['set-gross', 'set-net', 'toggle-prizes'])
   border-color: #2563eb;
 }
 
+/* Responsive */
 @media (max-width: 900px) {
   .mode-toggle {
     width: 100%;
@@ -115,4 +112,35 @@ const emit = defineEmits(['set-gross', 'set-net', 'toggle-prizes'])
   }
 }
 
+/* ✅ Dark mode styling */
+@media (prefers-color-scheme: dark) {
+  .flight-header {
+    background: #e4e5e6;   /* slate-700-ish */
+    border-color: #465365;
+  }
+
+  .flight-title {
+    color: #0e0e0f;
+  }
+
+  .mode-paren {
+    color: #0e0e0f;
+  }
+
+  .mode-btn {
+    background: #374151;      /* inactive */
+    border-color: #4b5563;
+    color: #e5e7eb;
+  }
+
+  .mode-btn:hover {
+    background: #4b5563;
+  }
+
+  .mode-btn.active {
+    background: #ffffff;      /* high-contrast active */
+    color: #111827;
+    border-color: #60a5fa;
+  }
+}
 </style>
