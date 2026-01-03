@@ -1,12 +1,19 @@
 <!-- src/views/EventView.vue -->
 <script setup>
+  console.log('URL search:', window.location.search)
 import { ref, computed, onMounted } from 'vue'
 
 import FlightSection from '@/components/event/FlightSection.vue'
 import { buildFlightPrizeSummary } from '@/utils/prizeReducer'
 
 /* ---------- Hardcoded for this weekend ---------- */
-const EVENT_ID = 44
+const getEventIdFromQuery = () => {
+  const params = new URLSearchParams(window.location.search)
+  return params.get('event_id') || '44'
+}
+
+const EVENT_ID = getEventIdFromQuery()
+//const EVENT_ID = 44
 const COURSE_ID = 44
 
 /* ---------- State ---------- */
@@ -17,7 +24,6 @@ const error = ref(false)
 
 const scoreMode = ref('gross') // 'gross' | 'net'
 const prizeView = ref(false)
-
 
 
 /* ---------- Fetch data ---------- */

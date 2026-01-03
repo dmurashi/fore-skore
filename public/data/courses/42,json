@@ -1,9 +1,9 @@
 {
   "meta": {
     "family": "madmen",
-    "event_id": 41,
+    "event_id": 42,
     "event_name": "MadMen",
-    "generated_at": "2026-01-02T22:39:11.919699",
+    "generated_at": "2026-01-03T13:10:33.206573",
     "schema_version": 1,
     "used_tee_set_ids": [
       1,

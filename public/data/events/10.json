@@ -1,0 +1,5421 @@
+{
+  "meta": {
+    "family": "madmen",
+    "event_id": 10,
+    "event_date": "2025-12-07",
+    "event_name": "MadMen",
+    "total_purse": 570,
+    "generated_at": "2026-01-03T13:18:25.385215",
+    "player_count": 19,
+    "event_details": "",
+    "default_buy_in": 30,
+    "schema_version": 7
+  },
+  "players": [
+    {
+      "name": " Derek Murashige",
+      "holes": {
+        "1": {
+          "net": 3,
+          "par": 4,
+          "gross": 4,
+          "net_diff": -1,
+          "par_index": {
+            "men": 2,
+            "women": 2
+          },
+          "gross_diff": 0,
+          "net_result": "BIRDIE",
+          "competitions": null,
+          "gross_result": "PAR"
+        },
+        "2": {
+          "net": 4,
+          "par": 3,
+          "gross": 4,
+          "net_diff": 1,
+          "par_index": {
+            "men": 14,
+            "women": 18
+          },
+          "gross_diff": 1,
+          "net_result": "BOGEY",
+          "competitions": null,
+          "gross_result": "BOGEY"
+        },
+        "3": {
+          "net": 4,
+          "par": 4,
+          "gross": 4,
+          "net_diff": 0,
+          "par_index": {
+            "men": 16,
+            "women": 16
+          },
+          "gross_diff": 0,
+          "net_result": "PAR",
+          "competitions": null,
+          "gross_result": "PAR"
+        },
+        "4": {
+          "net": 5,
+          "par": 5,
+          "gross": 5,
+          "net_diff": 0,
+          "par_index": {
+            "men": 12,
+            "women": 10
+          },
+          "gross_diff": 0,
+          "net_result": "PAR",
+          "competitions": null,
+          "gross_result": "PAR"
+        },
+        "5": {
+          "net": 4,
+          "par": 3,
+          "gross": 4,
+          "net_diff": 1,
+          "par_index": {
+            "men": 10,
+            "women": 12
+          },
+          "gross_diff": 1,
+          "net_result": "BOGEY",
+          "competitions": null,
+          "gross_result": "BOGEY"
+        },
+        "6": {
+          "net": 4,
+          "par": 4,
+          "gross": 4,
+          "net_diff": 0,
+          "par_index": {
+            "men": 8,
+            "women": 4
+          },
+          "gross_diff": 0,
+          "net_result": "PAR",
+          "competitions": null,
+          "gross_result": "PAR"
+        },
+        "7": {
+          "net": 4,
+          "par": 4,
+          "gross": 4,
+          "net_diff": 0,
+          "par_index": {
+            "men": 6,
+            "women": 6
+          },
+          "gross_diff": 0,
+          "net_result": "PAR",
+          "competitions": null,
+          "gross_result": "PAR"
+        },
+        "8": {
+          "net": 5,
+          "par": 5,
+          "gross": 5,
+          "net_diff": 0,
+          "par_index": {
+            "men": 18,
+            "women": 14
+          },
+          "gross_diff": 0,
+          "net_result": "PAR",
+          "competitions": null,
+          "gross_result": "PAR"
+        },
+        "9": {
+          "net": 4,
+          "par": 4,
+          "gross": 4,
+          "net_diff": 0,
+          "par_index": {
+            "men": 4,
+            "women": 8
+          },
+          "gross_diff": 0,
+          "net_result": "PAR",
+          "competitions": null,
+          "gross_result": "PAR"
+        },
+        "10": {
+          "net": 6,
+          "par": 5,
+          "gross": 6,
+          "net_diff": 1,
+          "par_index": {
+            "men": 15,
+            "women": 15
+          },
+          "gross_diff": 1,
+          "net_result": "BOGEY",
+          "competitions": null,
+          "gross_result": "BOGEY"
+        },
+        "11": {
+          "net": 4,
+          "par": 3,
+          "gross": 4,
+          "net_diff": 1,
+          "par_index": {
+            "men": 5,
+            "women": 11
+          },
+          "gross_diff": 1,
+          "net_result": "BOGEY",
+          "competitions": null,
+          "gross_result": "BOGEY"
+        },
+        "12": {
+          "net": 4,
+          "par": 4,
+          "gross": 4,
+          "net_diff": 0,
+          "par_index": {
+            "men": 7,
+            "women": 13
+          },
+          "gross_diff": 0,
+          "net_result": "PAR",
+          "competitions": null,
+          "gross_result": "PAR"
+        },
+        "13": {
+          "net": 4,
+          "par": 5,
+          "gross": 4,
+          "net_diff": -1,
+          "par_index": {
+            "men": 17,
+            "women": 5
+          },
+          "gross_diff": -1,
+          "net_result": "BIRDIE",
+          "competitions": null,
+          "gross_result": "BIRDIE"
+        },
+        "14": {
+          "net": 4,
+          "par": 4,
+          "gross": 4,
+          "net_diff": 0,
+          "par_index": {
+            "men": 13,
+            "women": 7
+          },
+          "gross_diff": 0,
+          "net_result": "PAR",
+          "competitions": null,
+          "gross_result": "PAR"
+        },
+        "15": {
+          "net": 3,
+          "par": 3,
+          "gross": 3,
+          "net_diff": 0,
+          "par_index": {
+            "men": 9,
+            "women": 17
+          },
+          "gross_diff": 0,
+          "net_result": "PAR",
+          "competitions": [
+            {
+              "name": "CTP",
+              "type": "CTP",
+              "value": 0,
+              "payout": 20,
+              "details": null
+            }
+          ],
+          "gross_result": "PAR"
+        },
+        "16": {
+          "net": 4,
+          "par": 4,
+          "gross": 5,
+          "net_diff": 0,
+          "par_index": {
+            "men": 1,
+            "women": 9
+          },
+          "gross_diff": 1,
+          "net_result": "PAR",
+          "competitions": null,
+          "gross_result": "BOGEY"
+        },
+        "17": {
+          "net": 3,
+          "par": 4,
+          "gross": 3,
+          "net_diff": -1,
+          "par_index": {
+            "men": 11,
+            "women": 1
+          },
+          "gross_diff": -1,
+          "net_result": "BIRDIE",
+          "competitions": null,
+          "gross_result": "BIRDIE"
+        },
+        "18": {
+          "net": 4,
+          "par": 4,
+          "gross": 4,
+          "net_diff": 0,
+          "par_index": {
+            "men": 3,
+            "women": 3
+          },
+          "gross_diff": 0,
+          "net_result": "PAR",
+          "competitions": null,
+          "gross_result": "PAR"
+        }
+      },
+      "flight": "A",
+      "gender": "M",
+      "net_rank": 1,
+      "tee_name": "Blue/White",
+      "net_total": 73,
+      "player_id": 1,
+      "gross_rank": 1,
+      "tee_set_id": 1,
+      "gross_total": 75,
+      "net_rank_label": "T1",
+      "course_handicap": 2,
+      "event_player_id": 631,
+      "gross_rank_label": "T1",
+      "round_competitions": [
+        {
+          "name": "Low Total (Net)",
+          "type": "LOW_NET",
+          "value": 73,
+          "payout": 20,
+          "details": " Tie-break: back_9"
+        }
+      ]
+    },
+    {
+      "name": "Steven Diemesevich",
+      "holes": {
+        "1": {
+          "net": 4,
+          "par": 4,
+          "gross": 4,
+          "net_diff": 0,
+          "par_index": {
+            "men": 2,
+            "women": 2
+          },
+          "gross_diff": 0,
+          "net_result": "PAR",
+          "competitions": null,
+          "gross_result": "PAR"
+        },
+        "2": {
+          "net": 3,
+          "par": 3,
+          "gross": 3,
+          "net_diff": 0,
+          "par_index": {
+            "men": 14,
+            "women": 18
+          },
+          "gross_diff": 0,
+          "net_result": "PAR",
+          "competitions": null,
+          "gross_result": "PAR"
+        },
+        "3": {
+          "net": 4,
+          "par": 4,
+          "gross": 4,
+          "net_diff": 0,
+          "par_index": {
+            "men": 16,
+            "women": 16
+          },
+          "gross_diff": 0,
+          "net_result": "PAR",
+          "competitions": null,
+          "gross_result": "PAR"
+        },
+        "4": {
+          "net": 6,
+          "par": 5,
+          "gross": 6,
+          "net_diff": 1,
+          "par_index": {
+            "men": 12,
+            "women": 10
+          },
+          "gross_diff": 1,
+          "net_result": "BOGEY",
+          "competitions": null,
+          "gross_result": "BOGEY"
+        },
+        "5": {
+          "net": 3,
+          "par": 3,
+          "gross": 3,
+          "net_diff": 0,
+          "par_index": {
+            "men": 10,
+            "women": 12
+          },
+          "gross_diff": 0,
+          "net_result": "PAR",
+          "competitions": null,
+          "gross_result": "PAR"
+        },
+        "6": {
+          "net": 4,
+          "par": 4,
+          "gross": 4,
+          "net_diff": 0,
+          "par_index": {
+            "men": 8,
+            "women": 4
+          },
+          "gross_diff": 0,
+          "net_result": "PAR",
+          "competitions": null,
+          "gross_result": "PAR"
+        },
+        "7": {
+          "net": 4,
+          "par": 4,
+          "gross": 4,
+          "net_diff": 0,
+          "par_index": {
+            "men": 6,
+            "women": 6
+          },
+          "gross_diff": 0,
+          "net_result": "PAR",
+          "competitions": null,
+          "gross_result": "PAR"
+        },
+        "8": {
+          "net": 5,
+          "par": 5,
+          "gross": 5,
+          "net_diff": 0,
+          "par_index": {
+            "men": 18,
+            "women": 14
+          },
+          "gross_diff": 0,
+          "net_result": "PAR",
+          "competitions": null,
+          "gross_result": "PAR"
+        },
+        "9": {
+          "net": 5,
+          "par": 4,
+          "gross": 5,
+          "net_diff": 1,
+          "par_index": {
+            "men": 4,
+            "women": 8
+          },
+          "gross_diff": 1,
+          "net_result": "BOGEY",
+          "competitions": null,
+          "gross_result": "BOGEY"
+        },
+        "10": {
+          "net": 6,
+          "par": 5,
+          "gross": 6,
+          "net_diff": 1,
+          "par_index": {
+            "men": 15,
+            "women": 15
+          },
+          "gross_diff": 1,
+          "net_result": "BOGEY",
+          "competitions": null,
+          "gross_result": "BOGEY"
+        },
+        "11": {
+          "net": 3,
+          "par": 3,
+          "gross": 3,
+          "net_diff": 0,
+          "par_index": {
+            "men": 5,
+            "women": 11
+          },
+          "gross_diff": 0,
+          "net_result": "PAR",
+          "competitions": null,
+          "gross_result": "PAR"
+        },
+        "12": {
+          "net": 6,
+          "par": 4,
+          "gross": 6,
+          "net_diff": 2,
+          "par_index": {
+            "men": 7,
+            "women": 13
+          },
+          "gross_diff": 2,
+          "net_result": "DBL BOGEY",
+          "competitions": null,
+          "gross_result": "DBL BOGEY"
+        },
+        "13": {
+          "net": 5,
+          "par": 5,
+          "gross": 5,
+          "net_diff": 0,
+          "par_index": {
+            "men": 17,
+            "women": 5
+          },
+          "gross_diff": 0,
+          "net_result": "PAR",
+          "competitions": null,
+          "gross_result": "PAR"
+        },
+        "14": {
+          "net": 3,
+          "par": 4,
+          "gross": 3,
+          "net_diff": -1,
+          "par_index": {
+            "men": 13,
+            "women": 7
+          },
+          "gross_diff": -1,
+          "net_result": "BIRDIE",
+          "competitions": null,
+          "gross_result": "BIRDIE"
+        },
+        "15": {
+          "net": 4,
+          "par": 3,
+          "gross": 4,
+          "net_diff": 1,
+          "par_index": {
+            "men": 9,
+            "women": 17
+          },
+          "gross_diff": 1,
+          "net_result": "BOGEY",
+          "competitions": null,
+          "gross_result": "BOGEY"
+        },
+        "16": {
+          "net": 2,
+          "par": 4,
+          "gross": 3,
+          "net_diff": -2,
+          "par_index": {
+            "men": 1,
+            "women": 9
+          },
+          "gross_diff": -1,
+          "net_result": "EAGLE",
+          "competitions": [
+            {
+              "name": "Gross Skins",
+              "type": "GROSS_SKINS",
+              "value": 3,
+              "payout": 20,
+              "details": "birdie"
+            },
+            {
+              "name": "Net Skins",
+              "type": "NET_SKINS",
+              "value": 2,
+              "payout": 20,
+              "details": "eagle"
+            }
+          ],
+          "gross_result": "BIRDIE"
+        },
+        "17": {
+          "net": 3,
+          "par": 4,
+          "gross": 3,
+          "net_diff": -1,
+          "par_index": {
+            "men": 11,
+            "women": 1
+          },
+          "gross_diff": -1,
+          "net_result": "BIRDIE",
+          "competitions": null,
+          "gross_result": "BIRDIE"
+        },
+        "18": {
+          "net": 4,
+          "par": 4,
+          "gross": 4,
+          "net_diff": 0,
+          "par_index": {
+            "men": 3,
+            "women": 3
+          },
+          "gross_diff": 0,
+          "net_result": "PAR",
+          "competitions": null,
+          "gross_result": "PAR"
+        }
+      },
+      "flight": "A",
+      "gender": "M",
+      "net_rank": 3,
+      "tee_name": "Black",
+      "net_total": 74,
+      "player_id": 64,
+      "gross_rank": 1,
+      "tee_set_id": 3,
+      "gross_total": 75,
+      "net_rank_label": "3",
+      "course_handicap": 1,
+      "event_player_id": 616,
+      "gross_rank_label": "T1",
+      "round_competitions": [
+        {
+          "name": "Final Four (Net)",
+          "type": "FINAL_4_NET",
+          "value": 13,
+          "payout": 20,
+          "details": " Tie-break: 16–18"
+        }
+      ]
+    },
+    {
+      "name": "Josh Faecke",
+      "holes": {
+        "1": {
+          "net": 3,
+          "par": 4,
+          "gross": 3,
+          "net_diff": -1,
+          "par_index": {
+            "men": 2,
+            "women": 2
+          },
+          "gross_diff": -1,
+          "net_result": "BIRDIE",
+          "competitions": [
+            {
+              "name": "Gross Skins",
+              "type": "GROSS_SKINS",
+              "value": 3,
+              "payout": 20,
+              "details": "birdie"
+            }
+          ],
+          "gross_result": "BIRDIE"
+        },
+        "2": {
+          "net": 3,
+          "par": 3,
+          "gross": 3,
+          "net_diff": 0,
+          "par_index": {
+            "men": 14,
+            "women": 18
+          },
+          "gross_diff": 0,
+          "net_result": "PAR",
+          "competitions": null,
+          "gross_result": "PAR"
+        },
+        "3": {
+          "net": 4,
+          "par": 4,
+          "gross": 4,
+          "net_diff": 0,
+          "par_index": {
+            "men": 16,
+            "women": 16
+          },
+          "gross_diff": 0,
+          "net_result": "PAR",
+          "competitions": null,
+          "gross_result": "PAR"
+        },
+        "4": {
+          "net": 6,
+          "par": 5,
+          "gross": 6,
+          "net_diff": 1,
+          "par_index": {
+            "men": 12,
+            "women": 10
+          },
+          "gross_diff": 1,
+          "net_result": "BOGEY",
+          "competitions": null,
+          "gross_result": "BOGEY"
+        },
+        "5": {
+          "net": 2,
+          "par": 3,
+          "gross": 2,
+          "net_diff": -1,
+          "par_index": {
+            "men": 10,
+            "women": 12
+          },
+          "gross_diff": -1,
+          "net_result": "BIRDIE",
+          "competitions": [
+            {
+              "name": "CTP",
+              "type": "CTP",
+              "value": 0,
+              "payout": 20,
+              "details": null
+            }
+          ],
+          "gross_result": "BIRDIE"
+        },
+        "6": {
+          "net": 4,
+          "par": 4,
+          "gross": 4,
+          "net_diff": 0,
+          "par_index": {
+            "men": 8,
+            "women": 4
+          },
+          "gross_diff": 0,
+          "net_result": "PAR",
+          "competitions": null,
+          "gross_result": "PAR"
+        },
+        "7": {
+          "net": 4,
+          "par": 4,
+          "gross": 4,
+          "net_diff": 0,
+          "par_index": {
+            "men": 6,
+            "women": 6
+          },
+          "gross_diff": 0,
+          "net_result": "PAR",
+          "competitions": null,
+          "gross_result": "PAR"
+        },
+        "8": {
+          "net": 7,
+          "par": 5,
+          "gross": 7,
+          "net_diff": 2,
+          "par_index": {
+            "men": 18,
+            "women": 14
+          },
+          "gross_diff": 2,
+          "net_result": "DBL BOGEY",
+          "competitions": null,
+          "gross_result": "DBL BOGEY"
+        },
+        "9": {
+          "net": 5,
+          "par": 4,
+          "gross": 5,
+          "net_diff": 1,
+          "par_index": {
+            "men": 4,
+            "women": 8
+          },
+          "gross_diff": 1,
+          "net_result": "BOGEY",
+          "competitions": null,
+          "gross_result": "BOGEY"
+        },
+        "10": {
+          "net": 7,
+          "par": 5,
+          "gross": 7,
+          "net_diff": 2,
+          "par_index": {
+            "men": 15,
+            "women": 15
+          },
+          "gross_diff": 2,
+          "net_result": "DBL BOGEY",
+          "competitions": null,
+          "gross_result": "DBL BOGEY"
+        },
+        "11": {
+          "net": 3,
+          "par": 3,
+          "gross": 3,
+          "net_diff": 0,
+          "par_index": {
+            "men": 5,
+            "women": 11
+          },
+          "gross_diff": 0,
+          "net_result": "PAR",
+          "competitions": null,
+          "gross_result": "PAR"
+        },
+        "12": {
+          "net": 5,
+          "par": 4,
+          "gross": 5,
+          "net_diff": 1,
+          "par_index": {
+            "men": 7,
+            "women": 13
+          },
+          "gross_diff": 1,
+          "net_result": "BOGEY",
+          "competitions": null,
+          "gross_result": "BOGEY"
+        },
+        "13": {
+          "net": 4,
+          "par": 5,
+          "gross": 4,
+          "net_diff": -1,
+          "par_index": {
+            "men": 17,
+            "women": 5
+          },
+          "gross_diff": -1,
+          "net_result": "BIRDIE",
+          "competitions": null,
+          "gross_result": "BIRDIE"
+        },
+        "14": {
+          "net": 4,
+          "par": 4,
+          "gross": 4,
+          "net_diff": 0,
+          "par_index": {
+            "men": 13,
+            "women": 7
+          },
+          "gross_diff": 0,
+          "net_result": "PAR",
+          "competitions": null,
+          "gross_result": "PAR"
+        },
+        "15": {
+          "net": 3,
+          "par": 3,
+          "gross": 3,
+          "net_diff": 0,
+          "par_index": {
+            "men": 9,
+            "women": 17
+          },
+          "gross_diff": 0,
+          "net_result": "PAR",
+          "competitions": null,
+          "gross_result": "PAR"
+        },
+        "16": {
+          "net": 4,
+          "par": 4,
+          "gross": 4,
+          "net_diff": 0,
+          "par_index": {
+            "men": 1,
+            "women": 9
+          },
+          "gross_diff": 0,
+          "net_result": "PAR",
+          "competitions": null,
+          "gross_result": "PAR"
+        },
+        "17": {
+          "net": 6,
+          "par": 4,
+          "gross": 6,
+          "net_diff": 2,
+          "par_index": {
+            "men": 11,
+            "women": 1
+          },
+          "gross_diff": 2,
+          "net_result": "DBL BOGEY",
+          "competitions": null,
+          "gross_result": "DBL BOGEY"
+        },
+        "18": {
+          "net": 3,
+          "par": 4,
+          "gross": 3,
+          "net_diff": -1,
+          "par_index": {
+            "men": 3,
+            "women": 3
+          },
+          "gross_diff": -1,
+          "net_result": "BIRDIE",
+          "competitions": [
+            {
+              "name": "Gross Skins",
+              "type": "GROSS_SKINS",
+              "value": 3,
+              "payout": 20,
+              "details": "birdie"
+            }
+          ],
+          "gross_result": "BIRDIE"
+        }
+      },
+      "flight": "A",
+      "gender": "M",
+      "net_rank": 5,
+      "tee_name": "Blue",
+      "net_total": 77,
+      "player_id": 174,
+      "gross_rank": 3,
+      "tee_set_id": 2,
+      "gross_total": 77,
+      "net_rank_label": "T5",
+      "course_handicap": 0,
+      "event_player_id": 617,
+      "gross_rank_label": "3",
+      "round_competitions": null
+    },
+    {
+      "name": " Greg Harrelson",
+      "holes": {
+        "1": {
+          "net": 4,
+          "par": 4,
+          "gross": 5,
+          "net_diff": 0,
+          "par_index": {
+            "men": 2,
+            "women": 2
+          },
+          "gross_diff": 1,
+          "net_result": "PAR",
+          "competitions": null,
+          "gross_result": "BOGEY"
+        },
+        "2": {
+          "net": 3,
+          "par": 3,
+          "gross": 3,
+          "net_diff": 0,
+          "par_index": {
+            "men": 14,
+            "women": 18
+          },
+          "gross_diff": 0,
+          "net_result": "PAR",
+          "competitions": [
+            {
+              "name": "CTP",
+              "type": "CTP",
+              "value": 0,
+              "payout": 20,
+              "details": null
+            }
+          ],
+          "gross_result": "PAR"
+        },
+        "3": {
+          "net": 4,
+          "par": 4,
+          "gross": 4,
+          "net_diff": 0,
+          "par_index": {
+            "men": 16,
+            "women": 16
+          },
+          "gross_diff": 0,
+          "net_result": "PAR",
+          "competitions": null,
+          "gross_result": "PAR"
+        },
+        "4": {
+          "net": 6,
+          "par": 5,
+          "gross": 6,
+          "net_diff": 1,
+          "par_index": {
+            "men": 12,
+            "women": 10
+          },
+          "gross_diff": 1,
+          "net_result": "BOGEY",
+          "competitions": null,
+          "gross_result": "BOGEY"
+        },
+        "5": {
+          "net": 2,
+          "par": 3,
+          "gross": 2,
+          "net_diff": -1,
+          "par_index": {
+            "men": 10,
+            "women": 12
+          },
+          "gross_diff": -1,
+          "net_result": "BIRDIE",
+          "competitions": null,
+          "gross_result": "BIRDIE"
+        },
+        "6": {
+          "net": 4,
+          "par": 4,
+          "gross": 4,
+          "net_diff": 0,
+          "par_index": {
+            "men": 8,
+            "women": 4
+          },
+          "gross_diff": 0,
+          "net_result": "PAR",
+          "competitions": null,
+          "gross_result": "PAR"
+        },
+        "7": {
+          "net": 4,
+          "par": 4,
+          "gross": 5,
+          "net_diff": 0,
+          "par_index": {
+            "men": 6,
+            "women": 6
+          },
+          "gross_diff": 1,
+          "net_result": "PAR",
+          "competitions": null,
+          "gross_result": "BOGEY"
+        },
+        "8": {
+          "net": 6,
+          "par": 5,
+          "gross": 6,
+          "net_diff": 1,
+          "par_index": {
+            "men": 18,
+            "women": 14
+          },
+          "gross_diff": 1,
+          "net_result": "BOGEY",
+          "competitions": null,
+          "gross_result": "BOGEY"
+        },
+        "9": {
+          "net": 3,
+          "par": 4,
+          "gross": 4,
+          "net_diff": -1,
+          "par_index": {
+            "men": 4,
+            "women": 8
+          },
+          "gross_diff": 0,
+          "net_result": "BIRDIE",
+          "competitions": null,
+          "gross_result": "PAR"
+        },
+        "10": {
+          "net": 6,
+          "par": 5,
+          "gross": 6,
+          "net_diff": 1,
+          "par_index": {
+            "men": 15,
+            "women": 15
+          },
+          "gross_diff": 1,
+          "net_result": "BOGEY",
+          "competitions": null,
+          "gross_result": "BOGEY"
+        },
+        "11": {
+          "net": 2,
+          "par": 3,
+          "gross": 3,
+          "net_diff": -1,
+          "par_index": {
+            "men": 5,
+            "women": 11
+          },
+          "gross_diff": 0,
+          "net_result": "BIRDIE",
+          "competitions": null,
+          "gross_result": "PAR"
+        },
+        "12": {
+          "net": 4,
+          "par": 4,
+          "gross": 4,
+          "net_diff": 0,
+          "par_index": {
+            "men": 7,
+            "women": 13
+          },
+          "gross_diff": 0,
+          "net_result": "PAR",
+          "competitions": null,
+          "gross_result": "PAR"
+        },
+        "13": {
+          "net": 6,
+          "par": 5,
+          "gross": 6,
+          "net_diff": 1,
+          "par_index": {
+            "men": 17,
+            "women": 5
+          },
+          "gross_diff": 1,
+          "net_result": "BOGEY",
+          "competitions": null,
+          "gross_result": "BOGEY"
+        },
+        "14": {
+          "net": 5,
+          "par": 4,
+          "gross": 5,
+          "net_diff": 1,
+          "par_index": {
+            "men": 13,
+            "women": 7
+          },
+          "gross_diff": 1,
+          "net_result": "BOGEY",
+          "competitions": null,
+          "gross_result": "BOGEY"
+        },
+        "15": {
+          "net": 2,
+          "par": 3,
+          "gross": 2,
+          "net_diff": -1,
+          "par_index": {
+            "men": 9,
+            "women": 17
+          },
+          "gross_diff": -1,
+          "net_result": "BIRDIE",
+          "competitions": null,
+          "gross_result": "BIRDIE"
+        },
+        "16": {
+          "net": 3,
+          "par": 4,
+          "gross": 4,
+          "net_diff": -1,
+          "par_index": {
+            "men": 1,
+            "women": 9
+          },
+          "gross_diff": 0,
+          "net_result": "BIRDIE",
+          "competitions": null,
+          "gross_result": "PAR"
+        },
+        "17": {
+          "net": 4,
+          "par": 4,
+          "gross": 4,
+          "net_diff": 0,
+          "par_index": {
+            "men": 11,
+            "women": 1
+          },
+          "gross_diff": 0,
+          "net_result": "PAR",
+          "competitions": null,
+          "gross_result": "PAR"
+        },
+        "18": {
+          "net": 5,
+          "par": 4,
+          "gross": 6,
+          "net_diff": 1,
+          "par_index": {
+            "men": 3,
+            "women": 3
+          },
+          "gross_diff": 2,
+          "net_result": "BOGEY",
+          "competitions": null,
+          "gross_result": "DBL BOGEY"
+        }
+      },
+      "flight": "A",
+      "gender": "M",
+      "net_rank": 1,
+      "tee_name": "White",
+      "net_total": 73,
+      "player_id": 21,
+      "gross_rank": 4,
+      "tee_set_id": 5,
+      "gross_total": 79,
+      "net_rank_label": "T1",
+      "course_handicap": 6,
+      "event_player_id": 622,
+      "gross_rank_label": "T4",
+      "round_competitions": null
+    },
+    {
+      "name": " Kevin Real",
+      "holes": {
+        "1": {
+          "net": 4,
+          "par": 4,
+          "gross": 5,
+          "net_diff": 0,
+          "par_index": {
+            "men": 2,
+            "women": 2
+          },
+          "gross_diff": 1,
+          "net_result": "PAR",
+          "competitions": null,
+          "gross_result": "BOGEY"
+        },
+        "2": {
+          "net": 5,
+          "par": 3,
+          "gross": 5,
+          "net_diff": 2,
+          "par_index": {
+            "men": 14,
+            "women": 18
+          },
+          "gross_diff": 2,
+          "net_result": "DBL BOGEY",
+          "competitions": null,
+          "gross_result": "DBL BOGEY"
+        },
+        "3": {
+          "net": 3,
+          "par": 4,
+          "gross": 3,
+          "net_diff": -1,
+          "par_index": {
+            "men": 16,
+            "women": 16
+          },
+          "gross_diff": -1,
+          "net_result": "BIRDIE",
+          "competitions": [
+            {
+              "name": "Gross Skins",
+              "type": "GROSS_SKINS",
+              "value": 3,
+              "payout": 20,
+              "details": "birdie"
+            },
+            {
+              "name": "Net Skins",
+              "type": "NET_SKINS",
+              "value": 3,
+              "payout": 20,
+              "details": "birdie"
+            }
+          ],
+          "gross_result": "BIRDIE"
+        },
+        "4": {
+          "net": 5,
+          "par": 5,
+          "gross": 5,
+          "net_diff": 0,
+          "par_index": {
+            "men": 12,
+            "women": 10
+          },
+          "gross_diff": 0,
+          "net_result": "PAR",
+          "competitions": null,
+          "gross_result": "PAR"
+        },
+        "5": {
+          "net": 3,
+          "par": 3,
+          "gross": 3,
+          "net_diff": 0,
+          "par_index": {
+            "men": 10,
+            "women": 12
+          },
+          "gross_diff": 0,
+          "net_result": "PAR",
+          "competitions": null,
+          "gross_result": "PAR"
+        },
+        "6": {
+          "net": 4,
+          "par": 4,
+          "gross": 4,
+          "net_diff": 0,
+          "par_index": {
+            "men": 8,
+            "women": 4
+          },
+          "gross_diff": 0,
+          "net_result": "PAR",
+          "competitions": null,
+          "gross_result": "PAR"
+        },
+        "7": {
+          "net": 4,
+          "par": 4,
+          "gross": 4,
+          "net_diff": 0,
+          "par_index": {
+            "men": 6,
+            "women": 6
+          },
+          "gross_diff": 0,
+          "net_result": "PAR",
+          "competitions": null,
+          "gross_result": "PAR"
+        },
+        "8": {
+          "net": 6,
+          "par": 5,
+          "gross": 6,
+          "net_diff": 1,
+          "par_index": {
+            "men": 18,
+            "women": 14
+          },
+          "gross_diff": 1,
+          "net_result": "BOGEY",
+          "competitions": null,
+          "gross_result": "BOGEY"
+        },
+        "9": {
+          "net": 3,
+          "par": 4,
+          "gross": 4,
+          "net_diff": -1,
+          "par_index": {
+            "men": 4,
+            "women": 8
+          },
+          "gross_diff": 0,
+          "net_result": "BIRDIE",
+          "competitions": null,
+          "gross_result": "PAR"
+        },
+        "10": {
+          "net": 6,
+          "par": 5,
+          "gross": 6,
+          "net_diff": 1,
+          "par_index": {
+            "men": 15,
+            "women": 15
+          },
+          "gross_diff": 1,
+          "net_result": "BOGEY",
+          "competitions": null,
+          "gross_result": "BOGEY"
+        },
+        "11": {
+          "net": 4,
+          "par": 3,
+          "gross": 4,
+          "net_diff": 1,
+          "par_index": {
+            "men": 5,
+            "women": 11
+          },
+          "gross_diff": 1,
+          "net_result": "BOGEY",
+          "competitions": [
+            {
+              "name": "CTP",
+              "type": "CTP",
+              "value": 0,
+              "payout": 20,
+              "details": null
+            }
+          ],
+          "gross_result": "BOGEY"
+        },
+        "12": {
+          "net": 3,
+          "par": 4,
+          "gross": 3,
+          "net_diff": -1,
+          "par_index": {
+            "men": 7,
+            "women": 13
+          },
+          "gross_diff": -1,
+          "net_result": "BIRDIE",
+          "competitions": [
+            {
+              "name": "Gross Skins",
+              "type": "GROSS_SKINS",
+              "value": 3,
+              "payout": 20,
+              "details": "birdie"
+            }
+          ],
+          "gross_result": "BIRDIE"
+        },
+        "13": {
+          "net": 7,
+          "par": 5,
+          "gross": 7,
+          "net_diff": 2,
+          "par_index": {
+            "men": 17,
+            "women": 5
+          },
+          "gross_diff": 2,
+          "net_result": "DBL BOGEY",
+          "competitions": null,
+          "gross_result": "DBL BOGEY"
+        },
+        "14": {
+          "net": 4,
+          "par": 4,
+          "gross": 4,
+          "net_diff": 0,
+          "par_index": {
+            "men": 13,
+            "women": 7
+          },
+          "gross_diff": 0,
+          "net_result": "PAR",
+          "competitions": null,
+          "gross_result": "PAR"
+        },
+        "15": {
+          "net": 2,
+          "par": 3,
+          "gross": 2,
+          "net_diff": -1,
+          "par_index": {
+            "men": 9,
+            "women": 17
+          },
+          "gross_diff": -1,
+          "net_result": "BIRDIE",
+          "competitions": null,
+          "gross_result": "BIRDIE"
+        },
+        "16": {
+          "net": 4,
+          "par": 4,
+          "gross": 5,
+          "net_diff": 0,
+          "par_index": {
+            "men": 1,
+            "women": 9
+          },
+          "gross_diff": 1,
+          "net_result": "PAR",
+          "competitions": null,
+          "gross_result": "BOGEY"
+        },
+        "17": {
+          "net": 4,
+          "par": 4,
+          "gross": 4,
+          "net_diff": 0,
+          "par_index": {
+            "men": 11,
+            "women": 1
+          },
+          "gross_diff": 0,
+          "net_result": "PAR",
+          "competitions": null,
+          "gross_result": "PAR"
+        },
+        "18": {
+          "net": 4,
+          "par": 4,
+          "gross": 5,
+          "net_diff": 0,
+          "par_index": {
+            "men": 3,
+            "women": 3
+          },
+          "gross_diff": 1,
+          "net_result": "PAR",
+          "competitions": null,
+          "gross_result": "BOGEY"
+        }
+      },
+      "flight": "A",
+      "gender": "M",
+      "net_rank": 4,
+      "tee_name": "Blue",
+      "net_total": 75,
+      "player_id": 22,
+      "gross_rank": 4,
+      "tee_set_id": 2,
+      "gross_total": 79,
+      "net_rank_label": "4",
+      "course_handicap": 4,
+      "event_player_id": 619,
+      "gross_rank_label": "T4",
+      "round_competitions": null
+    },
+    {
+      "name": " Travis Patterson",
+      "holes": {
+        "1": {
+          "net": 4,
+          "par": 4,
+          "gross": 5,
+          "net_diff": 0,
+          "par_index": {
+            "men": 2,
+            "women": 2
+          },
+          "gross_diff": 1,
+          "net_result": "PAR",
+          "competitions": null,
+          "gross_result": "BOGEY"
+        },
+        "2": {
+          "net": 3,
+          "par": 3,
+          "gross": 3,
+          "net_diff": 0,
+          "par_index": {
+            "men": 14,
+            "women": 18
+          },
+          "gross_diff": 0,
+          "net_result": "PAR",
+          "competitions": null,
+          "gross_result": "PAR"
+        },
+        "3": {
+          "net": 4,
+          "par": 4,
+          "gross": 4,
+          "net_diff": 0,
+          "par_index": {
+            "men": 16,
+            "women": 16
+          },
+          "gross_diff": 0,
+          "net_result": "PAR",
+          "competitions": null,
+          "gross_result": "PAR"
+        },
+        "4": {
+          "net": 5,
+          "par": 5,
+          "gross": 5,
+          "net_diff": 0,
+          "par_index": {
+            "men": 12,
+            "women": 10
+          },
+          "gross_diff": 0,
+          "net_result": "PAR",
+          "competitions": null,
+          "gross_result": "PAR"
+        },
+        "5": {
+          "net": 3,
+          "par": 3,
+          "gross": 3,
+          "net_diff": 0,
+          "par_index": {
+            "men": 10,
+            "women": 12
+          },
+          "gross_diff": 0,
+          "net_result": "PAR",
+          "competitions": null,
+          "gross_result": "PAR"
+        },
+        "6": {
+          "net": 6,
+          "par": 4,
+          "gross": 6,
+          "net_diff": 2,
+          "par_index": {
+            "men": 8,
+            "women": 4
+          },
+          "gross_diff": 2,
+          "net_result": "DBL BOGEY",
+          "competitions": null,
+          "gross_result": "DBL BOGEY"
+        },
+        "7": {
+          "net": 4,
+          "par": 4,
+          "gross": 5,
+          "net_diff": 0,
+          "par_index": {
+            "men": 6,
+            "women": 6
+          },
+          "gross_diff": 1,
+          "net_result": "PAR",
+          "competitions": null,
+          "gross_result": "BOGEY"
+        },
+        "8": {
+          "net": 5,
+          "par": 5,
+          "gross": 5,
+          "net_diff": 0,
+          "par_index": {
+            "men": 18,
+            "women": 14
+          },
+          "gross_diff": 0,
+          "net_result": "PAR",
+          "competitions": null,
+          "gross_result": "PAR"
+        },
+        "9": {
+          "net": 4,
+          "par": 4,
+          "gross": 5,
+          "net_diff": 0,
+          "par_index": {
+            "men": 4,
+            "women": 8
+          },
+          "gross_diff": 1,
+          "net_result": "PAR",
+          "competitions": null,
+          "gross_result": "BOGEY"
+        },
+        "10": {
+          "net": 5,
+          "par": 5,
+          "gross": 5,
+          "net_diff": 0,
+          "par_index": {
+            "men": 15,
+            "women": 15
+          },
+          "gross_diff": 0,
+          "net_result": "PAR",
+          "competitions": null,
+          "gross_result": "PAR"
+        },
+        "11": {
+          "net": 3,
+          "par": 3,
+          "gross": 4,
+          "net_diff": 0,
+          "par_index": {
+            "men": 5,
+            "women": 11
+          },
+          "gross_diff": 1,
+          "net_result": "PAR",
+          "competitions": null,
+          "gross_result": "BOGEY"
+        },
+        "12": {
+          "net": 3,
+          "par": 4,
+          "gross": 4,
+          "net_diff": -1,
+          "par_index": {
+            "men": 7,
+            "women": 13
+          },
+          "gross_diff": 0,
+          "net_result": "BIRDIE",
+          "competitions": null,
+          "gross_result": "PAR"
+        },
+        "13": {
+          "net": 6,
+          "par": 5,
+          "gross": 6,
+          "net_diff": 1,
+          "par_index": {
+            "men": 17,
+            "women": 5
+          },
+          "gross_diff": 1,
+          "net_result": "BOGEY",
+          "competitions": null,
+          "gross_result": "BOGEY"
+        },
+        "14": {
+          "net": 5,
+          "par": 4,
+          "gross": 5,
+          "net_diff": 1,
+          "par_index": {
+            "men": 13,
+            "women": 7
+          },
+          "gross_diff": 1,
+          "net_result": "BOGEY",
+          "competitions": null,
+          "gross_result": "BOGEY"
+        },
+        "15": {
+          "net": 3,
+          "par": 3,
+          "gross": 3,
+          "net_diff": 0,
+          "par_index": {
+            "men": 9,
+            "women": 17
+          },
+          "gross_diff": 0,
+          "net_result": "PAR",
+          "competitions": null,
+          "gross_result": "PAR"
+        },
+        "16": {
+          "net": 4,
+          "par": 4,
+          "gross": 5,
+          "net_diff": 0,
+          "par_index": {
+            "men": 1,
+            "women": 9
+          },
+          "gross_diff": 1,
+          "net_result": "PAR",
+          "competitions": null,
+          "gross_result": "BOGEY"
+        },
+        "17": {
+          "net": 5,
+          "par": 4,
+          "gross": 5,
+          "net_diff": 1,
+          "par_index": {
+            "men": 11,
+            "women": 1
+          },
+          "gross_diff": 1,
+          "net_result": "BOGEY",
+          "competitions": null,
+          "gross_result": "BOGEY"
+        },
+        "18": {
+          "net": 5,
+          "par": 4,
+          "gross": 6,
+          "net_diff": 1,
+          "par_index": {
+            "men": 3,
+            "women": 3
+          },
+          "gross_diff": 2,
+          "net_result": "BOGEY",
+          "competitions": null,
+          "gross_result": "DBL BOGEY"
+        }
+      },
+      "flight": "A",
+      "gender": "M",
+      "net_rank": 5,
+      "tee_name": "White",
+      "net_total": 77,
+      "player_id": 17,
+      "gross_rank": 6,
+      "tee_set_id": 5,
+      "gross_total": 84,
+      "net_rank_label": "T5",
+      "course_handicap": 7,
+      "event_player_id": 620,
+      "gross_rank_label": "6",
+      "round_competitions": null
+    },
+    {
+      "name": " Scott Bartlett",
+      "holes": {
+        "1": {
+          "net": 4,
+          "par": 4,
+          "gross": 5,
+          "net_diff": 0,
+          "par_index": {
+            "men": 2,
+            "women": 2
+          },
+          "gross_diff": 1,
+          "net_result": "PAR",
+          "competitions": null,
+          "gross_result": "BOGEY"
+        },
+        "2": {
+          "net": 3,
+          "par": 3,
+          "gross": 3,
+          "net_diff": 0,
+          "par_index": {
+            "men": 14,
+            "women": 18
+          },
+          "gross_diff": 0,
+          "net_result": "PAR",
+          "competitions": null,
+          "gross_result": "PAR"
+        },
+        "3": {
+          "net": 5,
+          "par": 4,
+          "gross": 5,
+          "net_diff": 1,
+          "par_index": {
+            "men": 16,
+            "women": 16
+          },
+          "gross_diff": 1,
+          "net_result": "BOGEY",
+          "competitions": null,
+          "gross_result": "BOGEY"
+        },
+        "4": {
+          "net": 6,
+          "par": 5,
+          "gross": 6,
+          "net_diff": 1,
+          "par_index": {
+            "men": 12,
+            "women": 10
+          },
+          "gross_diff": 1,
+          "net_result": "BOGEY",
+          "competitions": null,
+          "gross_result": "BOGEY"
+        },
+        "5": {
+          "net": 3,
+          "par": 3,
+          "gross": 3,
+          "net_diff": 0,
+          "par_index": {
+            "men": 10,
+            "women": 12
+          },
+          "gross_diff": 0,
+          "net_result": "PAR",
+          "competitions": null,
+          "gross_result": "PAR"
+        },
+        "6": {
+          "net": 6,
+          "par": 4,
+          "gross": 6,
+          "net_diff": 2,
+          "par_index": {
+            "men": 8,
+            "women": 4
+          },
+          "gross_diff": 2,
+          "net_result": "DBL BOGEY",
+          "competitions": null,
+          "gross_result": "DBL BOGEY"
+        },
+        "7": {
+          "net": 6,
+          "par": 4,
+          "gross": 6,
+          "net_diff": 2,
+          "par_index": {
+            "men": 6,
+            "women": 6
+          },
+          "gross_diff": 2,
+          "net_result": "DBL BOGEY",
+          "competitions": null,
+          "gross_result": "DBL BOGEY"
+        },
+        "8": {
+          "net": 5,
+          "par": 5,
+          "gross": 5,
+          "net_diff": 0,
+          "par_index": {
+            "men": 18,
+            "women": 14
+          },
+          "gross_diff": 0,
+          "net_result": "PAR",
+          "competitions": null,
+          "gross_result": "PAR"
+        },
+        "9": {
+          "net": 4,
+          "par": 4,
+          "gross": 4,
+          "net_diff": 0,
+          "par_index": {
+            "men": 4,
+            "women": 8
+          },
+          "gross_diff": 0,
+          "net_result": "PAR",
+          "competitions": null,
+          "gross_result": "PAR"
+        },
+        "10": {
+          "net": 5,
+          "par": 5,
+          "gross": 5,
+          "net_diff": 0,
+          "par_index": {
+            "men": 15,
+            "women": 15
+          },
+          "gross_diff": 0,
+          "net_result": "PAR",
+          "competitions": null,
+          "gross_result": "PAR"
+        },
+        "11": {
+          "net": 5,
+          "par": 3,
+          "gross": 5,
+          "net_diff": 2,
+          "par_index": {
+            "men": 5,
+            "women": 11
+          },
+          "gross_diff": 2,
+          "net_result": "DBL BOGEY",
+          "competitions": null,
+          "gross_result": "DBL BOGEY"
+        },
+        "12": {
+          "net": 6,
+          "par": 4,
+          "gross": 6,
+          "net_diff": 2,
+          "par_index": {
+            "men": 7,
+            "women": 13
+          },
+          "gross_diff": 2,
+          "net_result": "DBL BOGEY",
+          "competitions": null,
+          "gross_result": "DBL BOGEY"
+        },
+        "13": {
+          "net": 6,
+          "par": 5,
+          "gross": 6,
+          "net_diff": 1,
+          "par_index": {
+            "men": 17,
+            "women": 5
+          },
+          "gross_diff": 1,
+          "net_result": "BOGEY",
+          "competitions": null,
+          "gross_result": "BOGEY"
+        },
+        "14": {
+          "net": 5,
+          "par": 4,
+          "gross": 5,
+          "net_diff": 1,
+          "par_index": {
+            "men": 13,
+            "women": 7
+          },
+          "gross_diff": 1,
+          "net_result": "BOGEY",
+          "competitions": null,
+          "gross_result": "BOGEY"
+        },
+        "15": {
+          "net": 2,
+          "par": 3,
+          "gross": 2,
+          "net_diff": -1,
+          "par_index": {
+            "men": 9,
+            "women": 17
+          },
+          "gross_diff": -1,
+          "net_result": "BIRDIE",
+          "competitions": null,
+          "gross_result": "BIRDIE"
+        },
+        "16": {
+          "net": 4,
+          "par": 4,
+          "gross": 5,
+          "net_diff": 0,
+          "par_index": {
+            "men": 1,
+            "women": 9
+          },
+          "gross_diff": 1,
+          "net_result": "PAR",
+          "competitions": null,
+          "gross_result": "BOGEY"
+        },
+        "17": {
+          "net": 4,
+          "par": 4,
+          "gross": 4,
+          "net_diff": 0,
+          "par_index": {
+            "men": 11,
+            "women": 1
+          },
+          "gross_diff": 0,
+          "net_result": "PAR",
+          "competitions": null,
+          "gross_result": "PAR"
+        },
+        "18": {
+          "net": 3,
+          "par": 4,
+          "gross": 4,
+          "net_diff": -1,
+          "par_index": {
+            "men": 3,
+            "women": 3
+          },
+          "gross_diff": 0,
+          "net_result": "BIRDIE",
+          "competitions": null,
+          "gross_result": "PAR"
+        }
+      },
+      "flight": "A",
+      "gender": "M",
+      "net_rank": 8,
+      "tee_name": "Blue",
+      "net_total": 82,
+      "player_id": 26,
+      "gross_rank": 7,
+      "tee_set_id": 2,
+      "gross_total": 85,
+      "net_rank_label": "T8",
+      "course_handicap": 2,
+      "event_player_id": 614,
+      "gross_rank_label": "7",
+      "round_competitions": null
+    },
+    {
+      "name": " David Bird",
+      "holes": {
+        "1": {
+          "net": 3,
+          "par": 4,
+          "gross": 4,
+          "net_diff": -1,
+          "par_index": {
+            "men": 2,
+            "women": 2
+          },
+          "gross_diff": 0,
+          "net_result": "BIRDIE",
+          "competitions": null,
+          "gross_result": "PAR"
+        },
+        "2": {
+          "net": 4,
+          "par": 3,
+          "gross": 4,
+          "net_diff": 1,
+          "par_index": {
+            "men": 14,
+            "women": 18
+          },
+          "gross_diff": 1,
+          "net_result": "BOGEY",
+          "competitions": null,
+          "gross_result": "BOGEY"
+        },
+        "3": {
+          "net": 5,
+          "par": 4,
+          "gross": 5,
+          "net_diff": 1,
+          "par_index": {
+            "men": 16,
+            "women": 16
+          },
+          "gross_diff": 1,
+          "net_result": "BOGEY",
+          "competitions": null,
+          "gross_result": "BOGEY"
+        },
+        "4": {
+          "net": 6,
+          "par": 5,
+          "gross": 6,
+          "net_diff": 1,
+          "par_index": {
+            "men": 12,
+            "women": 10
+          },
+          "gross_diff": 1,
+          "net_result": "BOGEY",
+          "competitions": null,
+          "gross_result": "BOGEY"
+        },
+        "5": {
+          "net": 5,
+          "par": 3,
+          "gross": 5,
+          "net_diff": 2,
+          "par_index": {
+            "men": 10,
+            "women": 12
+          },
+          "gross_diff": 2,
+          "net_result": "DBL BOGEY",
+          "competitions": null,
+          "gross_result": "DBL BOGEY"
+        },
+        "6": {
+          "net": 4,
+          "par": 4,
+          "gross": 5,
+          "net_diff": 0,
+          "par_index": {
+            "men": 8,
+            "women": 4
+          },
+          "gross_diff": 1,
+          "net_result": "PAR",
+          "competitions": null,
+          "gross_result": "BOGEY"
+        },
+        "7": {
+          "net": 2,
+          "par": 4,
+          "gross": 3,
+          "net_diff": -2,
+          "par_index": {
+            "men": 6,
+            "women": 6
+          },
+          "gross_diff": -1,
+          "net_result": "EAGLE",
+          "competitions": [
+            {
+              "name": "Gross Skins",
+              "type": "GROSS_SKINS",
+              "value": 3,
+              "payout": 20,
+              "details": "birdie"
+            },
+            {
+              "name": "Net Skins",
+              "type": "NET_SKINS",
+              "value": 2,
+              "payout": 20,
+              "details": "eagle"
+            }
+          ],
+          "gross_result": "BIRDIE"
+        },
+        "8": {
+          "net": 5,
+          "par": 5,
+          "gross": 5,
+          "net_diff": 0,
+          "par_index": {
+            "men": 18,
+            "women": 14
+          },
+          "gross_diff": 0,
+          "net_result": "PAR",
+          "competitions": null,
+          "gross_result": "PAR"
+        },
+        "9": {
+          "net": 4,
+          "par": 4,
+          "gross": 5,
+          "net_diff": 0,
+          "par_index": {
+            "men": 4,
+            "women": 8
+          },
+          "gross_diff": 1,
+          "net_result": "PAR",
+          "competitions": null,
+          "gross_result": "BOGEY"
+        },
+        "10": {
+          "net": 6,
+          "par": 5,
+          "gross": 6,
+          "net_diff": 1,
+          "par_index": {
+            "men": 15,
+            "women": 15
+          },
+          "gross_diff": 1,
+          "net_result": "BOGEY",
+          "competitions": null,
+          "gross_result": "BOGEY"
+        },
+        "11": {
+          "net": 3,
+          "par": 3,
+          "gross": 4,
+          "net_diff": 0,
+          "par_index": {
+            "men": 5,
+            "women": 11
+          },
+          "gross_diff": 1,
+          "net_result": "PAR",
+          "competitions": null,
+          "gross_result": "BOGEY"
+        },
+        "12": {
+          "net": 4,
+          "par": 4,
+          "gross": 5,
+          "net_diff": 0,
+          "par_index": {
+            "men": 7,
+            "women": 13
+          },
+          "gross_diff": 1,
+          "net_result": "PAR",
+          "competitions": null,
+          "gross_result": "BOGEY"
+        },
+        "13": {
+          "net": 6,
+          "par": 5,
+          "gross": 6,
+          "net_diff": 1,
+          "par_index": {
+            "men": 17,
+            "women": 5
+          },
+          "gross_diff": 1,
+          "net_result": "BOGEY",
+          "competitions": null,
+          "gross_result": "BOGEY"
+        },
+        "14": {
+          "net": 5,
+          "par": 4,
+          "gross": 5,
+          "net_diff": 1,
+          "par_index": {
+            "men": 13,
+            "women": 7
+          },
+          "gross_diff": 1,
+          "net_result": "BOGEY",
+          "competitions": null,
+          "gross_result": "BOGEY"
+        },
+        "15": {
+          "net": 4,
+          "par": 3,
+          "gross": 4,
+          "net_diff": 1,
+          "par_index": {
+            "men": 9,
+            "women": 17
+          },
+          "gross_diff": 1,
+          "net_result": "BOGEY",
+          "competitions": null,
+          "gross_result": "BOGEY"
+        },
+        "16": {
+          "net": 5,
+          "par": 4,
+          "gross": 6,
+          "net_diff": 1,
+          "par_index": {
+            "men": 1,
+            "women": 9
+          },
+          "gross_diff": 2,
+          "net_result": "BOGEY",
+          "competitions": null,
+          "gross_result": "DBL BOGEY"
+        },
+        "17": {
+          "net": 5,
+          "par": 4,
+          "gross": 5,
+          "net_diff": 1,
+          "par_index": {
+            "men": 11,
+            "women": 1
+          },
+          "gross_diff": 1,
+          "net_result": "BOGEY",
+          "competitions": null,
+          "gross_result": "BOGEY"
+        },
+        "18": {
+          "net": 3,
+          "par": 4,
+          "gross": 4,
+          "net_diff": -1,
+          "par_index": {
+            "men": 3,
+            "women": 3
+          },
+          "gross_diff": 0,
+          "net_result": "BIRDIE",
+          "competitions": null,
+          "gross_result": "PAR"
+        }
+      },
+      "flight": "A",
+      "gender": "M",
+      "net_rank": 7,
+      "tee_name": "White",
+      "net_total": 79,
+      "player_id": 19,
+      "gross_rank": 8,
+      "tee_set_id": 5,
+      "gross_total": 87,
+      "net_rank_label": "7",
+      "course_handicap": 7,
+      "event_player_id": 615,
+      "gross_rank_label": "T8",
+      "round_competitions": null
+    },
+    {
+      "name": "Tony Frakes",
+      "holes": {
+        "1": {
+          "net": 5,
+          "par": 4,
+          "gross": 6,
+          "net_diff": 1,
+          "par_index": {
+            "men": 2,
+            "women": 2
+          },
+          "gross_diff": 2,
+          "net_result": "BOGEY",
+          "competitions": null,
+          "gross_result": "DBL BOGEY"
+        },
+        "2": {
+          "net": 4,
+          "par": 3,
+          "gross": 4,
+          "net_diff": 1,
+          "par_index": {
+            "men": 14,
+            "women": 18
+          },
+          "gross_diff": 1,
+          "net_result": "BOGEY",
+          "competitions": null,
+          "gross_result": "BOGEY"
+        },
+        "3": {
+          "net": 4,
+          "par": 4,
+          "gross": 4,
+          "net_diff": 0,
+          "par_index": {
+            "men": 16,
+            "women": 16
+          },
+          "gross_diff": 0,
+          "net_result": "PAR",
+          "competitions": null,
+          "gross_result": "PAR"
+        },
+        "4": {
+          "net": 6,
+          "par": 5,
+          "gross": 6,
+          "net_diff": 1,
+          "par_index": {
+            "men": 12,
+            "women": 10
+          },
+          "gross_diff": 1,
+          "net_result": "BOGEY",
+          "competitions": null,
+          "gross_result": "BOGEY"
+        },
+        "5": {
+          "net": 3,
+          "par": 3,
+          "gross": 3,
+          "net_diff": 0,
+          "par_index": {
+            "men": 10,
+            "women": 12
+          },
+          "gross_diff": 0,
+          "net_result": "PAR",
+          "competitions": null,
+          "gross_result": "PAR"
+        },
+        "6": {
+          "net": 4,
+          "par": 4,
+          "gross": 4,
+          "net_diff": 0,
+          "par_index": {
+            "men": 8,
+            "women": 4
+          },
+          "gross_diff": 0,
+          "net_result": "PAR",
+          "competitions": null,
+          "gross_result": "PAR"
+        },
+        "7": {
+          "net": 5,
+          "par": 4,
+          "gross": 5,
+          "net_diff": 1,
+          "par_index": {
+            "men": 6,
+            "women": 6
+          },
+          "gross_diff": 1,
+          "net_result": "BOGEY",
+          "competitions": null,
+          "gross_result": "BOGEY"
+        },
+        "8": {
+          "net": 6,
+          "par": 5,
+          "gross": 6,
+          "net_diff": 1,
+          "par_index": {
+            "men": 18,
+            "women": 14
+          },
+          "gross_diff": 1,
+          "net_result": "BOGEY",
+          "competitions": null,
+          "gross_result": "BOGEY"
+        },
+        "9": {
+          "net": 5,
+          "par": 4,
+          "gross": 6,
+          "net_diff": 1,
+          "par_index": {
+            "men": 4,
+            "women": 8
+          },
+          "gross_diff": 2,
+          "net_result": "BOGEY",
+          "competitions": null,
+          "gross_result": "DBL BOGEY"
+        },
+        "10": {
+          "net": 5,
+          "par": 5,
+          "gross": 5,
+          "net_diff": 0,
+          "par_index": {
+            "men": 15,
+            "women": 15
+          },
+          "gross_diff": 0,
+          "net_result": "PAR",
+          "competitions": null,
+          "gross_result": "PAR"
+        },
+        "11": {
+          "net": 2,
+          "par": 3,
+          "gross": 3,
+          "net_diff": -1,
+          "par_index": {
+            "men": 5,
+            "women": 11
+          },
+          "gross_diff": 0,
+          "net_result": "BIRDIE",
+          "competitions": null,
+          "gross_result": "PAR"
+        },
+        "12": {
+          "net": 4,
+          "par": 4,
+          "gross": 4,
+          "net_diff": 0,
+          "par_index": {
+            "men": 7,
+            "women": 13
+          },
+          "gross_diff": 0,
+          "net_result": "PAR",
+          "competitions": null,
+          "gross_result": "PAR"
+        },
+        "13": {
+          "net": 6,
+          "par": 5,
+          "gross": 6,
+          "net_diff": 1,
+          "par_index": {
+            "men": 17,
+            "women": 5
+          },
+          "gross_diff": 1,
+          "net_result": "BOGEY",
+          "competitions": null,
+          "gross_result": "BOGEY"
+        },
+        "14": {
+          "net": 5,
+          "par": 4,
+          "gross": 5,
+          "net_diff": 1,
+          "par_index": {
+            "men": 13,
+            "women": 7
+          },
+          "gross_diff": 1,
+          "net_result": "BOGEY",
+          "competitions": null,
+          "gross_result": "BOGEY"
+        },
+        "15": {
+          "net": 4,
+          "par": 3,
+          "gross": 4,
+          "net_diff": 1,
+          "par_index": {
+            "men": 9,
+            "women": 17
+          },
+          "gross_diff": 1,
+          "net_result": "BOGEY",
+          "competitions": null,
+          "gross_result": "BOGEY"
+        },
+        "16": {
+          "net": 5,
+          "par": 4,
+          "gross": 6,
+          "net_diff": 1,
+          "par_index": {
+            "men": 1,
+            "women": 9
+          },
+          "gross_diff": 2,
+          "net_result": "BOGEY",
+          "competitions": null,
+          "gross_result": "DBL BOGEY"
+        },
+        "17": {
+          "net": 4,
+          "par": 4,
+          "gross": 4,
+          "net_diff": 0,
+          "par_index": {
+            "men": 11,
+            "women": 1
+          },
+          "gross_diff": 0,
+          "net_result": "PAR",
+          "competitions": null,
+          "gross_result": "PAR"
+        },
+        "18": {
+          "net": 5,
+          "par": 4,
+          "gross": 6,
+          "net_diff": 1,
+          "par_index": {
+            "men": 3,
+            "women": 3
+          },
+          "gross_diff": 2,
+          "net_result": "BOGEY",
+          "competitions": null,
+          "gross_result": "DBL BOGEY"
+        }
+      },
+      "flight": "A",
+      "gender": "M",
+      "net_rank": 8,
+      "tee_name": "Blue",
+      "net_total": 82,
+      "player_id": 77,
+      "gross_rank": 8,
+      "tee_set_id": 2,
+      "gross_total": 87,
+      "net_rank_label": "T8",
+      "course_handicap": 5,
+      "event_player_id": 618,
+      "gross_rank_label": "T8",
+      "round_competitions": null
+    },
+    {
+      "name": " Archie Alano",
+      "holes": {
+        "1": {
+          "net": 3,
+          "par": 4,
+          "gross": 4,
+          "net_diff": -1,
+          "par_index": {
+            "men": 2,
+            "women": 2
+          },
+          "gross_diff": 0,
+          "net_result": "BIRDIE",
+          "competitions": null,
+          "gross_result": "PAR"
+        },
+        "2": {
+          "net": 4,
+          "par": 3,
+          "gross": 4,
+          "net_diff": 1,
+          "par_index": {
+            "men": 14,
+            "women": 18
+          },
+          "gross_diff": 1,
+          "net_result": "BOGEY",
+          "competitions": null,
+          "gross_result": "BOGEY"
+        },
+        "3": {
+          "net": 5,
+          "par": 4,
+          "gross": 5,
+          "net_diff": 1,
+          "par_index": {
+            "men": 16,
+            "women": 16
+          },
+          "gross_diff": 1,
+          "net_result": "BOGEY",
+          "competitions": null,
+          "gross_result": "BOGEY"
+        },
+        "4": {
+          "net": 5,
+          "par": 5,
+          "gross": 5,
+          "net_diff": 0,
+          "par_index": {
+            "men": 12,
+            "women": 10
+          },
+          "gross_diff": 0,
+          "net_result": "PAR",
+          "competitions": null,
+          "gross_result": "PAR"
+        },
+        "5": {
+          "net": 3,
+          "par": 3,
+          "gross": 3,
+          "net_diff": 0,
+          "par_index": {
+            "men": 10,
+            "women": 12
+          },
+          "gross_diff": 0,
+          "net_result": "PAR",
+          "competitions": null,
+          "gross_result": "PAR"
+        },
+        "6": {
+          "net": 5,
+          "par": 4,
+          "gross": 5,
+          "net_diff": 1,
+          "par_index": {
+            "men": 8,
+            "women": 4
+          },
+          "gross_diff": 1,
+          "net_result": "BOGEY",
+          "competitions": null,
+          "gross_result": "BOGEY"
+        },
+        "7": {
+          "net": 4,
+          "par": 4,
+          "gross": 5,
+          "net_diff": 0,
+          "par_index": {
+            "men": 6,
+            "women": 6
+          },
+          "gross_diff": 1,
+          "net_result": "PAR",
+          "competitions": null,
+          "gross_result": "BOGEY"
+        },
+        "8": {
+          "net": 6,
+          "par": 5,
+          "gross": 6,
+          "net_diff": 1,
+          "par_index": {
+            "men": 18,
+            "women": 14
+          },
+          "gross_diff": 1,
+          "net_result": "BOGEY",
+          "competitions": null,
+          "gross_result": "BOGEY"
+        },
+        "9": {
+          "net": 6,
+          "par": 4,
+          "gross": 7,
+          "net_diff": 2,
+          "par_index": {
+            "men": 4,
+            "women": 8
+          },
+          "gross_diff": 3,
+          "net_result": "DBL BOGEY",
+          "competitions": null,
+          "gross_result": "TRPL BOGEY"
+        },
+        "10": {
+          "net": 6,
+          "par": 5,
+          "gross": 6,
+          "net_diff": 1,
+          "par_index": {
+            "men": 15,
+            "women": 15
+          },
+          "gross_diff": 1,
+          "net_result": "BOGEY",
+          "competitions": null,
+          "gross_result": "BOGEY"
+        },
+        "11": {
+          "net": 3,
+          "par": 3,
+          "gross": 4,
+          "net_diff": 0,
+          "par_index": {
+            "men": 5,
+            "women": 11
+          },
+          "gross_diff": 1,
+          "net_result": "PAR",
+          "competitions": null,
+          "gross_result": "BOGEY"
+        },
+        "12": {
+          "net": 5,
+          "par": 4,
+          "gross": 5,
+          "net_diff": 1,
+          "par_index": {
+            "men": 7,
+            "women": 13
+          },
+          "gross_diff": 1,
+          "net_result": "BOGEY",
+          "competitions": null,
+          "gross_result": "BOGEY"
+        },
+        "13": {
+          "net": 6,
+          "par": 5,
+          "gross": 6,
+          "net_diff": 1,
+          "par_index": {
+            "men": 17,
+            "women": 5
+          },
+          "gross_diff": 1,
+          "net_result": "BOGEY",
+          "competitions": null,
+          "gross_result": "BOGEY"
+        },
+        "14": {
+          "net": 3,
+          "par": 4,
+          "gross": 3,
+          "net_diff": -1,
+          "par_index": {
+            "men": 13,
+            "women": 7
+          },
+          "gross_diff": -1,
+          "net_result": "BIRDIE",
+          "competitions": null,
+          "gross_result": "BIRDIE"
+        },
+        "15": {
+          "net": 4,
+          "par": 3,
+          "gross": 4,
+          "net_diff": 1,
+          "par_index": {
+            "men": 9,
+            "women": 17
+          },
+          "gross_diff": 1,
+          "net_result": "BOGEY",
+          "competitions": null,
+          "gross_result": "BOGEY"
+        },
+        "16": {
+          "net": 4,
+          "par": 4,
+          "gross": 5,
+          "net_diff": 0,
+          "par_index": {
+            "men": 1,
+            "women": 9
+          },
+          "gross_diff": 1,
+          "net_result": "PAR",
+          "competitions": null,
+          "gross_result": "BOGEY"
+        },
+        "17": {
+          "net": 6,
+          "par": 4,
+          "gross": 6,
+          "net_diff": 2,
+          "par_index": {
+            "men": 11,
+            "women": 1
+          },
+          "gross_diff": 2,
+          "net_result": "DBL BOGEY",
+          "competitions": null,
+          "gross_result": "DBL BOGEY"
+        },
+        "18": {
+          "net": 4,
+          "par": 4,
+          "gross": 5,
+          "net_diff": 0,
+          "par_index": {
+            "men": 3,
+            "women": 3
+          },
+          "gross_diff": 1,
+          "net_result": "PAR",
+          "competitions": null,
+          "gross_result": "BOGEY"
+        }
+      },
+      "flight": "A",
+      "gender": "M",
+      "net_rank": 8,
+      "tee_name": "Blue/White",
+      "net_total": 82,
+      "player_id": 18,
+      "gross_rank": 10,
+      "tee_set_id": 1,
+      "gross_total": 88,
+      "net_rank_label": "T8",
+      "course_handicap": 6,
+      "event_player_id": 613,
+      "gross_rank_label": "10",
+      "round_competitions": null
+    },
+    {
+      "name": "Brian Hauser",
+      "holes": {
+        "1": {
+          "net": 3,
+          "par": 4,
+          "gross": 4,
+          "net_diff": -1,
+          "par_index": {
+            "men": 2,
+            "women": 2
+          },
+          "gross_diff": 0,
+          "net_result": "BIRDIE",
+          "competitions": null,
+          "gross_result": "PAR"
+        },
+        "2": {
+          "net": 4,
+          "par": 3,
+          "gross": 4,
+          "net_diff": 1,
+          "par_index": {
+            "men": 14,
+            "women": 18
+          },
+          "gross_diff": 1,
+          "net_result": "BOGEY",
+          "competitions": null,
+          "gross_result": "BOGEY"
+        },
+        "3": {
+          "net": 3,
+          "par": 4,
+          "gross": 3,
+          "net_diff": -1,
+          "par_index": {
+            "men": 16,
+            "women": 16
+          },
+          "gross_diff": -1,
+          "net_result": "BIRDIE",
+          "competitions": [
+            {
+              "name": "Gross Skins",
+              "type": "GROSS_SKINS",
+              "value": 3,
+              "payout": 15,
+              "details": "birdie"
+            }
+          ],
+          "gross_result": "BIRDIE"
+        },
+        "4": {
+          "net": 5,
+          "par": 5,
+          "gross": 5,
+          "net_diff": 0,
+          "par_index": {
+            "men": 12,
+            "women": 10
+          },
+          "gross_diff": 0,
+          "net_result": "PAR",
+          "competitions": null,
+          "gross_result": "PAR"
+        },
+        "5": {
+          "net": 3,
+          "par": 3,
+          "gross": 3,
+          "net_diff": 0,
+          "par_index": {
+            "men": 10,
+            "women": 12
+          },
+          "gross_diff": 0,
+          "net_result": "PAR",
+          "competitions": null,
+          "gross_result": "PAR"
+        },
+        "6": {
+          "net": 4,
+          "par": 4,
+          "gross": 5,
+          "net_diff": 0,
+          "par_index": {
+            "men": 8,
+            "women": 4
+          },
+          "gross_diff": 1,
+          "net_result": "PAR",
+          "competitions": null,
+          "gross_result": "BOGEY"
+        },
+        "7": {
+          "net": 4,
+          "par": 4,
+          "gross": 5,
+          "net_diff": 0,
+          "par_index": {
+            "men": 6,
+            "women": 6
+          },
+          "gross_diff": 1,
+          "net_result": "PAR",
+          "competitions": null,
+          "gross_result": "BOGEY"
+        },
+        "8": {
+          "net": 5,
+          "par": 5,
+          "gross": 5,
+          "net_diff": 0,
+          "par_index": {
+            "men": 18,
+            "women": 14
+          },
+          "gross_diff": 0,
+          "net_result": "PAR",
+          "competitions": null,
+          "gross_result": "PAR"
+        },
+        "9": {
+          "net": 2,
+          "par": 4,
+          "gross": 3,
+          "net_diff": -2,
+          "par_index": {
+            "men": 4,
+            "women": 8
+          },
+          "gross_diff": -1,
+          "net_result": "EAGLE",
+          "competitions": null,
+          "gross_result": "BIRDIE"
+        },
+        "10": {
+          "net": 5,
+          "par": 5,
+          "gross": 5,
+          "net_diff": 0,
+          "par_index": {
+            "men": 15,
+            "women": 15
+          },
+          "gross_diff": 0,
+          "net_result": "PAR",
+          "competitions": null,
+          "gross_result": "PAR"
+        },
+        "11": {
+          "net": 1,
+          "par": 3,
+          "gross": 2,
+          "net_diff": -2,
+          "par_index": {
+            "men": 5,
+            "women": 11
+          },
+          "gross_diff": -1,
+          "net_result": "EAGLE",
+          "competitions": [
+            {
+              "name": "Gross Skins",
+              "type": "GROSS_SKINS",
+              "value": 2,
+              "payout": 15,
+              "details": "birdie"
+            },
+            {
+              "name": "Net Skins",
+              "type": "NET_SKINS",
+              "value": 1,
+              "payout": 15,
+              "details": "eagle"
+            }
+          ],
+          "gross_result": "BIRDIE"
+        },
+        "12": {
+          "net": 4,
+          "par": 4,
+          "gross": 5,
+          "net_diff": 0,
+          "par_index": {
+            "men": 7,
+            "women": 13
+          },
+          "gross_diff": 1,
+          "net_result": "PAR",
+          "competitions": null,
+          "gross_result": "BOGEY"
+        },
+        "13": {
+          "net": 5,
+          "par": 5,
+          "gross": 5,
+          "net_diff": 0,
+          "par_index": {
+            "men": 17,
+            "women": 5
+          },
+          "gross_diff": 0,
+          "net_result": "PAR",
+          "competitions": null,
+          "gross_result": "PAR"
+        },
+        "14": {
+          "net": 3,
+          "par": 4,
+          "gross": 3,
+          "net_diff": -1,
+          "par_index": {
+            "men": 13,
+            "women": 7
+          },
+          "gross_diff": -1,
+          "net_result": "BIRDIE",
+          "competitions": [
+            {
+              "name": "Gross Skins",
+              "type": "GROSS_SKINS",
+              "value": 3,
+              "payout": 15,
+              "details": "birdie"
+            },
+            {
+              "name": "Net Skins",
+              "type": "NET_SKINS",
+              "value": 3,
+              "payout": 15,
+              "details": "birdie"
+            }
+          ],
+          "gross_result": "BIRDIE"
+        },
+        "15": {
+          "net": 3,
+          "par": 3,
+          "gross": 3,
+          "net_diff": 0,
+          "par_index": {
+            "men": 9,
+            "women": 17
+          },
+          "gross_diff": 0,
+          "net_result": "PAR",
+          "competitions": [
+            {
+              "name": "CTP",
+              "type": "CTP",
+              "value": 0,
+              "payout": 15,
+              "details": null
+            }
+          ],
+          "gross_result": "PAR"
+        },
+        "16": {
+          "net": 4,
+          "par": 4,
+          "gross": 5,
+          "net_diff": 0,
+          "par_index": {
+            "men": 1,
+            "women": 9
+          },
+          "gross_diff": 1,
+          "net_result": "PAR",
+          "competitions": null,
+          "gross_result": "BOGEY"
+        },
+        "17": {
+          "net": 4,
+          "par": 4,
+          "gross": 4,
+          "net_diff": 0,
+          "par_index": {
+            "men": 11,
+            "women": 1
+          },
+          "gross_diff": 0,
+          "net_result": "PAR",
+          "competitions": null,
+          "gross_result": "PAR"
+        },
+        "18": {
+          "net": 3,
+          "par": 4,
+          "gross": 4,
+          "net_diff": -1,
+          "par_index": {
+            "men": 3,
+            "women": 3
+          },
+          "gross_diff": 0,
+          "net_result": "BIRDIE",
+          "competitions": null,
+          "gross_result": "PAR"
+        }
+      },
+      "flight": "B",
+      "gender": "M",
+      "net_rank": 1,
+      "tee_name": "White",
+      "net_total": 65,
+      "player_id": 55,
+      "gross_rank": 1,
+      "tee_set_id": 5,
+      "gross_total": 73,
+      "net_rank_label": "1",
+      "course_handicap": 8,
+      "event_player_id": 624,
+      "gross_rank_label": "1",
+      "round_competitions": [
+        {
+          "name": "Final Four (Net)",
+          "type": "FINAL_4_NET",
+          "value": 14,
+          "payout": 15,
+          "details": " Tie-break: 18"
+        },
+        {
+          "name": "Low Total (Net)",
+          "type": "LOW_NET",
+          "value": 65,
+          "payout": 15,
+          "details": " Tie-break: outright"
+        }
+      ]
+    },
+    {
+      "name": " Dave Maddox",
+      "holes": {
+        "1": {
+          "net": 5,
+          "par": 4,
+          "gross": 6,
+          "net_diff": 1,
+          "par_index": {
+            "men": 2,
+            "women": 2
+          },
+          "gross_diff": 2,
+          "net_result": "BOGEY",
+          "competitions": null,
+          "gross_result": "DBL BOGEY"
+        },
+        "2": {
+          "net": 3,
+          "par": 3,
+          "gross": 3,
+          "net_diff": 0,
+          "par_index": {
+            "men": 14,
+            "women": 18
+          },
+          "gross_diff": 0,
+          "net_result": "PAR",
+          "competitions": null,
+          "gross_result": "PAR"
+        },
+        "3": {
+          "net": 4,
+          "par": 4,
+          "gross": 4,
+          "net_diff": 0,
+          "par_index": {
+            "men": 16,
+            "women": 16
+          },
+          "gross_diff": 0,
+          "net_result": "PAR",
+          "competitions": null,
+          "gross_result": "PAR"
+        },
+        "4": {
+          "net": 4,
+          "par": 5,
+          "gross": 4,
+          "net_diff": -1,
+          "par_index": {
+            "men": 12,
+            "women": 10
+          },
+          "gross_diff": -1,
+          "net_result": "BIRDIE",
+          "competitions": [
+            {
+              "name": "Gross Skins",
+              "type": "GROSS_SKINS",
+              "value": 4,
+              "payout": 15,
+              "details": "birdie"
+            },
+            {
+              "name": "Net Skins",
+              "type": "NET_SKINS",
+              "value": 4,
+              "payout": 15,
+              "details": "birdie"
+            }
+          ],
+          "gross_result": "BIRDIE"
+        },
+        "5": {
+          "net": 5,
+          "par": 3,
+          "gross": 5,
+          "net_diff": 2,
+          "par_index": {
+            "men": 10,
+            "women": 12
+          },
+          "gross_diff": 2,
+          "net_result": "DBL BOGEY",
+          "competitions": null,
+          "gross_result": "DBL BOGEY"
+        },
+        "6": {
+          "net": 5,
+          "par": 4,
+          "gross": 5,
+          "net_diff": 1,
+          "par_index": {
+            "men": 8,
+            "women": 4
+          },
+          "gross_diff": 1,
+          "net_result": "BOGEY",
+          "competitions": null,
+          "gross_result": "BOGEY"
+        },
+        "7": {
+          "net": 3,
+          "par": 4,
+          "gross": 4,
+          "net_diff": -1,
+          "par_index": {
+            "men": 6,
+            "women": 6
+          },
+          "gross_diff": 0,
+          "net_result": "BIRDIE",
+          "competitions": null,
+          "gross_result": "PAR"
+        },
+        "8": {
+          "net": 5,
+          "par": 5,
+          "gross": 5,
+          "net_diff": 0,
+          "par_index": {
+            "men": 18,
+            "women": 14
+          },
+          "gross_diff": 0,
+          "net_result": "PAR",
+          "competitions": null,
+          "gross_result": "PAR"
+        },
+        "9": {
+          "net": 2,
+          "par": 4,
+          "gross": 3,
+          "net_diff": -2,
+          "par_index": {
+            "men": 4,
+            "women": 8
+          },
+          "gross_diff": -1,
+          "net_result": "EAGLE",
+          "competitions": null,
+          "gross_result": "BIRDIE"
+        },
+        "10": {
+          "net": 5,
+          "par": 5,
+          "gross": 5,
+          "net_diff": 0,
+          "par_index": {
+            "men": 15,
+            "women": 15
+          },
+          "gross_diff": 0,
+          "net_result": "PAR",
+          "competitions": null,
+          "gross_result": "PAR"
+        },
+        "11": {
+          "net": 2,
+          "par": 3,
+          "gross": 3,
+          "net_diff": -1,
+          "par_index": {
+            "men": 5,
+            "women": 11
+          },
+          "gross_diff": 0,
+          "net_result": "BIRDIE",
+          "competitions": null,
+          "gross_result": "PAR"
+        },
+        "12": {
+          "net": 5,
+          "par": 4,
+          "gross": 5,
+          "net_diff": 1,
+          "par_index": {
+            "men": 7,
+            "women": 13
+          },
+          "gross_diff": 1,
+          "net_result": "BOGEY",
+          "competitions": null,
+          "gross_result": "BOGEY"
+        },
+        "13": {
+          "net": 6,
+          "par": 5,
+          "gross": 6,
+          "net_diff": 1,
+          "par_index": {
+            "men": 17,
+            "women": 5
+          },
+          "gross_diff": 1,
+          "net_result": "BOGEY",
+          "competitions": null,
+          "gross_result": "BOGEY"
+        },
+        "14": {
+          "net": 4,
+          "par": 4,
+          "gross": 4,
+          "net_diff": 0,
+          "par_index": {
+            "men": 13,
+            "women": 7
+          },
+          "gross_diff": 0,
+          "net_result": "PAR",
+          "competitions": null,
+          "gross_result": "PAR"
+        },
+        "15": {
+          "net": 3,
+          "par": 3,
+          "gross": 3,
+          "net_diff": 0,
+          "par_index": {
+            "men": 9,
+            "women": 17
+          },
+          "gross_diff": 0,
+          "net_result": "PAR",
+          "competitions": null,
+          "gross_result": "PAR"
+        },
+        "16": {
+          "net": 4,
+          "par": 4,
+          "gross": 5,
+          "net_diff": 0,
+          "par_index": {
+            "men": 1,
+            "women": 9
+          },
+          "gross_diff": 1,
+          "net_result": "PAR",
+          "competitions": null,
+          "gross_result": "BOGEY"
+        },
+        "17": {
+          "net": 5,
+          "par": 4,
+          "gross": 5,
+          "net_diff": 1,
+          "par_index": {
+            "men": 11,
+            "women": 1
+          },
+          "gross_diff": 1,
+          "net_result": "BOGEY",
+          "competitions": null,
+          "gross_result": "BOGEY"
+        },
+        "18": {
+          "net": 4,
+          "par": 4,
+          "gross": 5,
+          "net_diff": 0,
+          "par_index": {
+            "men": 3,
+            "women": 3
+          },
+          "gross_diff": 1,
+          "net_result": "PAR",
+          "competitions": null,
+          "gross_result": "BOGEY"
+        }
+      },
+      "flight": "B",
+      "gender": "M",
+      "net_rank": 2,
+      "tee_name": "White",
+      "net_total": 74,
+      "player_id": 20,
+      "gross_rank": 2,
+      "tee_set_id": 5,
+      "gross_total": 80,
+      "net_rank_label": "T2",
+      "course_handicap": 8,
+      "event_player_id": 626,
+      "gross_rank_label": "2",
+      "round_competitions": null
+    },
+    {
+      "name": "Thom Lewis",
+      "holes": {
+        "1": {
+          "net": 4,
+          "par": 4,
+          "gross": 5,
+          "net_diff": 0,
+          "par_index": {
+            "men": 2,
+            "women": 2
+          },
+          "gross_diff": 1,
+          "net_result": "PAR",
+          "competitions": null,
+          "gross_result": "BOGEY"
+        },
+        "2": {
+          "net": 3,
+          "par": 3,
+          "gross": 3,
+          "net_diff": 0,
+          "par_index": {
+            "men": 14,
+            "women": 18
+          },
+          "gross_diff": 0,
+          "net_result": "PAR",
+          "competitions": [
+            {
+              "name": "CTP",
+              "type": "CTP",
+              "value": 0,
+              "payout": 15,
+              "details": null
+            }
+          ],
+          "gross_result": "PAR"
+        },
+        "3": {
+          "net": 4,
+          "par": 4,
+          "gross": 4,
+          "net_diff": 0,
+          "par_index": {
+            "men": 16,
+            "women": 16
+          },
+          "gross_diff": 0,
+          "net_result": "PAR",
+          "competitions": null,
+          "gross_result": "PAR"
+        },
+        "4": {
+          "net": 6,
+          "par": 5,
+          "gross": 7,
+          "net_diff": 1,
+          "par_index": {
+            "men": 12,
+            "women": 10
+          },
+          "gross_diff": 2,
+          "net_result": "BOGEY",
+          "competitions": null,
+          "gross_result": "DBL BOGEY"
+        },
+        "5": {
+          "net": 3,
+          "par": 3,
+          "gross": 4,
+          "net_diff": 0,
+          "par_index": {
+            "men": 10,
+            "women": 12
+          },
+          "gross_diff": 1,
+          "net_result": "PAR",
+          "competitions": null,
+          "gross_result": "BOGEY"
+        },
+        "6": {
+          "net": 5,
+          "par": 4,
+          "gross": 6,
+          "net_diff": 1,
+          "par_index": {
+            "men": 8,
+            "women": 4
+          },
+          "gross_diff": 2,
+          "net_result": "BOGEY",
+          "competitions": null,
+          "gross_result": "DBL BOGEY"
+        },
+        "7": {
+          "net": 3,
+          "par": 4,
+          "gross": 4,
+          "net_diff": -1,
+          "par_index": {
+            "men": 6,
+            "women": 6
+          },
+          "gross_diff": 0,
+          "net_result": "BIRDIE",
+          "competitions": null,
+          "gross_result": "PAR"
+        },
+        "8": {
+          "net": 6,
+          "par": 5,
+          "gross": 6,
+          "net_diff": 1,
+          "par_index": {
+            "men": 18,
+            "women": 14
+          },
+          "gross_diff": 1,
+          "net_result": "BOGEY",
+          "competitions": null,
+          "gross_result": "BOGEY"
+        },
+        "9": {
+          "net": 3,
+          "par": 4,
+          "gross": 4,
+          "net_diff": -1,
+          "par_index": {
+            "men": 4,
+            "women": 8
+          },
+          "gross_diff": 0,
+          "net_result": "BIRDIE",
+          "competitions": null,
+          "gross_result": "PAR"
+        },
+        "10": {
+          "net": 6,
+          "par": 5,
+          "gross": 6,
+          "net_diff": 1,
+          "par_index": {
+            "men": 15,
+            "women": 15
+          },
+          "gross_diff": 1,
+          "net_result": "BOGEY",
+          "competitions": null,
+          "gross_result": "BOGEY"
+        },
+        "11": {
+          "net": 2,
+          "par": 3,
+          "gross": 3,
+          "net_diff": -1,
+          "par_index": {
+            "men": 5,
+            "women": 11
+          },
+          "gross_diff": 0,
+          "net_result": "BIRDIE",
+          "competitions": null,
+          "gross_result": "PAR"
+        },
+        "12": {
+          "net": 4,
+          "par": 4,
+          "gross": 5,
+          "net_diff": 0,
+          "par_index": {
+            "men": 7,
+            "women": 13
+          },
+          "gross_diff": 1,
+          "net_result": "PAR",
+          "competitions": null,
+          "gross_result": "BOGEY"
+        },
+        "13": {
+          "net": 7,
+          "par": 5,
+          "gross": 7,
+          "net_diff": 2,
+          "par_index": {
+            "men": 17,
+            "women": 5
+          },
+          "gross_diff": 2,
+          "net_result": "DBL BOGEY",
+          "competitions": null,
+          "gross_result": "DBL BOGEY"
+        },
+        "14": {
+          "net": 4,
+          "par": 4,
+          "gross": 4,
+          "net_diff": 0,
+          "par_index": {
+            "men": 13,
+            "women": 7
+          },
+          "gross_diff": 0,
+          "net_result": "PAR",
+          "competitions": null,
+          "gross_result": "PAR"
+        },
+        "15": {
+          "net": 3,
+          "par": 3,
+          "gross": 4,
+          "net_diff": 0,
+          "par_index": {
+            "men": 9,
+            "women": 17
+          },
+          "gross_diff": 1,
+          "net_result": "PAR",
+          "competitions": null,
+          "gross_result": "BOGEY"
+        },
+        "16": {
+          "net": 4,
+          "par": 4,
+          "gross": 5,
+          "net_diff": 0,
+          "par_index": {
+            "men": 1,
+            "women": 9
+          },
+          "gross_diff": 1,
+          "net_result": "PAR",
+          "competitions": null,
+          "gross_result": "BOGEY"
+        },
+        "17": {
+          "net": 3,
+          "par": 4,
+          "gross": 4,
+          "net_diff": -1,
+          "par_index": {
+            "men": 11,
+            "women": 1
+          },
+          "gross_diff": 0,
+          "net_result": "BIRDIE",
+          "competitions": [
+            {
+              "name": "Net Skins",
+              "type": "NET_SKINS",
+              "value": 3,
+              "payout": 15,
+              "details": "birdie"
+            }
+          ],
+          "gross_result": "PAR"
+        },
+        "18": {
+          "net": 4,
+          "par": 4,
+          "gross": 5,
+          "net_diff": 0,
+          "par_index": {
+            "men": 3,
+            "women": 3
+          },
+          "gross_diff": 1,
+          "net_result": "PAR",
+          "competitions": null,
+          "gross_result": "BOGEY"
+        }
+      },
+      "flight": "B",
+      "gender": "M",
+      "net_rank": 2,
+      "tee_name": "White",
+      "net_total": 74,
+      "player_id": 44,
+      "gross_rank": 3,
+      "tee_set_id": 5,
+      "gross_total": 86,
+      "net_rank_label": "T2",
+      "course_handicap": 12,
+      "event_player_id": 629,
+      "gross_rank_label": "3",
+      "round_competitions": null
+    },
+    {
+      "name": " Brad Weintraub",
+      "holes": {
+        "1": {
+          "net": 4,
+          "par": 4,
+          "gross": 5,
+          "net_diff": 0,
+          "par_index": {
+            "men": 2,
+            "women": 2
+          },
+          "gross_diff": 1,
+          "net_result": "PAR",
+          "competitions": null,
+          "gross_result": "BOGEY"
+        },
+        "2": {
+          "net": 4,
+          "par": 3,
+          "gross": 4,
+          "net_diff": 1,
+          "par_index": {
+            "men": 14,
+            "women": 18
+          },
+          "gross_diff": 1,
+          "net_result": "BOGEY",
+          "competitions": null,
+          "gross_result": "BOGEY"
+        },
+        "3": {
+          "net": 4,
+          "par": 4,
+          "gross": 4,
+          "net_diff": 0,
+          "par_index": {
+            "men": 16,
+            "women": 16
+          },
+          "gross_diff": 0,
+          "net_result": "PAR",
+          "competitions": null,
+          "gross_result": "PAR"
+        },
+        "4": {
+          "net": 7,
+          "par": 5,
+          "gross": 7,
+          "net_diff": 2,
+          "par_index": {
+            "men": 12,
+            "women": 10
+          },
+          "gross_diff": 2,
+          "net_result": "DBL BOGEY",
+          "competitions": null,
+          "gross_result": "DBL BOGEY"
+        },
+        "5": {
+          "net": 2,
+          "par": 3,
+          "gross": 3,
+          "net_diff": -1,
+          "par_index": {
+            "men": 10,
+            "women": 12
+          },
+          "gross_diff": 0,
+          "net_result": "BIRDIE",
+          "competitions": null,
+          "gross_result": "PAR"
+        },
+        "6": {
+          "net": 4,
+          "par": 4,
+          "gross": 5,
+          "net_diff": 0,
+          "par_index": {
+            "men": 8,
+            "women": 4
+          },
+          "gross_diff": 1,
+          "net_result": "PAR",
+          "competitions": null,
+          "gross_result": "BOGEY"
+        },
+        "7": {
+          "net": 4,
+          "par": 4,
+          "gross": 5,
+          "net_diff": 0,
+          "par_index": {
+            "men": 6,
+            "women": 6
+          },
+          "gross_diff": 1,
+          "net_result": "PAR",
+          "competitions": null,
+          "gross_result": "BOGEY"
+        },
+        "8": {
+          "net": 5,
+          "par": 5,
+          "gross": 5,
+          "net_diff": 0,
+          "par_index": {
+            "men": 18,
+            "women": 14
+          },
+          "gross_diff": 0,
+          "net_result": "PAR",
+          "competitions": null,
+          "gross_result": "PAR"
+        },
+        "9": {
+          "net": 2,
+          "par": 4,
+          "gross": 3,
+          "net_diff": -2,
+          "par_index": {
+            "men": 4,
+            "women": 8
+          },
+          "gross_diff": -1,
+          "net_result": "EAGLE",
+          "competitions": null,
+          "gross_result": "BIRDIE"
+        },
+        "10": {
+          "net": 6,
+          "par": 5,
+          "gross": 6,
+          "net_diff": 1,
+          "par_index": {
+            "men": 15,
+            "women": 15
+          },
+          "gross_diff": 1,
+          "net_result": "BOGEY",
+          "competitions": null,
+          "gross_result": "BOGEY"
+        },
+        "11": {
+          "net": 2,
+          "par": 3,
+          "gross": 3,
+          "net_diff": -1,
+          "par_index": {
+            "men": 5,
+            "women": 11
+          },
+          "gross_diff": 0,
+          "net_result": "BIRDIE",
+          "competitions": null,
+          "gross_result": "PAR"
+        },
+        "12": {
+          "net": 5,
+          "par": 4,
+          "gross": 6,
+          "net_diff": 1,
+          "par_index": {
+            "men": 7,
+            "women": 13
+          },
+          "gross_diff": 2,
+          "net_result": "BOGEY",
+          "competitions": null,
+          "gross_result": "DBL BOGEY"
+        },
+        "13": {
+          "net": 7,
+          "par": 5,
+          "gross": 7,
+          "net_diff": 2,
+          "par_index": {
+            "men": 17,
+            "women": 5
+          },
+          "gross_diff": 2,
+          "net_result": "DBL BOGEY",
+          "competitions": null,
+          "gross_result": "DBL BOGEY"
+        },
+        "14": {
+          "net": 5,
+          "par": 4,
+          "gross": 5,
+          "net_diff": 1,
+          "par_index": {
+            "men": 13,
+            "women": 7
+          },
+          "gross_diff": 1,
+          "net_result": "BOGEY",
+          "competitions": null,
+          "gross_result": "BOGEY"
+        },
+        "15": {
+          "net": 3,
+          "par": 3,
+          "gross": 4,
+          "net_diff": 0,
+          "par_index": {
+            "men": 9,
+            "women": 17
+          },
+          "gross_diff": 1,
+          "net_result": "PAR",
+          "competitions": null,
+          "gross_result": "BOGEY"
+        },
+        "16": {
+          "net": 5,
+          "par": 4,
+          "gross": 6,
+          "net_diff": 1,
+          "par_index": {
+            "men": 1,
+            "women": 9
+          },
+          "gross_diff": 2,
+          "net_result": "BOGEY",
+          "competitions": null,
+          "gross_result": "DBL BOGEY"
+        },
+        "17": {
+          "net": 5,
+          "par": 4,
+          "gross": 5,
+          "net_diff": 1,
+          "par_index": {
+            "men": 11,
+            "women": 1
+          },
+          "gross_diff": 1,
+          "net_result": "BOGEY",
+          "competitions": null,
+          "gross_result": "BOGEY"
+        },
+        "18": {
+          "net": 3,
+          "par": 4,
+          "gross": 4,
+          "net_diff": -1,
+          "par_index": {
+            "men": 3,
+            "women": 3
+          },
+          "gross_diff": 0,
+          "net_result": "BIRDIE",
+          "competitions": null,
+          "gross_result": "PAR"
+        }
+      },
+      "flight": "B",
+      "gender": "M",
+      "net_rank": 4,
+      "tee_name": "White",
+      "net_total": 77,
+      "player_id": 9,
+      "gross_rank": 4,
+      "tee_set_id": 5,
+      "gross_total": 87,
+      "net_rank_label": "4",
+      "course_handicap": 10,
+      "event_player_id": 627,
+      "gross_rank_label": "4",
+      "round_competitions": null
+    },
+    {
+      "name": "John Torgenson",
+      "holes": {
+        "1": {
+          "net": 6,
+          "par": 4,
+          "gross": 7,
+          "net_diff": 2,
+          "par_index": {
+            "men": 2,
+            "women": 2
+          },
+          "gross_diff": 3,
+          "net_result": "DBL BOGEY",
+          "competitions": null,
+          "gross_result": "TRPL BOGEY"
+        },
+        "2": {
+          "net": 3,
+          "par": 3,
+          "gross": 3,
+          "net_diff": 0,
+          "par_index": {
+            "men": 14,
+            "women": 18
+          },
+          "gross_diff": 0,
+          "net_result": "PAR",
+          "competitions": null,
+          "gross_result": "PAR"
+        },
+        "3": {
+          "net": 5,
+          "par": 4,
+          "gross": 5,
+          "net_diff": 1,
+          "par_index": {
+            "men": 16,
+            "women": 16
+          },
+          "gross_diff": 1,
+          "net_result": "BOGEY",
+          "competitions": null,
+          "gross_result": "BOGEY"
+        },
+        "4": {
+          "net": 7,
+          "par": 5,
+          "gross": 7,
+          "net_diff": 2,
+          "par_index": {
+            "men": 12,
+            "women": 10
+          },
+          "gross_diff": 2,
+          "net_result": "DBL BOGEY",
+          "competitions": null,
+          "gross_result": "DBL BOGEY"
+        },
+        "5": {
+          "net": 3,
+          "par": 3,
+          "gross": 4,
+          "net_diff": 0,
+          "par_index": {
+            "men": 10,
+            "women": 12
+          },
+          "gross_diff": 1,
+          "net_result": "PAR",
+          "competitions": null,
+          "gross_result": "BOGEY"
+        },
+        "6": {
+          "net": 3,
+          "par": 4,
+          "gross": 4,
+          "net_diff": -1,
+          "par_index": {
+            "men": 8,
+            "women": 4
+          },
+          "gross_diff": 0,
+          "net_result": "BIRDIE",
+          "competitions": [
+            {
+              "name": "Gross Skins",
+              "type": "GROSS_SKINS",
+              "value": 4,
+              "payout": 15,
+              "details": "par"
+            },
+            {
+              "name": "Net Skins",
+              "type": "NET_SKINS",
+              "value": 3,
+              "payout": 15,
+              "details": "birdie"
+            }
+          ],
+          "gross_result": "PAR"
+        },
+        "7": {
+          "net": 4,
+          "par": 4,
+          "gross": 5,
+          "net_diff": 0,
+          "par_index": {
+            "men": 6,
+            "women": 6
+          },
+          "gross_diff": 1,
+          "net_result": "PAR",
+          "competitions": null,
+          "gross_result": "BOGEY"
+        },
+        "8": {
+          "net": 5,
+          "par": 5,
+          "gross": 5,
+          "net_diff": 0,
+          "par_index": {
+            "men": 18,
+            "women": 14
+          },
+          "gross_diff": 0,
+          "net_result": "PAR",
+          "competitions": null,
+          "gross_result": "PAR"
+        },
+        "9": {
+          "net": 5,
+          "par": 4,
+          "gross": 6,
+          "net_diff": 1,
+          "par_index": {
+            "men": 4,
+            "women": 8
+          },
+          "gross_diff": 2,
+          "net_result": "BOGEY",
+          "competitions": null,
+          "gross_result": "DBL BOGEY"
+        },
+        "10": {
+          "net": 7,
+          "par": 5,
+          "gross": 7,
+          "net_diff": 2,
+          "par_index": {
+            "men": 15,
+            "women": 15
+          },
+          "gross_diff": 2,
+          "net_result": "DBL BOGEY",
+          "competitions": null,
+          "gross_result": "DBL BOGEY"
+        },
+        "11": {
+          "net": 2,
+          "par": 3,
+          "gross": 3,
+          "net_diff": -1,
+          "par_index": {
+            "men": 5,
+            "women": 11
+          },
+          "gross_diff": 0,
+          "net_result": "BIRDIE",
+          "competitions": null,
+          "gross_result": "PAR"
+        },
+        "12": {
+          "net": 5,
+          "par": 4,
+          "gross": 6,
+          "net_diff": 1,
+          "par_index": {
+            "men": 7,
+            "women": 13
+          },
+          "gross_diff": 2,
+          "net_result": "BOGEY",
+          "competitions": null,
+          "gross_result": "DBL BOGEY"
+        },
+        "13": {
+          "net": 5,
+          "par": 5,
+          "gross": 5,
+          "net_diff": 0,
+          "par_index": {
+            "men": 17,
+            "women": 5
+          },
+          "gross_diff": 0,
+          "net_result": "PAR",
+          "competitions": null,
+          "gross_result": "PAR"
+        },
+        "14": {
+          "net": 6,
+          "par": 4,
+          "gross": 6,
+          "net_diff": 2,
+          "par_index": {
+            "men": 13,
+            "women": 7
+          },
+          "gross_diff": 2,
+          "net_result": "DBL BOGEY",
+          "competitions": null,
+          "gross_result": "DBL BOGEY"
+        },
+        "15": {
+          "net": 3,
+          "par": 3,
+          "gross": 4,
+          "net_diff": 0,
+          "par_index": {
+            "men": 9,
+            "women": 17
+          },
+          "gross_diff": 1,
+          "net_result": "PAR",
+          "competitions": null,
+          "gross_result": "BOGEY"
+        },
+        "16": {
+          "net": 5,
+          "par": 4,
+          "gross": 6,
+          "net_diff": 1,
+          "par_index": {
+            "men": 1,
+            "women": 9
+          },
+          "gross_diff": 2,
+          "net_result": "BOGEY",
+          "competitions": null,
+          "gross_result": "DBL BOGEY"
+        },
+        "17": {
+          "net": 5,
+          "par": 4,
+          "gross": 5,
+          "net_diff": 1,
+          "par_index": {
+            "men": 11,
+            "women": 1
+          },
+          "gross_diff": 1,
+          "net_result": "BOGEY",
+          "competitions": null,
+          "gross_result": "BOGEY"
+        },
+        "18": {
+          "net": 5,
+          "par": 4,
+          "gross": 6,
+          "net_diff": 1,
+          "par_index": {
+            "men": 3,
+            "women": 3
+          },
+          "gross_diff": 2,
+          "net_result": "BOGEY",
+          "competitions": null,
+          "gross_result": "DBL BOGEY"
+        }
+      },
+      "flight": "B",
+      "gender": "M",
+      "net_rank": 9,
+      "tee_name": "Blue/White",
+      "net_total": 84,
+      "player_id": 162,
+      "gross_rank": 5,
+      "tee_set_id": 1,
+      "gross_total": 94,
+      "net_rank_label": "9",
+      "course_handicap": 10,
+      "event_player_id": 625,
+      "gross_rank_label": "5",
+      "round_competitions": null
+    },
+    {
+      "name": "Todd Karren",
+      "holes": {
+        "1": {
+          "net": 6,
+          "par": 4,
+          "gross": 7,
+          "net_diff": 2,
+          "par_index": {
+            "men": 2,
+            "women": 2
+          },
+          "gross_diff": 3,
+          "net_result": "DBL BOGEY",
+          "competitions": null,
+          "gross_result": "TRPL BOGEY"
+        },
+        "2": {
+          "net": 3,
+          "par": 3,
+          "gross": 4,
+          "net_diff": 0,
+          "par_index": {
+            "men": 14,
+            "women": 18
+          },
+          "gross_diff": 1,
+          "net_result": "PAR",
+          "competitions": null,
+          "gross_result": "BOGEY"
+        },
+        "3": {
+          "net": 5,
+          "par": 4,
+          "gross": 5,
+          "net_diff": 1,
+          "par_index": {
+            "men": 16,
+            "women": 16
+          },
+          "gross_diff": 1,
+          "net_result": "BOGEY",
+          "competitions": null,
+          "gross_result": "BOGEY"
+        },
+        "4": {
+          "net": 6,
+          "par": 5,
+          "gross": 7,
+          "net_diff": 1,
+          "par_index": {
+            "men": 12,
+            "women": 10
+          },
+          "gross_diff": 2,
+          "net_result": "BOGEY",
+          "competitions": null,
+          "gross_result": "DBL BOGEY"
+        },
+        "5": {
+          "net": 2,
+          "par": 3,
+          "gross": 3,
+          "net_diff": -1,
+          "par_index": {
+            "men": 10,
+            "women": 12
+          },
+          "gross_diff": 0,
+          "net_result": "BIRDIE",
+          "competitions": [
+            {
+              "name": "CTP",
+              "type": "CTP",
+              "value": 0,
+              "payout": 15,
+              "details": null
+            }
+          ],
+          "gross_result": "PAR"
+        },
+        "6": {
+          "net": 5,
+          "par": 4,
+          "gross": 6,
+          "net_diff": 1,
+          "par_index": {
+            "men": 8,
+            "women": 4
+          },
+          "gross_diff": 2,
+          "net_result": "BOGEY",
+          "competitions": null,
+          "gross_result": "DBL BOGEY"
+        },
+        "7": {
+          "net": 5,
+          "par": 4,
+          "gross": 6,
+          "net_diff": 1,
+          "par_index": {
+            "men": 6,
+            "women": 6
+          },
+          "gross_diff": 2,
+          "net_result": "BOGEY",
+          "competitions": null,
+          "gross_result": "DBL BOGEY"
+        },
+        "8": {
+          "net": 6,
+          "par": 5,
+          "gross": 6,
+          "net_diff": 1,
+          "par_index": {
+            "men": 18,
+            "women": 14
+          },
+          "gross_diff": 1,
+          "net_result": "BOGEY",
+          "competitions": null,
+          "gross_result": "BOGEY"
+        },
+        "9": {
+          "net": 5,
+          "par": 4,
+          "gross": 6,
+          "net_diff": 1,
+          "par_index": {
+            "men": 4,
+            "women": 8
+          },
+          "gross_diff": 2,
+          "net_result": "BOGEY",
+          "competitions": null,
+          "gross_result": "DBL BOGEY"
+        },
+        "10": {
+          "net": 5,
+          "par": 5,
+          "gross": 5,
+          "net_diff": 0,
+          "par_index": {
+            "men": 15,
+            "women": 15
+          },
+          "gross_diff": 0,
+          "net_result": "PAR",
+          "competitions": null,
+          "gross_result": "PAR"
+        },
+        "11": {
+          "net": 2,
+          "par": 3,
+          "gross": 3,
+          "net_diff": -1,
+          "par_index": {
+            "men": 5,
+            "women": 11
+          },
+          "gross_diff": 0,
+          "net_result": "BIRDIE",
+          "competitions": [
+            {
+              "name": "CTP",
+              "type": "CTP",
+              "value": 0,
+              "payout": 15,
+              "details": null
+            }
+          ],
+          "gross_result": "PAR"
+        },
+        "12": {
+          "net": 4,
+          "par": 4,
+          "gross": 5,
+          "net_diff": 0,
+          "par_index": {
+            "men": 7,
+            "women": 13
+          },
+          "gross_diff": 1,
+          "net_result": "PAR",
+          "competitions": null,
+          "gross_result": "BOGEY"
+        },
+        "13": {
+          "net": 5,
+          "par": 5,
+          "gross": 5,
+          "net_diff": 0,
+          "par_index": {
+            "men": 17,
+            "women": 5
+          },
+          "gross_diff": 0,
+          "net_result": "PAR",
+          "competitions": null,
+          "gross_result": "PAR"
+        },
+        "14": {
+          "net": 5,
+          "par": 4,
+          "gross": 6,
+          "net_diff": 1,
+          "par_index": {
+            "men": 13,
+            "women": 7
+          },
+          "gross_diff": 2,
+          "net_result": "BOGEY",
+          "competitions": null,
+          "gross_result": "DBL BOGEY"
+        },
+        "15": {
+          "net": 4,
+          "par": 3,
+          "gross": 5,
+          "net_diff": 1,
+          "par_index": {
+            "men": 9,
+            "women": 17
+          },
+          "gross_diff": 2,
+          "net_result": "BOGEY",
+          "competitions": null,
+          "gross_result": "DBL BOGEY"
+        },
+        "16": {
+          "net": 4,
+          "par": 4,
+          "gross": 5,
+          "net_diff": 0,
+          "par_index": {
+            "men": 1,
+            "women": 9
+          },
+          "gross_diff": 1,
+          "net_result": "PAR",
+          "competitions": null,
+          "gross_result": "BOGEY"
+        },
+        "17": {
+          "net": 4,
+          "par": 4,
+          "gross": 5,
+          "net_diff": 0,
+          "par_index": {
+            "men": 11,
+            "women": 1
+          },
+          "gross_diff": 1,
+          "net_result": "PAR",
+          "competitions": null,
+          "gross_result": "BOGEY"
+        },
+        "18": {
+          "net": 5,
+          "par": 4,
+          "gross": 6,
+          "net_diff": 1,
+          "par_index": {
+            "men": 3,
+            "women": 3
+          },
+          "gross_diff": 2,
+          "net_result": "BOGEY",
+          "competitions": null,
+          "gross_result": "DBL BOGEY"
+        }
+      },
+      "flight": "B",
+      "gender": "M",
+      "net_rank": 6,
+      "tee_name": "White",
+      "net_total": 81,
+      "player_id": 178,
+      "gross_rank": 6,
+      "tee_set_id": 5,
+      "gross_total": 95,
+      "net_rank_label": "6",
+      "course_handicap": 14,
+      "event_player_id": 630,
+      "gross_rank_label": "6",
+      "round_competitions": null
+    },
+    {
+      "name": " Jim Rolstead",
+      "holes": {
+        "1": {
+          "net": 6,
+          "par": 4,
+          "gross": 7,
+          "net_diff": 2,
+          "par_index": {
+            "men": 2,
+            "women": 2
+          },
+          "gross_diff": 3,
+          "net_result": "DBL BOGEY",
+          "competitions": null,
+          "gross_result": "TRPL BOGEY"
+        },
+        "2": {
+          "net": 3,
+          "par": 3,
+          "gross": 4,
+          "net_diff": 0,
+          "par_index": {
+            "men": 14,
+            "women": 18
+          },
+          "gross_diff": 1,
+          "net_result": "PAR",
+          "competitions": null,
+          "gross_result": "BOGEY"
+        },
+        "3": {
+          "net": 3,
+          "par": 4,
+          "gross": 4,
+          "net_diff": -1,
+          "par_index": {
+            "men": 16,
+            "women": 16
+          },
+          "gross_diff": 0,
+          "net_result": "BIRDIE",
+          "competitions": null,
+          "gross_result": "PAR"
+        },
+        "4": {
+          "net": 6,
+          "par": 5,
+          "gross": 7,
+          "net_diff": 1,
+          "par_index": {
+            "men": 12,
+            "women": 10
+          },
+          "gross_diff": 2,
+          "net_result": "BOGEY",
+          "competitions": null,
+          "gross_result": "DBL BOGEY"
+        },
+        "5": {
+          "net": 3,
+          "par": 3,
+          "gross": 4,
+          "net_diff": 0,
+          "par_index": {
+            "men": 10,
+            "women": 12
+          },
+          "gross_diff": 1,
+          "net_result": "PAR",
+          "competitions": null,
+          "gross_result": "BOGEY"
+        },
+        "6": {
+          "net": 6,
+          "par": 4,
+          "gross": 7,
+          "net_diff": 2,
+          "par_index": {
+            "men": 8,
+            "women": 4
+          },
+          "gross_diff": 3,
+          "net_result": "DBL BOGEY",
+          "competitions": null,
+          "gross_result": "TRPL BOGEY"
+        },
+        "7": {
+          "net": 4,
+          "par": 4,
+          "gross": 5,
+          "net_diff": 0,
+          "par_index": {
+            "men": 6,
+            "women": 6
+          },
+          "gross_diff": 1,
+          "net_result": "PAR",
+          "competitions": null,
+          "gross_result": "BOGEY"
+        },
+        "8": {
+          "net": 6,
+          "par": 5,
+          "gross": 6,
+          "net_diff": 1,
+          "par_index": {
+            "men": 18,
+            "women": 14
+          },
+          "gross_diff": 1,
+          "net_result": "BOGEY",
+          "competitions": null,
+          "gross_result": "BOGEY"
+        },
+        "9": {
+          "net": 4,
+          "par": 4,
+          "gross": 5,
+          "net_diff": 0,
+          "par_index": {
+            "men": 4,
+            "women": 8
+          },
+          "gross_diff": 1,
+          "net_result": "PAR",
+          "competitions": null,
+          "gross_result": "BOGEY"
+        },
+        "10": {
+          "net": 6,
+          "par": 5,
+          "gross": 7,
+          "net_diff": 1,
+          "par_index": {
+            "men": 15,
+            "women": 15
+          },
+          "gross_diff": 2,
+          "net_result": "BOGEY",
+          "competitions": null,
+          "gross_result": "DBL BOGEY"
+        },
+        "11": {
+          "net": 2,
+          "par": 3,
+          "gross": 3,
+          "net_diff": -1,
+          "par_index": {
+            "men": 5,
+            "women": 11
+          },
+          "gross_diff": 0,
+          "net_result": "BIRDIE",
+          "competitions": null,
+          "gross_result": "PAR"
+        },
+        "12": {
+          "net": 4,
+          "par": 4,
+          "gross": 5,
+          "net_diff": 0,
+          "par_index": {
+            "men": 7,
+            "women": 13
+          },
+          "gross_diff": 1,
+          "net_result": "PAR",
+          "competitions": null,
+          "gross_result": "BOGEY"
+        },
+        "13": {
+          "net": 7,
+          "par": 5,
+          "gross": 8,
+          "net_diff": 2,
+          "par_index": {
+            "men": 17,
+            "women": 5
+          },
+          "gross_diff": 3,
+          "net_result": "DBL BOGEY",
+          "competitions": null,
+          "gross_result": "TRPL BOGEY"
+        },
+        "14": {
+          "net": 5,
+          "par": 4,
+          "gross": 6,
+          "net_diff": 1,
+          "par_index": {
+            "men": 13,
+            "women": 7
+          },
+          "gross_diff": 2,
+          "net_result": "BOGEY",
+          "competitions": null,
+          "gross_result": "DBL BOGEY"
+        },
+        "15": {
+          "net": 4,
+          "par": 3,
+          "gross": 5,
+          "net_diff": 1,
+          "par_index": {
+            "men": 9,
+            "women": 17
+          },
+          "gross_diff": 2,
+          "net_result": "BOGEY",
+          "competitions": null,
+          "gross_result": "DBL BOGEY"
+        },
+        "16": {
+          "net": 5,
+          "par": 4,
+          "gross": 6,
+          "net_diff": 1,
+          "par_index": {
+            "men": 1,
+            "women": 9
+          },
+          "gross_diff": 2,
+          "net_result": "BOGEY",
+          "competitions": null,
+          "gross_result": "DBL BOGEY"
+        },
+        "17": {
+          "net": 5,
+          "par": 4,
+          "gross": 6,
+          "net_diff": 1,
+          "par_index": {
+            "men": 11,
+            "women": 1
+          },
+          "gross_diff": 2,
+          "net_result": "BOGEY",
+          "competitions": null,
+          "gross_result": "DBL BOGEY"
+        },
+        "18": {
+          "net": 4,
+          "par": 4,
+          "gross": 5,
+          "net_diff": 0,
+          "par_index": {
+            "men": 3,
+            "women": 3
+          },
+          "gross_diff": 1,
+          "net_result": "PAR",
+          "competitions": null,
+          "gross_result": "BOGEY"
+        }
+      },
+      "flight": "B",
+      "gender": "M",
+      "net_rank": 7,
+      "tee_name": "White",
+      "net_total": 83,
+      "player_id": 25,
+      "gross_rank": 7,
+      "tee_set_id": 5,
+      "gross_total": 100,
+      "net_rank_label": "T7",
+      "course_handicap": 17,
+      "event_player_id": 623,
+      "gross_rank_label": "7",
+      "round_competitions": null
+    },
+    {
+      "name": " Todd Grady",
+      "holes": {
+        "1": {
+          "net": 3,
+          "par": 4,
+          "gross": 5,
+          "net_diff": -1,
+          "par_index": {
+            "men": 2,
+            "women": 2
+          },
+          "gross_diff": 1,
+          "net_result": "BIRDIE",
+          "competitions": null,
+          "gross_result": "BOGEY"
+        },
+        "2": {
+          "net": 3,
+          "par": 3,
+          "gross": 4,
+          "net_diff": 0,
+          "par_index": {
+            "men": 14,
+            "women": 18
+          },
+          "gross_diff": 1,
+          "net_result": "PAR",
+          "competitions": null,
+          "gross_result": "BOGEY"
+        },
+        "3": {
+          "net": 4,
+          "par": 4,
+          "gross": 5,
+          "net_diff": 0,
+          "par_index": {
+            "men": 16,
+            "women": 16
+          },
+          "gross_diff": 1,
+          "net_result": "PAR",
+          "competitions": null,
+          "gross_result": "BOGEY"
+        },
+        "4": {
+          "net": 6,
+          "par": 5,
+          "gross": 7,
+          "net_diff": 1,
+          "par_index": {
+            "men": 12,
+            "women": 10
+          },
+          "gross_diff": 2,
+          "net_result": "BOGEY",
+          "competitions": null,
+          "gross_result": "DBL BOGEY"
+        },
+        "5": {
+          "net": 3,
+          "par": 3,
+          "gross": 4,
+          "net_diff": 0,
+          "par_index": {
+            "men": 10,
+            "women": 12
+          },
+          "gross_diff": 1,
+          "net_result": "PAR",
+          "competitions": null,
+          "gross_result": "BOGEY"
+        },
+        "6": {
+          "net": 6,
+          "par": 4,
+          "gross": 7,
+          "net_diff": 2,
+          "par_index": {
+            "men": 8,
+            "women": 4
+          },
+          "gross_diff": 3,
+          "net_result": "DBL BOGEY",
+          "competitions": null,
+          "gross_result": "TRPL BOGEY"
+        },
+        "7": {
+          "net": 3,
+          "par": 4,
+          "gross": 5,
+          "net_diff": -1,
+          "par_index": {
+            "men": 6,
+            "women": 6
+          },
+          "gross_diff": 1,
+          "net_result": "BIRDIE",
+          "competitions": null,
+          "gross_result": "BOGEY"
+        },
+        "8": {
+          "net": 4,
+          "par": 5,
+          "gross": 5,
+          "net_diff": -1,
+          "par_index": {
+            "men": 18,
+            "women": 14
+          },
+          "gross_diff": 0,
+          "net_result": "BIRDIE",
+          "competitions": [
+            {
+              "name": "Net Skins",
+              "type": "NET_SKINS",
+              "value": 4,
+              "payout": 15,
+              "details": "birdie"
+            }
+          ],
+          "gross_result": "PAR"
+        },
+        "9": {
+          "net": 4,
+          "par": 4,
+          "gross": 6,
+          "net_diff": 0,
+          "par_index": {
+            "men": 4,
+            "women": 8
+          },
+          "gross_diff": 2,
+          "net_result": "PAR",
+          "competitions": null,
+          "gross_result": "DBL BOGEY"
+        },
+        "10": {
+          "net": 7,
+          "par": 5,
+          "gross": 8,
+          "net_diff": 2,
+          "par_index": {
+            "men": 15,
+            "women": 15
+          },
+          "gross_diff": 3,
+          "net_result": "DBL BOGEY",
+          "competitions": null,
+          "gross_result": "TRPL BOGEY"
+        },
+        "11": {
+          "net": 2,
+          "par": 3,
+          "gross": 4,
+          "net_diff": -1,
+          "par_index": {
+            "men": 5,
+            "women": 11
+          },
+          "gross_diff": 1,
+          "net_result": "BIRDIE",
+          "competitions": null,
+          "gross_result": "BOGEY"
+        },
+        "12": {
+          "net": 5,
+          "par": 4,
+          "gross": 6,
+          "net_diff": 1,
+          "par_index": {
+            "men": 7,
+            "women": 13
+          },
+          "gross_diff": 2,
+          "net_result": "BOGEY",
+          "competitions": null,
+          "gross_result": "DBL BOGEY"
+        },
+        "13": {
+          "net": 7,
+          "par": 5,
+          "gross": 8,
+          "net_diff": 2,
+          "par_index": {
+            "men": 17,
+            "women": 5
+          },
+          "gross_diff": 3,
+          "net_result": "DBL BOGEY",
+          "competitions": null,
+          "gross_result": "TRPL BOGEY"
+        },
+        "14": {
+          "net": 4,
+          "par": 4,
+          "gross": 5,
+          "net_diff": 0,
+          "par_index": {
+            "men": 13,
+            "women": 7
+          },
+          "gross_diff": 1,
+          "net_result": "PAR",
+          "competitions": null,
+          "gross_result": "BOGEY"
+        },
+        "15": {
+          "net": 4,
+          "par": 3,
+          "gross": 5,
+          "net_diff": 1,
+          "par_index": {
+            "men": 9,
+            "women": 17
+          },
+          "gross_diff": 2,
+          "net_result": "BOGEY",
+          "competitions": null,
+          "gross_result": "DBL BOGEY"
+        },
+        "16": {
+          "net": 4,
+          "par": 4,
+          "gross": 6,
+          "net_diff": 0,
+          "par_index": {
+            "men": 1,
+            "women": 9
+          },
+          "gross_diff": 2,
+          "net_result": "PAR",
+          "competitions": null,
+          "gross_result": "DBL BOGEY"
+        },
+        "17": {
+          "net": 6,
+          "par": 4,
+          "gross": 7,
+          "net_diff": 2,
+          "par_index": {
+            "men": 11,
+            "women": 1
+          },
+          "gross_diff": 3,
+          "net_result": "DBL BOGEY",
+          "competitions": null,
+          "gross_result": "TRPL BOGEY"
+        },
+        "18": {
+          "net": 5,
+          "par": 4,
+          "gross": 7,
+          "net_diff": 1,
+          "par_index": {
+            "men": 3,
+            "women": 3
+          },
+          "gross_diff": 3,
+          "net_result": "BOGEY",
+          "competitions": null,
+          "gross_result": "TRPL BOGEY"
+        }
+      },
+      "flight": "B",
+      "gender": "M",
+      "net_rank": 5,
+      "tee_name": "White",
+      "net_total": 80,
+      "player_id": 2,
+      "gross_rank": 8,
+      "tee_set_id": 5,
+      "gross_total": 104,
+      "net_rank_label": "5",
+      "course_handicap": 18,
+      "event_player_id": 628,
+      "gross_rank_label": "8",
+      "round_competitions": null
+    },
+    {
+      "name": "Cressy Patterson",
+      "holes": {
+        "1": {
+          "net": 2,
+          "par": 4,
+          "gross": 4,
+          "net_diff": -2,
+          "par_index": {
+            "men": 2,
+            "women": 2
+          },
+          "gross_diff": 0,
+          "net_result": "EAGLE",
+          "competitions": [
+            {
+              "name": "Net Skins",
+              "type": "NET_SKINS",
+              "value": 2,
+              "payout": 15,
+              "details": "eagle"
+            }
+          ],
+          "gross_result": "PAR"
+        },
+        "2": {
+          "net": 3,
+          "par": 3,
+          "gross": 4,
+          "net_diff": 0,
+          "par_index": {
+            "men": 14,
+            "women": 18
+          },
+          "gross_diff": 1,
+          "net_result": "PAR",
+          "competitions": null,
+          "gross_result": "BOGEY"
+        },
+        "3": {
+          "net": 5,
+          "par": 4,
+          "gross": 6,
+          "net_diff": 1,
+          "par_index": {
+            "men": 16,
+            "women": 16
+          },
+          "gross_diff": 2,
+          "net_result": "BOGEY",
+          "competitions": null,
+          "gross_result": "DBL BOGEY"
+        },
+        "4": {
+          "net": 7,
+          "par": 5,
+          "gross": 8,
+          "net_diff": 2,
+          "par_index": {
+            "men": 12,
+            "women": 10
+          },
+          "gross_diff": 3,
+          "net_result": "DBL BOGEY",
+          "competitions": null,
+          "gross_result": "TRPL BOGEY"
+        },
+        "5": {
+          "net": 4,
+          "par": 3,
+          "gross": 5,
+          "net_diff": 1,
+          "par_index": {
+            "men": 10,
+            "women": 12
+          },
+          "gross_diff": 2,
+          "net_result": "BOGEY",
+          "competitions": null,
+          "gross_result": "DBL BOGEY"
+        },
+        "6": {
+          "net": 6,
+          "par": 4,
+          "gross": 7,
+          "net_diff": 2,
+          "par_index": {
+            "men": 8,
+            "women": 4
+          },
+          "gross_diff": 3,
+          "net_result": "DBL BOGEY",
+          "competitions": null,
+          "gross_result": "TRPL BOGEY"
+        },
+        "7": {
+          "net": 6,
+          "par": 4,
+          "gross": 7,
+          "net_diff": 2,
+          "par_index": {
+            "men": 6,
+            "women": 6
+          },
+          "gross_diff": 3,
+          "net_result": "DBL BOGEY",
+          "competitions": null,
+          "gross_result": "TRPL BOGEY"
+        },
+        "8": {
+          "net": 5,
+          "par": 5,
+          "gross": 6,
+          "net_diff": 0,
+          "par_index": {
+            "men": 18,
+            "women": 14
+          },
+          "gross_diff": 1,
+          "net_result": "PAR",
+          "competitions": null,
+          "gross_result": "BOGEY"
+        },
+        "9": {
+          "net": 4,
+          "par": 4,
+          "gross": 6,
+          "net_diff": 0,
+          "par_index": {
+            "men": 4,
+            "women": 8
+          },
+          "gross_diff": 2,
+          "net_result": "PAR",
+          "competitions": null,
+          "gross_result": "DBL BOGEY"
+        },
+        "10": {
+          "net": 5,
+          "par": 5,
+          "gross": 6,
+          "net_diff": 0,
+          "par_index": {
+            "men": 15,
+            "women": 15
+          },
+          "gross_diff": 1,
+          "net_result": "PAR",
+          "competitions": null,
+          "gross_result": "BOGEY"
+        },
+        "11": {
+          "net": 3,
+          "par": 3,
+          "gross": 4,
+          "net_diff": 0,
+          "par_index": {
+            "men": 5,
+            "women": 11
+          },
+          "gross_diff": 1,
+          "net_result": "PAR",
+          "competitions": null,
+          "gross_result": "BOGEY"
+        },
+        "12": {
+          "net": 5,
+          "par": 4,
+          "gross": 6,
+          "net_diff": 1,
+          "par_index": {
+            "men": 7,
+            "women": 13
+          },
+          "gross_diff": 2,
+          "net_result": "BOGEY",
+          "competitions": null,
+          "gross_result": "DBL BOGEY"
+        },
+        "13": {
+          "net": 5,
+          "par": 5,
+          "gross": 6,
+          "net_diff": 0,
+          "par_index": {
+            "men": 17,
+            "women": 5
+          },
+          "gross_diff": 1,
+          "net_result": "PAR",
+          "competitions": null,
+          "gross_result": "BOGEY"
+        },
+        "14": {
+          "net": 5,
+          "par": 4,
+          "gross": 6,
+          "net_diff": 1,
+          "par_index": {
+            "men": 13,
+            "women": 7
+          },
+          "gross_diff": 2,
+          "net_result": "BOGEY",
+          "competitions": null,
+          "gross_result": "DBL BOGEY"
+        },
+        "15": {
+          "net": 3,
+          "par": 3,
+          "gross": 4,
+          "net_diff": 0,
+          "par_index": {
+            "men": 9,
+            "women": 17
+          },
+          "gross_diff": 1,
+          "net_result": "PAR",
+          "competitions": null,
+          "gross_result": "BOGEY"
+        },
+        "16": {
+          "net": 5,
+          "par": 4,
+          "gross": 7,
+          "net_diff": 1,
+          "par_index": {
+            "men": 1,
+            "women": 9
+          },
+          "gross_diff": 3,
+          "net_result": "BOGEY",
+          "competitions": null,
+          "gross_result": "TRPL BOGEY"
+        },
+        "17": {
+          "net": 7,
+          "par": 4,
+          "gross": 8,
+          "net_diff": 3,
+          "par_index": {
+            "men": 11,
+            "women": 1
+          },
+          "gross_diff": 4,
+          "net_result": "TRPL BOGEY",
+          "competitions": null,
+          "gross_result": "OTHER"
+        },
+        "18": {
+          "net": 3,
+          "par": 4,
+          "gross": 5,
+          "net_diff": -1,
+          "par_index": {
+            "men": 3,
+            "women": 3
+          },
+          "gross_diff": 1,
+          "net_result": "BIRDIE",
+          "competitions": null,
+          "gross_result": "BOGEY"
+        }
+      },
+      "flight": "B",
+      "gender": "F",
+      "net_rank": 7,
+      "tee_name": "Red",
+      "net_total": 83,
+      "player_id": 181,
+      "gross_rank": 9,
+      "tee_set_id": 6,
+      "gross_total": 105,
+      "net_rank_label": "T7",
+      "course_handicap": 22,
+      "event_player_id": 621,
+      "gross_rank_label": "9",
+      "round_competitions": null
+    }
+  ]
+}
