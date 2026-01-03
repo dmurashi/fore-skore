@@ -13,31 +13,26 @@
 */
 .leaderboard-scroll {
   overflow-x: auto;
-  overflow-y: hidden;
+  overflow-y: visible;
   min-width: 0;
   width: 100%;
   -webkit-overflow-scrolling: touch;
   padding-right: 4px;
 }
 
-/* Keep the table from wrapping; allow it to be wider than the container */
-/*:deep(.scorecard) {
-  min-width: 1100px;
-  border-collapse: collapse;
-}*/
-
+/* Table sizing */
 :deep(.scorecard) {
   width: max-content;   /* size to content */
-  min-width: 100%;      /* but never smaller than container */
+  min-width: 100%;      /* fill container if content is smaller */
   border-collapse: separate;
   border-spacing: 0;
-
   box-sizing: border-box;
 }
 
-/* Prevent wrapping inside cells (this is fine to enforce here) */
+/* Prevent wrapping inside cells */
 :deep(.scorecard th),
 :deep(.scorecard td) {
   white-space: nowrap;
 }
+
 </style>

@@ -3,40 +3,71 @@
 // import { ref, onMounted, computed } from 'vue'
 import EventView from '@/views/EventView.vue'
 
+import eventLogo from '@/assets/logos/madmen-mvcc.png'
 
-// const eventData = ref<any | null>(null)
-
-// onMounted(async () => {
-//   const mod = await import('@/data/events/madmen-event.json')
-//   eventData.value = mod.default
-// })
-
-// const playersByFlight = computed(() => {
-//   if (!eventData.value?.players) return {}
-
-//   return Object.values(eventData.value.players).reduce(
-//     (acc: Record<string, any[]>, player: any) => {
-//       const flight = player.flight || 'A'
-//       acc[flight] ||= []
-//       acc[flight].push(player)
-//       return acc
-//     },
-//     {}
-//   )
-// })
 </script>
 
 <template>
-  <div id="app">
-    <div class="app-shell">
-      <!-- <div v-if="eventData"> -->
-       <div> 
-        <EventView />
-      </div>
+  <div class="app-shell">
+    <header class="site-header">
+      <img
+        :src="eventLogo"
+        alt="MadMen – Moon Valley Country Club"
+        class="site-logo"
+      />
+    </header>
 
-      <!-- <div v-else>
-        Loading...
-      </div> -->
-    </div>
+    <main class="main-content">
+      <EventView />
+    </main>
+
+    <footer class="site-footer">
+      © {{ new Date().getFullYear() }} Fore-Skore Golf Solutions.
+      All rights reserved. A DGMDomains project.
+    </footer>
   </div>
 </template>
+
+
+<style scoped>
+  .site-footer {
+  max-width: 1200px;
+  margin: 48px auto 24px auto; /* center horizontally */
+  padding: 16px 24px;
+
+  font-size: 12px;
+  text-align: center;
+  letter-spacing: 0.02em;
+
+  color: #6b7280;              /* light mode */
+  border-top: 1px solid #e5e7eb;
+}
+
+.site-header {
+  max-width: 1200px;
+  margin: 24px auto 12px auto;
+  padding: 0 24px;
+  text-align: center;
+}
+
+.site-logo {
+  max-width: 220px;
+  width: 100%;
+  height: auto;
+}
+
+/* Dark mode harmony */
+@media (prefers-color-scheme: dark) {
+  .site-logo {
+    filter: brightness(0.95);
+  }
+}
+
+.main-content {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0;
+}
+
+
+</style>

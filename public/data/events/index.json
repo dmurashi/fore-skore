@@ -2,7 +2,7 @@
   "meta": {
     "family": "madmen",
     "event_count": 9,
-    "generated_at": "2026-01-03T01:44:22.866165",
+    "generated_at": "2026-01-03T21:13:53.015556",
     "schema_version": 1
   },
   "events": [
@@ -23,8 +23,8 @@
       "name": "MadMen",
       "details": "",
       "course_file": "47.course.json",
-      "total_purse": 660,
-      "player_count": 22,
+      "total_purse": 690,
+      "player_count": 23,
       "results_file": "47.json",
       "default_buy_in": 30
     },
