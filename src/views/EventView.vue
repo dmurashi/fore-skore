@@ -74,15 +74,19 @@ const eventTitle = computed(() => {
   const meta = eventJson.value?.meta
   if (!meta?.event_date) return ''
 
-  const date = new Date(meta.event_date)
+  const { event_name, event_date } = meta
 
-  const formattedDate = date.toLocaleDateString('en-US', {
+  // Force local date interpretation (no timezone shift)
+  const [year, month, day] = event_date.split('-').map(Number)
+  const localDate = new Date(year, month - 1, day)
+
+  const formattedDate = new Intl.DateTimeFormat('en-US', {
     weekday: 'long',
     month: 'short',
     day: 'numeric',
-  })
+  }).format(localDate)
 
-  return `${meta.event_name} — ${formattedDate}`
+  return `${event_name} — ${formattedDate}`
 })
 
 </script>

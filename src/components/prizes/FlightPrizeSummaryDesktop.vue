@@ -138,7 +138,7 @@ const safePlayerCount = computed(() => Number(props.playerCount ?? 0))
 }
 
 
-.player-row:hover { background: #f8fafc; }
+.player-row:hover { background: #575859; }
 
 .player-name {
   white-space: nowrap; /* keep td as a real table-cell */

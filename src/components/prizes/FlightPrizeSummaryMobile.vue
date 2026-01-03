@@ -1,4 +1,4 @@
-<!--  FlightPrizeSummaryMobile.vue -->
+<!-- FlightPrizeSummaryMobile.vue -->
 <script setup>
 import { computed } from 'vue'
 import { formatCurrency } from '@/utils/money.js'
@@ -16,9 +16,9 @@ const hasPlayers = computed(() =>
 const safePlayerCount = computed(() => Number(props.playerCount ?? 0))
 </script>
 
-
 <template>
   <div class="mobile-summary">
+    <!-- ===== Header ===== -->
     <div class="mobile-header">
       <div class="mh-left">
         <div class="mh-title">FLIGHT {{ flightName }}</div>
@@ -34,23 +34,33 @@ const safePlayerCount = computed(() => Number(props.playerCount ?? 0))
       </div>
     </div>
 
+    <!-- ===== Empty ===== -->
     <div v-if="!hasPlayers" class="mobile-empty">
       No prize results
     </div>
 
+    <!-- ===== Player List ===== -->
     <div v-else class="mobile-list">
-      <div v-for="player in summary.players" :key="player.player_id ?? player.name" class="mobile-row">
+      <div
+        v-for="player in summary.players"
+        :key="player.player_id ?? player.name"
+        class="mobile-row"
+      >
+        <!-- TOP ROW -->
         <div class="mr-top">
+          <div class="mr-left">
             <div class="mr-name">
-                <span class="mr-name-text">{{ player.name }}</span>
-                <span class="mr-count">({{ player.winCount }})</span>
+              <span class="mr-name-text">{{ player.name }}</span>
+              <span class="mr-count">({{ player.winCount }})</span>
             </div>
+          </div>
 
-            <div class="mr-amount">
-                {{ formatCurrency(player.total) }}
-            </div>
-            </div>
+          <div class="mr-amount">
+            {{ formatCurrency(player.total) }}
+          </div>
+        </div>
 
+        <!-- DETAILS -->
         <div class="mr-wins">
           {{ player.wins }}
         </div>
@@ -60,6 +70,8 @@ const safePlayerCount = computed(() => Number(props.playerCount ?? 0))
 </template>
 
 <style scoped>
+/* ===== Layout ===== */
+
 .mobile-summary {
   display: flex;
   flex-direction: column;
@@ -67,33 +79,31 @@ const safePlayerCount = computed(() => Number(props.playerCount ?? 0))
   margin: 16px 0 24px;
 }
 
+/* ===== Header ===== */
+
 .mobile-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 12px;
-  flex-wrap: wrap;           /* ✅ allow right side to drop if needed */
+  flex-wrap: wrap;
 
   border: 1px solid #d1d5db;
   background-color: #eaecee !important;
   border-radius: 14px;
-
-  padding: 12px 16px 12px 12px; /* reduce right padding; 28px is huge on mobile */
+  padding: 12px 16px;
 }
 
 .mh-left,
 .mh-right {
-  min-width: 0;              /* ✅ critical in flex layouts */
+  min-width: 0;
 }
 
 .mh-right {
   text-align: right;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-
-  padding-right: 0;          /* ✅ remove the extra inward shove */
-  flex: 1 1 auto;            /* ✅ allow shrink/grow */
+  flex: 1 1 auto;
 }
 
 .mh-title {
@@ -121,15 +131,13 @@ const safePlayerCount = computed(() => Number(props.playerCount ?? 0))
   display: flex;
   gap: 10px;
   justify-content: flex-end;
-
   font-size: 12px;
   font-weight: 800;
   color: #374151;
-
-  white-space: normal;       /* ✅ allow wrapping */
-  flex-wrap: wrap;           /* ✅ */
+  flex-wrap: wrap;
 }
 
+/* ===== Empty ===== */
 
 .mobile-empty {
   border: 1px solid #e5e7eb;
@@ -140,6 +148,8 @@ const safePlayerCount = computed(() => Number(props.playerCount ?? 0))
   text-align: center;
   background: #fff;
 }
+
+/* ===== List ===== */
 
 .mobile-list {
   display: flex;
@@ -155,10 +165,18 @@ const safePlayerCount = computed(() => Number(props.playerCount ?? 0))
   color: #111827;
 }
 
+/* ===== Player Row ===== */
+
 .mr-top {
   display: flex;
   align-items: center;
   gap: 10px;
+}
+
+/* LEFT side must be shrinkable (Safari fix) */
+.mr-left {
+  flex: 1 1 auto;
+  min-width: 0; /* 🔑 critical for iOS Safari */
 }
 
 .mr-name {
@@ -166,14 +184,12 @@ const safePlayerCount = computed(() => Number(props.playerCount ?? 0))
   align-items: center;
   gap: 8px;
   min-width: 0;
-  flex: 1 1 auto;      /* ✅ name takes remaining space */
   font-weight: 900;
   color: #111827;
 }
 
 .mr-name-text {
-  min-width: 0;        /* ✅ ellipsis reliability */
-  flex: 1 1 auto;      /* ✅ */
+  min-width: 0; /* 🔑 */
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -185,36 +201,37 @@ const safePlayerCount = computed(() => Number(props.playerCount ?? 0))
   color: #6b7280;
 }
 
+/* RIGHT side must NEVER shrink */
 .mr-amount {
-  margin-left: 8px;
-  flex: 0 0 auto;      /* ✅ amount stays readable */
-  white-space: nowrap; /* ✅ prevents weird wraps */
+  flex: 0 0 auto; /* 🔑 */
+  white-space: nowrap;
   font-weight: 900;
   color: #111827; 
 }
 
+/* ===== Details ===== */
 
 .mr-wins {
   margin-top: 8px;
-
-  /* 🔑 fixes alignment */
-  text-align: left;
-  align-self: flex-start;
-
   font-size: 12px;
   line-height: 1.35;
   color: #374151;
+  text-align: left;
 }
+
+/* ===== Small screens ===== */
 
 @media (max-width: 420px) {
   .mobile-header {
     align-items: flex-start;
     background: #e5e7eb;
   }
+
   .mh-right {
     width: 100%;
     text-align: left;
   }
+
   .mh-metrics {
     justify-content: flex-start;
   }
