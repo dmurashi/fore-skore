@@ -35,6 +35,7 @@ const flightPlayerCount = computed(() => flightPlayers.value.length)
 </script>
 
 <template>
+  <!-- 🔑 Entire flight section forced to white -->
   <section class="flight-scorecard">
     <!-- Prize Summary -->
     <FlightPrizeSummary
@@ -43,7 +44,7 @@ const flightPlayerCount = computed(() => flightPlayers.value.length)
       :player-count="flightPlayerCount"
     />
 
-    <!-- Header (now extracted) -->
+    <!-- Header -->
     <FlightHeader
       :flight="flight"
       :score-mode="scoreMode"
@@ -67,18 +68,26 @@ const flightPlayerCount = computed(() => flightPlayers.value.length)
         :prize-view="prizeView"
       />
     </LeaderboardScroll>
-    <div class="flight-separator"></div>
 
+    <!-- Separator between flights -->
+    <div class="flight-separator"></div>
   </section>
 </template>
 
 <style scoped>
+/* ========================
+   Flight container (CRITICAL FIX)
+======================== */
 
-/*.flight-scorecard {
-  max-width: 100%;
-  overflow-x: hidden;
-}*/
-  
+.flight-scorecard {
+  background-color: #ffffff !important; /* 🔑 force white in dark mode */
+  border-radius: 16px;
+  padding: 16px;
+}
+
+/* ========================
+   Header
+======================== */
 
 .flight-header {
   display: flex;
@@ -94,6 +103,10 @@ const flightPlayerCount = computed(() => flightPlayers.value.length)
   color: #111827;
 }
 
+/* ========================
+   Separator
+======================== */
+
 .flight-separator {
   margin: 36px 0;
   height: 2px;
@@ -106,8 +119,10 @@ const flightPlayerCount = computed(() => flightPlayers.value.length)
   );
 }
 
+/* ========================
+   Mode toggle (legacy / shared)
+======================== */
 
-/* Toggle */
 .mode-toggle {
   display: inline-flex;
   gap: 6px;

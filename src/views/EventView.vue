@@ -68,9 +68,31 @@ const players = computed(() =>
 const prizeSummaries = computed(() =>
   eventJson.value ? buildFlightPrizeSummary(eventJson.value) : {}
 )
+
+const eventTitle = computed(() => {
+  if (!eventJson.value?.meta) return ''
+
+  const { event_name, event_date } = eventJson.value.meta
+
+  // Force local date interpretation (no timezone shift)
+  const [year, month, day] = event_date.split('-').map(Number)
+  const localDate = new Date(year, month - 1, day)
+
+  const formattedDate = new Intl.DateTimeFormat('en-US', {
+    weekday: 'long',
+    month: 'short',
+    day: 'numeric',
+  }).format(localDate)
+
+  return `${event_name} — ${formattedDate}`
+})
+
 </script>
 
 <template>
+  <header class="event-header">
+  <h1>{{ eventTitle }}</h1>
+</header>
   <section class="leaderboard-page">
     <div v-if="loading">Loading…</div>
     <div v-else-if="error">Failed to load event</div>
@@ -101,4 +123,15 @@ const prizeSummaries = computed(() =>
   gap: 32px;
   min-width: 0;
 }
+
+.event-header {
+  margin-bottom: 24px;
+}
+
+.event-header h1 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #111827;
+}
+
 </style>
