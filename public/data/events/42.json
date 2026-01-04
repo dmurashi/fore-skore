@@ -5,11 +5,11 @@
     "event_date": "2025-12-21",
     "event_name": "MadMen",
     "total_purse": 360,
-    "generated_at": "2026-01-03T13:11:06.389301",
+    "generated_at": "2026-01-04T23:27:41.66454",
     "player_count": 12,
     "event_details": "",
     "default_buy_in": 30,
-    "schema_version": 7
+    "schema_version": 8
   },
   "players": [
     {
@@ -227,8 +227,9 @@
               "name": "CTP",
               "type": "CTP",
               "value": 0,
-              "payout": 9.4736842105263158,
-              "details": null
+              "payout": 9.47368421052631578947,
+              "details": null,
+              "win_share": 1
             }
           ],
           "gross_result": "PAR"
@@ -249,15 +250,17 @@
               "name": "Gross Skins",
               "type": "GROSS_SKINS",
               "value": 3,
-              "payout": 9.4736842105263158,
-              "details": "birdie"
+              "payout": 9.47368421052631578947,
+              "details": "BIRDIE",
+              "win_share": 1
             },
             {
               "name": "Net Skins",
               "type": "NET_SKINS",
               "value": 2,
-              "payout": 9.4736842105263158,
-              "details": "eagle"
+              "payout": 9.47368421052631578947,
+              "details": "EAGLE",
+              "win_share": 1
             }
           ],
           "gross_result": "BIRDIE"
@@ -278,15 +281,17 @@
               "name": "Gross Skins",
               "type": "GROSS_SKINS",
               "value": 3,
-              "payout": 9.4736842105263158,
-              "details": "birdie"
+              "payout": 9.47368421052631578947,
+              "details": "BIRDIE",
+              "win_share": 1
             },
             {
               "name": "Net Skins",
               "type": "NET_SKINS",
               "value": 3,
-              "payout": 9.4736842105263158,
-              "details": "birdie"
+              "payout": 9.47368421052631578947,
+              "details": "BIRDIE",
+              "win_share": 1
             }
           ],
           "gross_result": "BIRDIE"
@@ -324,15 +329,17 @@
           "name": "Final Four (Net)",
           "type": "FINAL_4_NET",
           "value": 12,
-          "payout": 9.4736842105263158,
-          "details": " Tie-break: outright"
+          "payout": 9.4736842105263157894737,
+          "details": "Tie-break: outright",
+          "win_share": 1
         },
         {
           "name": "Low Total (Net)",
           "type": "LOW_NET",
           "value": 74,
-          "payout": 9.4736842105263158,
-          "details": " Tie-break: back_9"
+          "payout": 9.4736842105263157894737,
+          "details": "Tie-break: back_9",
+          "win_share": 1
         }
       ]
     },
@@ -640,22 +647,25 @@
               "name": "CTP",
               "type": "CTP",
               "value": 0,
-              "payout": 9.4736842105263158,
-              "details": null
+              "payout": 9.47368421052631578947,
+              "details": null,
+              "win_share": 1
             },
             {
               "name": "Gross Skins",
               "type": "GROSS_SKINS",
               "value": 2,
-              "payout": 9.4736842105263158,
-              "details": "birdie"
+              "payout": 9.47368421052631578947,
+              "details": "BIRDIE",
+              "win_share": 1
             },
             {
               "name": "Net Skins",
               "type": "NET_SKINS",
               "value": 2,
-              "payout": 9.4736842105263158,
-              "details": "birdie"
+              "payout": 9.47368421052631578947,
+              "details": "BIRDIE",
+              "win_share": 1
             }
           ],
           "gross_result": "BIRDIE"
@@ -690,15 +700,17 @@
               "name": "Gross Skins",
               "type": "GROSS_SKINS",
               "value": 4,
-              "payout": 9.4736842105263158,
-              "details": "birdie"
+              "payout": 9.47368421052631578947,
+              "details": "BIRDIE",
+              "win_share": 1
             },
             {
               "name": "Net Skins",
               "type": "NET_SKINS",
               "value": 4,
-              "payout": 9.4736842105263158,
-              "details": "birdie"
+              "payout": 9.47368421052631578947,
+              "details": "BIRDIE",
+              "win_share": 1
             }
           ],
           "gross_result": "BIRDIE"
@@ -803,8 +815,9 @@
               "name": "CTP",
               "type": "CTP",
               "value": 0,
-              "payout": 9.4736842105263158,
-              "details": null
+              "payout": 9.47368421052631578947,
+              "details": null,
+              "win_share": 1
             }
           ],
           "gross_result": "PAR"
@@ -998,8 +1011,9 @@
               "name": "CTP",
               "type": "CTP",
               "value": 0,
-              "payout": 9.4736842105263158,
-              "details": null
+              "payout": 9.47368421052631578947,
+              "details": null,
+              "win_share": 1
             }
           ],
           "gross_result": "PAR"
@@ -1090,8 +1104,9 @@
               "name": "Net Skins",
               "type": "NET_SKINS",
               "value": 2,
-              "payout": 9.4736842105263158,
-              "details": "birdie"
+              "payout": 9.47368421052631578947,
+              "details": "BIRDIE",
+              "win_share": 1
             }
           ],
           "gross_result": "PAR"
@@ -1229,15 +1244,17 @@
               "name": "Gross Skins",
               "type": "GROSS_SKINS",
               "value": 3,
-              "payout": 9.4736842105263158,
-              "details": "birdie"
+              "payout": 9.47368421052631578947,
+              "details": "BIRDIE",
+              "win_share": 1
             },
             {
               "name": "Net Skins",
               "type": "NET_SKINS",
               "value": 2,
-              "payout": 9.4736842105263158,
-              "details": "eagle"
+              "payout": 9.47368421052631578947,
+              "details": "EAGLE",
+              "win_share": 1
             }
           ],
           "gross_result": "BIRDIE"
@@ -1697,15 +1714,17 @@
               "name": "Gross Skins",
               "type": "GROSS_SKINS",
               "value": 3,
-              "payout": 9.4736842105263158,
-              "details": "birdie"
+              "payout": 9.47368421052631578947,
+              "details": "BIRDIE",
+              "win_share": 1
             },
             {
               "name": "Net Skins",
               "type": "NET_SKINS",
               "value": 3,
-              "payout": 9.4736842105263158,
-              "details": "birdie"
+              "payout": 9.47368421052631578947,
+              "details": "BIRDIE",
+              "win_share": 1
             }
           ],
           "gross_result": "BIRDIE"
@@ -1843,15 +1862,17 @@
               "name": "Gross Skins",
               "type": "GROSS_SKINS",
               "value": 4,
-              "payout": 6.9230769230769231,
-              "details": "birdie"
+              "payout": 6.92307692307692307692,
+              "details": "BIRDIE",
+              "win_share": 1
             },
             {
               "name": "Net Skins",
               "type": "NET_SKINS",
               "value": 4,
-              "payout": 6.9230769230769231,
-              "details": "birdie"
+              "payout": 6.92307692307692307692,
+              "details": "BIRDIE",
+              "win_share": 1
             }
           ],
           "gross_result": "BIRDIE"
@@ -1928,15 +1949,17 @@
               "name": "Gross Skins",
               "type": "GROSS_SKINS",
               "value": 3,
-              "payout": 6.9230769230769231,
-              "details": "birdie"
+              "payout": 6.92307692307692307692,
+              "details": "BIRDIE",
+              "win_share": 1
             },
             {
               "name": "Net Skins",
               "type": "NET_SKINS",
               "value": 2,
-              "payout": 6.9230769230769231,
-              "details": "eagle"
+              "payout": 6.92307692307692307692,
+              "details": "EAGLE",
+              "win_share": 1
             }
           ],
           "gross_result": "BIRDIE"
@@ -1971,8 +1994,9 @@
               "name": "CTP",
               "type": "CTP",
               "value": 0,
-              "payout": 6.9230769230769231,
-              "details": null
+              "payout": 6.92307692307692307692,
+              "details": null,
+              "win_share": 1
             }
           ],
           "gross_result": "PAR"
@@ -2007,15 +2031,17 @@
               "name": "Gross Skins",
               "type": "GROSS_SKINS",
               "value": 5,
-              "payout": 6.9230769230769231,
-              "details": "par"
+              "payout": 6.92307692307692307692,
+              "details": "PAR",
+              "win_share": 1
             },
             {
               "name": "Net Skins",
               "type": "NET_SKINS",
               "value": 5,
-              "payout": 6.9230769230769231,
-              "details": "par"
+              "payout": 6.92307692307692307692,
+              "details": "PAR",
+              "win_share": 1
             }
           ],
           "gross_result": "PAR"
@@ -2092,15 +2118,17 @@
               "name": "Gross Skins",
               "type": "GROSS_SKINS",
               "value": 3,
-              "payout": 6.9230769230769231,
-              "details": "birdie"
+              "payout": 6.92307692307692307692,
+              "details": "BIRDIE",
+              "win_share": 1
             },
             {
               "name": "Net Skins",
               "type": "NET_SKINS",
               "value": 2,
-              "payout": 6.9230769230769231,
-              "details": "eagle"
+              "payout": 6.92307692307692307692,
+              "details": "EAGLE",
+              "win_share": 1
             }
           ],
           "gross_result": "BIRDIE"
@@ -2196,8 +2224,9 @@
               "name": "CTP",
               "type": "CTP",
               "value": 0,
-              "payout": 6.9230769230769231,
-              "details": null
+              "payout": 6.92307692307692307692,
+              "details": null,
+              "win_share": 1
             }
           ],
           "gross_result": "PAR"
@@ -2274,8 +2303,9 @@
               "name": "Gross Skins",
               "type": "GROSS_SKINS",
               "value": 5,
-              "payout": 6.9230769230769231,
-              "details": "par"
+              "payout": 6.92307692307692307692,
+              "details": "PAR",
+              "win_share": 1
             }
           ],
           "gross_result": "PAR"
@@ -2310,8 +2340,9 @@
               "name": "Net Skins",
               "type": "NET_SKINS",
               "value": 3,
-              "payout": 6.9230769230769231,
-              "details": "birdie"
+              "payout": 6.92307692307692307692,
+              "details": "BIRDIE",
+              "win_share": 1
             }
           ],
           "gross_result": "PAR"
@@ -2491,15 +2522,17 @@
               "name": "Gross Skins",
               "type": "GROSS_SKINS",
               "value": 2,
-              "payout": 6.9230769230769231,
-              "details": "birdie"
+              "payout": 6.92307692307692307692,
+              "details": "BIRDIE",
+              "win_share": 1
             },
             {
               "name": "Net Skins",
               "type": "NET_SKINS",
               "value": 1,
-              "payout": 6.9230769230769231,
-              "details": "eagle"
+              "payout": 6.92307692307692307692,
+              "details": "EAGLE",
+              "win_share": 1
             }
           ],
           "gross_result": "BIRDIE"
@@ -2520,15 +2553,17 @@
               "name": "Gross Skins",
               "type": "GROSS_SKINS",
               "value": 4,
-              "payout": 6.9230769230769231,
-              "details": "par"
+              "payout": 6.92307692307692307692,
+              "details": "PAR",
+              "win_share": 1
             },
             {
               "name": "Net Skins",
               "type": "NET_SKINS",
               "value": 3,
-              "payout": 6.9230769230769231,
-              "details": "birdie"
+              "payout": 6.92307692307692307692,
+              "details": "BIRDIE",
+              "win_share": 1
             }
           ],
           "gross_result": "PAR"
@@ -2647,8 +2682,9 @@
               "name": "Net Skins",
               "type": "NET_SKINS",
               "value": 3,
-              "payout": 6.9230769230769231,
-              "details": "birdie"
+              "payout": 6.92307692307692307692,
+              "details": "BIRDIE",
+              "win_share": 1
             }
           ],
           "gross_result": "PAR"
@@ -2728,15 +2764,17 @@
           "name": "Final Four (Net)",
           "type": "FINAL_4_NET",
           "value": 15,
-          "payout": 6.9230769230769231,
-          "details": " Tie-break: 17–18"
+          "payout": 6.9230769230769230769231,
+          "details": "Tie-break: outright",
+          "win_share": 1
         },
         {
           "name": "Low Total (Net)",
           "type": "LOW_NET",
           "value": 74,
-          "payout": 6.9230769230769231,
-          "details": " Tie-break: outright"
+          "payout": 6.9230769230769230769231,
+          "details": "Tie-break: outright",
+          "win_share": 1
         }
       ]
     },
@@ -2759,15 +2797,17 @@
               "name": "Gross Skins",
               "type": "GROSS_SKINS",
               "value": 4,
-              "payout": 6.9230769230769231,
-              "details": "par"
+              "payout": 6.92307692307692307692,
+              "details": "PAR",
+              "win_share": 1
             },
             {
               "name": "Net Skins",
               "type": "NET_SKINS",
               "value": 3,
-              "payout": 6.9230769230769231,
-              "details": "birdie"
+              "payout": 6.92307692307692307692,
+              "details": "BIRDIE",
+              "win_share": 1
             }
           ],
           "gross_result": "PAR"
@@ -2802,15 +2842,17 @@
               "name": "Gross Skins",
               "type": "GROSS_SKINS",
               "value": 3,
-              "payout": 6.9230769230769231,
-              "details": "birdie"
+              "payout": 6.92307692307692307692,
+              "details": "BIRDIE",
+              "win_share": 1
             },
             {
               "name": "Net Skins",
               "type": "NET_SKINS",
               "value": 3,
-              "payout": 6.9230769230769231,
-              "details": "birdie"
+              "payout": 6.92307692307692307692,
+              "details": "BIRDIE",
+              "win_share": 1
             }
           ],
           "gross_result": "BIRDIE"
@@ -2985,15 +3027,17 @@
               "name": "CTP",
               "type": "CTP",
               "value": 0,
-              "payout": 6.9230769230769231,
-              "details": null
+              "payout": 6.92307692307692307692,
+              "details": null,
+              "win_share": 1
             },
             {
               "name": "Net Skins",
               "type": "NET_SKINS",
               "value": 2,
-              "payout": 6.9230769230769231,
-              "details": "birdie"
+              "payout": 6.92307692307692307692,
+              "details": "BIRDIE",
+              "win_share": 1
             }
           ],
           "gross_result": "PAR"
@@ -3360,8 +3404,9 @@
               "name": "CTP",
               "type": "CTP",
               "value": 0,
-              "payout": 6.9230769230769231,
-              "details": null
+              "payout": 6.92307692307692307692,
+              "details": null,
+              "win_share": 1
             }
           ],
           "gross_result": "PAR"
