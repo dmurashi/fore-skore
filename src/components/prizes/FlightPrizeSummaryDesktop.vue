@@ -1,4 +1,4 @@
-<!--  FlightPrizeSummaryDesktop.vue -->
+<!-- FlightPrizeSummaryDesktop.vue -->
 <script setup>
 import { computed } from 'vue'
 import { formatCurrency } from '@/utils/money.js'
@@ -9,11 +9,21 @@ const props = defineProps({
   summary: { type: Object, required: true },
 })
 
-const hasPlayers = computed(() =>
-  Array.isArray(props.summary.players) && props.summary.players.length > 0
+/* ---------- Derived ---------- */
+
+const hasPlayers = computed(
+  () => Array.isArray(props.summary.players) && props.summary.players.length > 0
 )
 
 const safePlayerCount = computed(() => Number(props.playerCount ?? 0))
+
+/* ---------- Helpers ---------- */
+
+function formatWinShare(value) {
+  if (value == null) return ''
+
+  return Number(value).toFixed(2).replace(/\.?0+$/, '')
+}
 </script>
 
 <template>
@@ -28,11 +38,11 @@ const safePlayerCount = computed(() => Number(props.playerCount ?? 0))
       <thead>
         <tr class="summary-header">
           <th class="flight-header">
-          <div class="flight-header-inner">
-            <span class="flight-left">FLIGHT {{ flightName }}</span>
-            <span class="flight-right">Players: {{ safePlayerCount }}</span>
-          </div>
-        </th>
+            <div class="flight-header-inner">
+              <span class="flight-left">FLIGHT {{ flightName }}</span>
+              <span class="flight-right">Players: {{ safePlayerCount }}</span>
+            </div>
+          </th>
 
           <th class="total-header">
             {{ formatCurrency(summary.totalPot) }}
@@ -40,7 +50,7 @@ const safePlayerCount = computed(() => Number(props.playerCount ?? 0))
 
           <th class="metrics-header">
             <div class="metrics">
-              <span>Skins: {{ summary.totalWins }}</span>
+              <span>Skins: {{ Math.round(summary.totalWins) }}</span>
               <span>Per: {{ formatCurrency(summary.per) }}</span>
             </div>
           </th>
@@ -52,16 +62,31 @@ const safePlayerCount = computed(() => Number(props.playerCount ?? 0))
           <td colspan="3" class="empty-row">No prize results</td>
         </tr>
 
-        <tr v-for="player in summary.players" :key="player.player_id ?? player.name">
+        <tr
+          v-for="player in summary.players"
+          :key="player.player_id ?? player.name"
+        >
           <td class="player-name">
-          <div class="player-name-inner">
+            <div class="player-name-inner">
               <span class="player-name-text">{{ player.name }}</span>
-              <span class="win-count">{{ player.winCount }}</span>
-          </div>
+
+              <span
+                v-if="player.winShare > 0"
+                class="win-count"
+                :title="`Win share: ${player.winShare}`"
+              >
+                {{ formatWinShare(player.winShare) }}
+              </span>
+            </div>
           </td>
 
-          <td class="player-total">{{ formatCurrency(player.total) }}</td>
-          <td class="player-wins">{{ player.wins }}</td>
+          <td class="player-total">
+            {{ formatCurrency(player.total) }}
+          </td>
+
+          <td class="player-wins">
+            {{ player.wins }}
+          </td>
         </tr>
       </tbody>
     </table>

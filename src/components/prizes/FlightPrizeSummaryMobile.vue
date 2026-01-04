@@ -14,6 +14,21 @@ const hasPlayers = computed(() =>
 )
 
 const safePlayerCount = computed(() => Number(props.playerCount ?? 0))
+
+/**
+ * Round win share for display only
+ */
+function formatWinShare(value) {
+  if (!Number.isFinite(value) || value <= 0) return ''
+  return Number(value.toFixed(2))
+}
+
+/**
+ * Flight-level total wins should be whole
+ */
+const roundedTotalWins = computed(() =>
+  Math.round(Number(props.summary.totalWins || 0))
+)
 </script>
 
 <template>
@@ -28,7 +43,7 @@ const safePlayerCount = computed(() => Number(props.playerCount ?? 0))
       <div class="mh-right">
         <div class="mh-pot">{{ formatCurrency(summary.totalPot) }}</div>
         <div class="mh-metrics">
-          <span>Skins: {{ summary.totalWins }}</span>
+          <span>Skins: {{ roundedTotalWins }}</span>
           <span>Per: {{ formatCurrency(summary.per) }}</span>
         </div>
       </div>
@@ -51,7 +66,15 @@ const safePlayerCount = computed(() => Number(props.playerCount ?? 0))
           <div class="mr-left">
             <div class="mr-name">
               <span class="mr-name-text">{{ player.name }}</span>
-              <span class="mr-count">({{ player.winCount }})</span>
+
+              <!-- ✅ Win Share -->
+              <span
+                v-if="player.winShare > 0"
+                class="mr-count"
+                :title="`Win share: ${player.winShare}`"
+              >
+                ({{ formatWinShare(player.winShare) }})
+              </span>
             </div>
           </div>
 
