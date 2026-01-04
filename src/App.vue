@@ -1,5 +1,5 @@
 <!-- App.vue -->
-<script setup lang="ts">
+<script setup>
 // import { ref, onMounted, computed } from 'vue'
 import EventView from '@/views/EventView.vue'
 

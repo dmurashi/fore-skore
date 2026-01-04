@@ -156,26 +156,5 @@ const eventTitle = computed(() => {
     border-bottom: 1px solid #374151;
   }
 }
-/* ---------- Page Load Animation ---------- */
-.fade-in {
-  opacity: 0;
-  transform: translateY(12px);
-  animation: fadeInUp 650ms cubic-bezier(0.22, 1, 0.36, 1) both;
-}
 
-@keyframes fadeInUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Respect reduced motion preferences */
-@media (prefers-reduced-motion: reduce) {
-  .fade-in {
-    animation: none;
-    opacity: 1;
-    transform: none;
-  }
-}
 </style>
