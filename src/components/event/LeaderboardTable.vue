@@ -426,6 +426,11 @@ const totalUnderPar = (t) =>
   }
 }
 
+.scorecard tbody tr td.total-under-par {
+  color: #dc2626;
+  font-weight: 800;
+}
+
 /* =========================================================
    Column sizing
 ========================================================= */
@@ -476,10 +481,6 @@ const totalUnderPar = (t) =>
 tfoot tr:first-child th,
 tfoot tr:first-child td {
   border-top: 2px solid #e5e7eb;
-}
-
-.total-under-par {
-  color: #dc2626;
 }
 
 /* =========================================================
