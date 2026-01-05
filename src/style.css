@@ -1,3 +1,6 @@
+/* =========================================================
+   Root / Base
+========================================================= */
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -14,10 +17,11 @@
 }
 
 /* Root sizing: let the app use the full viewport width */
-html, body {
+html,
+body {
   width: 100%;
   max-width: 100%;
-  /* do NOT force overflow-x hidden here; it can clamp intentional scroll areas */
+  /* do NOT force overflow-x hidden here */
 }
 
 #app {
@@ -42,28 +46,35 @@ html, body {
   text-align: left;
 }
 
+/* =========================================================
+   Tables
+========================================================= */
 table {
   background: #ffffff;
-  color: #111827 ;
+  color: #111827;
 }
 
 table td,
 table th {
-  /*background: #ffffff !important;
-  color: #111827 !important; */
   color: #111827;
 }
 
-
+/* =========================================================
+   Links
+========================================================= */
 a {
   font-weight: 500;
   color: #646cff;
   text-decoration: inherit;
 }
+
 a:hover {
   color: #535bf2;
 }
 
+/* =========================================================
+   Body
+========================================================= */
 body {
   margin: 0;
   display: flex;
@@ -72,11 +83,17 @@ body {
   min-height: 100vh;
 }
 
+/* =========================================================
+   Headings
+========================================================= */
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
 }
 
+/* =========================================================
+   Default Button (NON-pill)
+========================================================= */
 button {
   border-radius: 8px;
   border: 1px solid transparent;
@@ -88,27 +105,110 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
 }
+
 button:hover {
   border-color: #646cff;
 }
+
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+/* =========================================================
+   Cards
+========================================================= */
 .card {
   padding: 2em;
 }
 
+/* =========================================================
+   Light Mode Root Overrides
+========================================================= */
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
     background-color: #ffffff;
   }
+
   a:hover {
     color: #747bff;
   }
+
   button {
     background-color: #f9f9f9;
   }
+}
+
+/* =========================================================
+   GLOBAL: Pill Toggle / Selector Buttons
+   (Mode toggles, Flight selector, etc.)
+========================================================= */
+
+/* Base pill button
+   – intentionally overrides generic button styling */
+.pill-btn {
+  padding: 8px 18px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 16px;
+  font-family: inherit;
+  cursor: pointer;
+
+  background: none;
+  border: 1.5px solid transparent;
+  outline: none;
+
+  transition:
+    background-color 120ms ease,
+    border-color 120ms ease,
+    color 120ms ease;
+}
+
+/* =========================================================
+   LIGHT MODE (DEFAULT) — MATCHES SCREENSHOT
+========================================================= */
+
+/* Unselected */
+.pill-btn {
+  background: #ffffff; /* slate */
+  color: #374151;
+  border-color: #374151;
+}
+
+/* Selected */
+.pill-btn.is-active {
+  background: #111827;
+  color: #ffffff;
+  border-color: #3b82f6; /* blue */
+}
+/* =========================================================
+   DARK MODE
+========================================================= */
+@media (prefers-color-scheme: dark) {
+  /* Unselected */
+  .pill-btn {
+    background: #1f2937; /* darker slate */
+    color: #ffffff;
+    border-color: #ffffff;
+  }
+
+  /* Selected — ALWAYS blue border */
+  .pill-btn.is-active {
+    background: #ffffff;
+    color: #111827;
+    border-color: #3b82f6; /* blue */
+  }
+}
+
+/* =========================================================
+   Optional polish (safe)
+========================================================= */
+.pill-btn:not(.is-active):hover {
+  opacity: 0.92;
+}
+
+.pill-btn:focus-visible {
+  outline: 1px solid #3b82f6;
+  outline-offset: px;
 }

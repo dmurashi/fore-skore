@@ -99,7 +99,7 @@ const totalUnderPar = (t) =>
       </tr>
 
       <tr class="par-row">
-        <th></th>
+        <th class="rank-col">-</th>
         <th class="player-col">PAR</th>
         <th></th>
 
@@ -254,8 +254,8 @@ const totalUnderPar = (t) =>
 
     <tfoot>
       <tr class="index-row">
-        <th></th>
-        <th>Index (M)</th>
+        <th class="rank-col"></th>
+        <th class="player-col">Index (M)</th>
         <th></th>
         <td v-for="h in frontNine" :key="'imf' + h">
           {{ idxMenFor(h) ?? '—' }}
@@ -270,8 +270,8 @@ const totalUnderPar = (t) =>
       </tr>
 
       <tr class="index-row">
-        <th></th>
-        <th>Index (W)</th>
+        <th class="rank-col"></th>
+        <th class="player-col">Index (W)</th>
         <th></th>
         <td v-for="h in frontNine" :key="'iwf' + h">
           {{ idxWomenFor(h) ?? '—' }}
@@ -289,12 +289,16 @@ const totalUnderPar = (t) =>
 </template>
 
 <style scoped>
-.player-name { font-weight: 700; }
+/* =========================================================
+   Base
+========================================================= */
+.player-name {
+  font-weight: 700;
+}
 
-/* ✅ “Fit if you can, scroll if you must” */
 .scorecard {
-  width: max-content;   /* natural width based on columns/content */
-  min-width: 100%;      /* but never smaller than container */
+  width: max-content;
+  min-width: 100%;
   border-collapse: collapse;
   font-size: 14px;
 }
@@ -308,34 +312,123 @@ const totalUnderPar = (t) =>
   box-sizing: border-box;
 }
 
+/* =========================================================
+   Header
+========================================================= */
 .scorecard th {
   background: #f9fafb;
   font-weight: 700;
+  color: #111827;
 }
 
-.scorecard th.player-col,
-.scorecard td.player-col {
-  text-align: left;
-}
-
-/* Hover: avoid borders (borders change layout width) */
-.scorecard tbody tr:hover td {
-  background: #f3f4f6;
-}
-
-.scorecard tbody tr:hover td.player-col {
-  box-shadow: inset 1.5px 0 0 #2563eb; /* same vibe, no width inflation */
-}
-
+/* =========================================================
+   Sticky columns (NO custom background)
+========================================================= */
 .rank-col {
   width: 32px;
   min-width: 32px;
   max-width: 32px;
-  text-align: center;
   font-weight: 600;
-  color: #374151;
 }
 
+.scorecard th.rank-col,
+.scorecard td.rank-col {
+  position: sticky;
+  left: 0;
+  z-index: 4;
+  box-shadow:
+    inset 1px 0 0 #e5e7eb,   /* left edge */
+    inset -1px 0 0 #e5e7eb;  /* right edge */
+}
+
+.scorecard th.player-col,
+.scorecard td.player-col {
+  position: sticky;
+  left: 32px;
+  z-index: 3;
+  text-align: left;
+  box-shadow: 1px 0 0 rgba(0, 0, 0, 0.06);
+  
+}
+
+/* =========================================================
+   Body rows
+========================================================= */
+.scorecard tbody tr td {
+  background: #ffffff;
+  color: #111827;
+}
+
+.scorecard tbody tr:hover td {
+  background: #f3f4f6;
+}
+
+/* =========================================
+   Player row hover highlight (LEFT BLUE BAR)
+========================================= */
+
+/* Ensure the player column is sticky */
+.player-col {
+  position: sticky;
+  left: 0;
+  background: white;
+  z-index: 3;
+}
+
+/* Create the hover rail */
+.player-col::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 2px;
+  height: 100%;
+  background: transparent;
+  transition: background-color 120ms ease;
+}
+
+/* Activate on row hover */
+.scorecard tbody tr:hover .player-col::before {
+  background-color: #3b82f6; /* Tailwind blue-500 */
+}
+
+
+/* =========================================================
+   Dark mode — PAPER STAYS WHITE
+========================================================= */
+@media (prefers-color-scheme: dark) {
+  /* Borders slightly stronger for contrast */
+  .scorecard th,
+  .scorecard td {
+    border-color: #d1d5db;
+  }
+
+  /* Text remains dark-on-white */
+  .scorecard th {
+    background: #f9fafb;
+    color: #111827;
+  }
+
+  .scorecard tbody tr td {
+    background: #ffffff;
+    color: #111827;
+  }
+
+  /* Hover remains subtle */
+  .scorecard tbody tr:hover td {
+    background: #f3f4f6;
+  }
+
+  /* Sticky divider shadow tuned for dark chrome */
+  .scorecard th.player-col,
+  .scorecard td.player-col {
+    box-shadow: 0.5px 0 0 rgba(0, 0, 0, 0.12);
+  }
+}
+
+/* =========================================================
+   Column sizing
+========================================================= */
 .hole-col {
   width: 32px;
   position: relative;
@@ -351,20 +444,20 @@ const totalUnderPar = (t) =>
   font-weight: 800;
 }
 
-.placeholder { color: #9ca3af; }
-
-/* PAR row */
-.par-row th {
-  background: #f3f4f6;
-  color: #6b7280;
+.placeholder {
+  color: #9ca3af;
 }
 
+/* =========================================================
+   PAR / Index rows
+========================================================= */
 .par-row th,
 .par-row td {
-  border-bottom: 2px solid #e5e7eb;
+  background: #f3f4f6;
+  color: #6b7280;
+  border-bottom: 1px solid #e5e7eb;
 }
 
-/* Index rows */
 .index-row th,
 .index-row td {
   background: #fafafa;
@@ -373,22 +466,28 @@ const totalUnderPar = (t) =>
 }
 
 .index-row th:nth-child(2) {
-  text-align: left !important;
+  text-align: left;
   padding-left: 12px;
 }
 
+/* =========================================================
+   Footer
+========================================================= */
 tfoot tr:first-child th,
 tfoot tr:first-child td {
   border-top: 2px solid #e5e7eb;
 }
 
-.total-under-par { color: #dc2626; }
+.total-under-par {
+  color: #dc2626;
+}
 
-/* Tee column */
+/* =========================================================
+   Tee column
+========================================================= */
 .tee-col {
   width: 28px;
   text-align: center;
-  background-color: #f9fafb;
 }
 
 .tee-badge {
@@ -396,22 +495,24 @@ tfoot tr:first-child td {
   width: 14px;
   height: 14px;
   border-radius: 2px;
-  box-sizing: border-box;
 }
 
-/* ---------- Hole score styling ---------- */
+/* =========================================================
+   Hole score styling
+========================================================= */
 .hole-score {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   width: 24px;
   height: 24px;
-  font-weight: 400;
   line-height: 1;
-  box-sizing: border-box;
 }
 
-.score-birdie { border: 1.5px solid #22c55e; border-radius: 50%; }
+.score-birdie {
+  border: 1.5px solid #22c55e;
+  border-radius: 50%;
+}
 
 .score-eagle {
   position: relative;
@@ -426,7 +527,10 @@ tfoot tr:first-child td {
   border-radius: 50%;
 }
 
-.score-bogey { border: 1px solid #9ca3af; border-radius: 3px; }
+.score-bogey {
+  border: 1px solid #9ca3af;
+  border-radius: 3px;
+}
 
 .score-dbl-bogey-plus {
   position: relative;
@@ -441,63 +545,57 @@ tfoot tr:first-child td {
   border-radius: 2px;
 }
 
-/* ---------- dots for strokes ---------- */
+/* =========================================================
+   Stroke indicators
+========================================================= */
 .stroke-indicator {
   position: absolute;
   top: 0.3px;
   left: 52%;
   transform: translateX(-50%);
   pointer-events: none;
-  line-height: 0;
-  height: 0;
 }
 
 .stroke-dots {
   font-size: 4px;
-  line-height: 1;
   color: #870909;
   opacity: 0.5;
-  letter-spacing: 1px;
-  display: inline-block;
 }
 
 .stroke-plus {
   font-size: 7px;
   font-weight: 600;
-  line-height: 1;
   color: #023ec0;
   opacity: 0.5;
-  display: inline-block;
 }
 
-/* CTP badge — lower right corner */
+/* =========================================================
+   CTP
+========================================================= */
 .ctp-badge {
   position: absolute;
   bottom: 1px;
   right: 1px;
   font-size: 18px;
-  line-height: 1;
   pointer-events: none;
 }
 
-/* ---------- Prize badges ---------- */
+/* =========================================================
+   Prize badges
+========================================================= */
 .badge {
   display: inline-flex;
-  align-items: center;
   gap: 4px;
   margin-left: 8px;
   padding: 2px 8px;
   font-size: 11px;
   font-weight: 700;
   border-radius: 999px;
-  line-height: 1.3;
-  white-space: nowrap;
 }
 
 .badge.low-net {
   background: #eb253fd9;
   color: #ffffff;
-  margin-left: 10px;
 }
 
 .badge.low-gross {
@@ -506,35 +604,26 @@ tfoot tr:first-child td {
   background: transparent;
 }
 
-/* ------- PRIZES / SKINS CELLS --------- */
-/* NOTE: must beat any td { background: ... } shorthand rules */
+/* =========================================================
+   Skins
+========================================================= */
 .scorecard td.gross-skin,
 .scorecard td.net-skin,
 .scorecard td.both-skins {
   background-size: 3px 3px !important;
   background-position: 0 0, 1.5px 1.5px !important;
-  background-repeat: repeat !important;
 }
 
 .scorecard td.gross-skin {
   background-color: #c1f873 !important;
-  background-image:
-    radial-gradient(rgba(255, 255, 255, 0.078) 1px, transparent 1px),
-    radial-gradient(rgba(0, 0, 0, 0.12) 1px, transparent 1px) !important;
 }
 
 .scorecard td.net-skin {
   background-color: #52b9fd80 !important;
-  background-image:
-    radial-gradient(rgba(255, 255, 255, 0.078) 1px, transparent 1px),
-    radial-gradient(rgba(0, 0, 0, 0.12) 1px, transparent 1px) !important;
 }
 
 .scorecard td.both-skins {
   background-color: #b61604ed !important;
-  background-image:
-    radial-gradient(rgba(255, 255, 255, 0.12) 1px, transparent 1px),
-    radial-gradient(rgba(0, 0, 0, 0.12) 1px, transparent 1px) !important;
 }
 
 .scorecard td.both-skins .hole-score {
@@ -542,13 +631,11 @@ tfoot tr:first-child td {
   font-weight: 700;
 }
 
-
-
-/* FINAL 4 NET grouping (✅ zero layout width change) */
+/* =========================================================
+   FINAL 4 NET
+========================================================= */
 .final4 {
-  box-shadow:
-    inset 0 2px 0 #2563eb,
-    inset 0 -2px 0 #2563eb;
+  box-shadow: inset 0 2px 0 #2563eb, inset 0 -2px 0 #2563eb;
 }
 .final4.first {
   box-shadow:
@@ -563,3 +650,4 @@ tfoot tr:first-child td {
     inset 0 -2px 0 #2563eb;
 }
 </style>
+

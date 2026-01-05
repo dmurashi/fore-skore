@@ -163,8 +163,8 @@ const eventTitle = computed(() => {
           <button
             v-for="flight in flights"
             :key="flight"
-            class="flight-btn"
-            :class="{ active: flight === selectedFlight }"
+            class="pill-btn"
+            :class="{ 'is-active': flight === selectedFlight }"
             @click="selectedFlight = flight"
           >
             Flight {{ flight }}
@@ -192,6 +192,7 @@ const eventTitle = computed(() => {
 </template>
 
 <style scoped>
+
 .event-view {
   display: flex;
   flex-direction: column;
@@ -207,6 +208,12 @@ const eventTitle = computed(() => {
   text-align: center;
   color: #1f2937;
   max-width: 1250px;
+}
+
+ @media (prefers-color-scheme: dark) {
+  .event-view .event-title {
+    color: #ffffff;
+  }
 }
 
 /* ---------- Event Selector ---------- */
@@ -233,18 +240,4 @@ const eventTitle = computed(() => {
   max-width: 1250px;
 }
 
-.flight-btn {
-  padding: 6px 14px;
-  border-radius: 999px;
-  border: 1px solid #d1d5db;
-  background: #f9fafb;
-  font-weight: 600;
-  font-size: 13px;
-  cursor: pointer;
-}
-
-.flight-btn.active {
-  background: #111827;
-  color: #ffffff;
-}
 </style>
