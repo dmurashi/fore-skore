@@ -51,7 +51,7 @@ import eventLogo from '@/assets/logos/madmen-mvcc.png'
 }
 
 .site-logo {
-  max-width: 220px;
+  max-width: 160px;
   width: 100%;
   height: auto;
 }
