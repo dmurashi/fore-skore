@@ -1,10 +1,12 @@
 <!-- src/views/EventView.vue -->
 <script setup>
+  console.log(import.meta.env)
 console.log('URL search:', window.location.search)
 
 import { ref, computed, onMounted, watch } from 'vue'
 import FlightSection from '@/components/event/FlightSection.vue'
 import { buildFlightPrizeSummary } from '@/utils/prizeReducer'
+import { DATA_BASE_URL } from '@/config/datasources'
 
 /* ---------- Helpers ---------- */
 const getEventIdFromQuery = () => {
@@ -27,7 +29,7 @@ const selectedFlight = ref(null)
 
 /* ---------- Loaders ---------- */
 const loadEventIndex = async () => {
-  const res = await fetch('/data/events/index.json')
+  const res = await fetch(`${DATA_BASE_URL}/events/index.json`)
   if (!res.ok) throw new Error('Failed to load event index')
   const json = await res.json()
 
@@ -47,12 +49,12 @@ const loadEvent = async (eventId) => {
   selectedFlight.value = null
 
   try {
-    const eventRes = await fetch(`/data/events/${eventId}.json`)
+    const eventRes = await fetch(`${DATA_BASE_URL}/events/${eventId}.json`)
     if (!eventRes.ok) throw new Error('Failed to load event')
     eventJson.value = await eventRes.json()
 
     const courseId = eventJson.value?.meta?.course_id ?? eventId
-    const courseRes = await fetch(`/data/courses/${courseId}.json`)
+    const courseRes = await fetch(`${DATA_BASE_URL}/courses/${courseId}.json`)
     if (!courseRes.ok) throw new Error('Failed to load course')
     courseManifest.value = await courseRes.json()
 
@@ -133,6 +135,7 @@ const eventTitle = computed(() => {
   return `Results:\u00A0\u00A0${formattedDate}`
 })
 </script>
+
 
 <template>
   <div class="event-view" :class="{ 'fade-in': !loading }">
