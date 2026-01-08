@@ -4,7 +4,7 @@ const raw = import.meta.env.VITE_DATA_BASE_URL || '/data'
 export const BASE = raw.replace(/\/+$/, '')
 
 export const familyIndexUrl = f =>
-  `${BASE}/family-index.json`
+  `${BASE}/${f}/family-index.json`
 
 export const monthIndexUrl = (f, y, m) =>
   `${BASE}/${f}/events/${y}/${m}/index.json`
