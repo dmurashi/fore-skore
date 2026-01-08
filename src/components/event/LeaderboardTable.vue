@@ -551,21 +551,26 @@ tfoot tr:first-child td {
 ========================================================= */
 .stroke-indicator {
   position: absolute;
-  top: 0.3px;
-  left: 52%;
+  top: 2px;              /* visual offset from top border */
+  left: 50%;
   transform: translateX(-50%);
+  line-height: 1;
   pointer-events: none;
 }
 
 .stroke-dots {
   font-size: 4px;
+  line-height: 1;
+  display: block;
   color: #870909;
   opacity: 0.5;
 }
 
 .stroke-plus {
   font-size: 7px;
+  line-height: 1;
   font-weight: 600;
+  display: block;
   color: #023ec0;
   opacity: 0.5;
 }

@@ -1,25 +1,42 @@
 <!-- src/views/EventView.vue -->
 <script setup>
-  console.log(import.meta.env)
-console.log('URL search:', window.location.search)
-
+/* =======================
+ * Imports
+ * ======================= */
 import { ref, computed, onMounted, watch } from 'vue'
+
 import FlightSection from '@/components/event/FlightSection.vue'
 import { buildFlightPrizeSummary } from '@/utils/prizeReducer'
-import { DATA_BASE_URL } from '@/config/datasources'
+import {
+  familyIndexUrl,
+  monthIndexUrl,
+  eventUrl,
+  courseUrl,
+} from '@/config/datasources'
 
-/* ---------- Helpers ---------- */
-const getEventIdFromQuery = () => {
-  const params = new URLSearchParams(window.location.search)
-  return params.get('event_id')
-}
+/* =======================
+ * Constants
+ * ======================= */
+const FAMILY = 'madmen'
+const DEFAULT_TEE_SET_ID = '1'
 
-/* ---------- State ---------- */
-const eventIndex = ref([])
-const selectedEventId = ref(getEventIdFromQuery())
-
+/* =======================
+ * State
+ * ======================= */
 const eventJson = ref(null)
 const courseManifest = ref(null)
+
+const familyIndex = ref(null)
+
+const monthOptions = ref([])        // [{ key, year, month, path }]
+const selectedMonthKey = ref(null)
+
+const monthEvents = ref([])         // events for selector
+const selectedEventId = ref(null)
+
+const currentYear = ref(null)
+const currentMonth = ref(null)
+
 const loading = ref(true)
 const error = ref(false)
 
@@ -27,41 +44,84 @@ const scoreMode = ref('gross')
 const prizeView = ref(false)
 const selectedFlight = ref(null)
 
-/* ---------- Loaders ---------- */
-const loadEventIndex = async () => {
-  const res = await fetch(`${DATA_BASE_URL}/events/index.json`)
-  if (!res.ok) throw new Error('Failed to load event index')
-  const json = await res.json()
-
-  eventIndex.value = json.events ?? []
-
-  // Default to latest event if none selected
-  if (!selectedEventId.value && eventIndex.value.length) {
-    selectedEventId.value = eventIndex.value[0].id
-  }
+/* =======================
+ * Helpers
+ * ======================= */
+async function fetchJson(url) {
+  const res = await fetch(url, { cache: 'no-store' })
+  if (!res.ok) throw new Error(`${res.status} ${res.statusText}`)
+  return res.json()
 }
 
-const loadEvent = async (eventId) => {
-  if (!eventId) return
+const loadMonthIndex = async ({ year, month, path }) => {
+  const url = path
+    ? `${import.meta.env.VITE_DATA_BASE_URL}/${FAMILY}/${path}`
+    : monthIndexUrl(FAMILY, year, month)
 
+  const monthJson = await fetchJson(url)
+  monthEvents.value = monthJson.events ?? []
+}
+
+const loadEventAndCourse = async ({ year, month, event_id }) => {
+  const eventRes = await fetchJson(
+    eventUrl({ f: FAMILY, y: year, m: month, id: event_id })
+  )
+  eventJson.value = eventRes
+
+  const courseRes = await fetchJson(
+    courseUrl({ f: FAMILY, y: year, m: month, id: event_id })
+  )
+  courseManifest.value = courseRes
+
+  const params = new URLSearchParams(window.location.search)
+  params.set('event_id', event_id)
+  window.history.replaceState({}, '', `?${params}`)
+}
+
+/* =======================
+ * Initial Load (Latest)
+ * ======================= */
+const loadLatestEvent = async () => {
   loading.value = true
   error.value = false
   selectedFlight.value = null
 
   try {
-    const eventRes = await fetch(`${DATA_BASE_URL}/events/${eventId}.json`)
-    if (!eventRes.ok) throw new Error('Failed to load event')
-    eventJson.value = await eventRes.json()
+    const fam = await fetchJson(familyIndexUrl(FAMILY))
+    if (!fam?.latest) throw new Error('family-index missing latest')
 
-    const courseId = eventJson.value?.meta?.course_id ?? eventId
-    const courseRes = await fetch(`${DATA_BASE_URL}/courses/${courseId}.json`)
-    if (!courseRes.ok) throw new Error('Failed to load course')
-    courseManifest.value = await courseRes.json()
+    familyIndex.value = fam
 
-    // keep URL in sync
-    const params = new URLSearchParams(window.location.search)
-    params.set('event_id', eventId)
-    window.history.replaceState({}, '', `?${params}`)
+    // build month selector
+    const monthsObj = fam.months ?? {}
+    monthOptions.value = Object.entries(monthsObj)
+      .map(([key, v]) => ({
+        key,
+        year: Number(v.year),
+        month: String(v.month).padStart(2, '0'),
+        path: v.path,
+      }))
+      .sort((a, b) => b.key.localeCompare(a.key))
+
+    const { year, month, event_id } = fam.latest
+
+    currentYear.value = Number(year)
+    currentMonth.value = String(month).padStart(2, '0')
+    selectedMonthKey.value = `${currentYear.value}-${currentMonth.value}`
+
+    await loadMonthIndex({
+      year: currentYear.value,
+      month: currentMonth.value,
+      path: monthsObj[selectedMonthKey.value]?.path,
+    })
+
+    selectedEventId.value = String(event_id)
+
+    await loadEventAndCourse({
+      year: currentYear.value,
+      month: currentMonth.value,
+      event_id: selectedEventId.value,
+    })
   } catch (e) {
     console.error(e)
     error.value = true
@@ -70,61 +130,111 @@ const loadEvent = async (eventId) => {
   }
 }
 
-/* ---------- Init ---------- */
-onMounted(async () => {
+/* =======================
+ * React to Month Change
+ * ======================= */
+watch(selectedMonthKey, async (key) => {
+  if (!key || !familyIndex.value?.months?.[key]) return
+
+  loading.value = true
+  error.value = false
+  selectedFlight.value = null
+
   try {
-    await loadEventIndex()
-    await loadEvent(selectedEventId.value)
+    const meta = familyIndex.value.months[key]
+    currentYear.value = Number(meta.year)
+    currentMonth.value = String(meta.month).padStart(2, '0')
+
+    await loadMonthIndex({
+      year: currentYear.value,
+      month: currentMonth.value,
+      path: meta.path,
+    })
+
+    const first = monthEvents.value?.[0]
+    selectedEventId.value = first ? String(first.event_id) : null
   } catch (e) {
     console.error(e)
     error.value = true
+  } finally {
     loading.value = false
   }
 })
 
-/* ---------- Reload when event changes ---------- */
-watch(selectedEventId, (id) => {
-  loadEvent(id)
+/* =======================
+ * React to Event Change
+ * ======================= */
+watch(selectedEventId, async (id) => {
+  if (!id || !currentYear.value || !currentMonth.value) return
+
+  loading.value = true
+  error.value = false
+  selectedFlight.value = null
+
+  try {
+    await loadEventAndCourse({
+      year: currentYear.value,
+      month: currentMonth.value,
+      event_id: String(id),
+    })
+  } catch (e) {
+    console.error(e)
+    error.value = true
+  } finally {
+    loading.value = false
+  }
 })
 
-/* ---------- Course / Tee ---------- */
-const teeSetId = '1'
+/* =======================
+ * Init
+ * ======================= */
+onMounted(loadLatestEvent)
+
+/* =======================
+ * Course / Tee
+ * ======================= */
 const teeSet = computed(() =>
-  courseManifest.value?.courses?.[0]?.tee_sets?.[teeSetId] ?? { holes: {} }
+  courseManifest.value?.courses?.[0]?.tee_sets?.[DEFAULT_TEE_SET_ID] ?? { holes: {} }
 )
 
-/* ---------- Derived ---------- */
+/* =======================
+ * Derived
+ * ======================= */
 const scoreModeLabel = computed(() =>
   scoreMode.value === 'net' ? 'Net' : 'Gross'
 )
-
-const flights = computed(() => {
-  if (!eventJson.value?.players) return []
-  return [...new Set(eventJson.value.players.map(p => p.flight))]
-})
 
 const players = computed(() =>
   eventJson.value?.players ?? []
 )
 
+const flights = computed(() => {
+  if (!players.value.length) return []
+  return [...new Set(players.value.map(p => p.flight))]
+})
+
 const prizeSummaries = computed(() =>
   eventJson.value ? buildFlightPrizeSummary(eventJson.value) : {}
 )
 
-/* ---------- Default Flight Selection ---------- */
+/* =======================
+ * Default Flight Selection
+ * ======================= */
 watch(flights, (newFlights) => {
   if (!selectedFlight.value && newFlights.length) {
     selectedFlight.value = newFlights[0]
   }
 })
 
-/* ---------- Event Title ---------- */
+/* =======================
+ * Event Title
+ * ======================= */
 const eventTitle = computed(() => {
   const meta = eventJson.value?.meta
   if (!meta?.event_date) return ''
 
-  const [year, month, day] = meta.event_date.split('-').map(Number)
-  const localDate = new Date(year, month - 1, day)
+  const [y, m, d] = meta.event_date.split('-').map(Number)
+  const localDate = new Date(y, m - 1, d)
 
   const formattedDate = new Intl.DateTimeFormat('en-US', {
     weekday: 'long',
@@ -135,7 +245,6 @@ const eventTitle = computed(() => {
   return `Results:\u00A0\u00A0${formattedDate}`
 })
 </script>
-
 
 <template>
   <div class="event-view" :class="{ 'fade-in': !loading }">
@@ -148,15 +257,25 @@ const eventTitle = computed(() => {
       <div v-else-if="error">Failed to load event</div>
 
       <template v-else>
-        <!-- Event Selector -->
+        <!-- Month + Event Selector -->
         <div class="event-selector">
+          <select v-model="selectedMonthKey">
+            <option
+              v-for="m in monthOptions"
+              :key="m.key"
+              :value="m.key"
+            >
+              {{ m.key }}
+            </option>
+          </select>
+
           <select v-model="selectedEventId">
             <option
-              v-for="e in eventIndex"
-              :key="e.id"
-              :value="e.id"
+              v-for="e in monthEvents"
+              :key="e.event_id"
+              :value="String(e.event_id)"
             >
-              {{ e.name }} — {{ e.date }}
+              {{ e.name }} – {{ e.date }}
             </option>
           </select>
         </div>
@@ -195,7 +314,6 @@ const eventTitle = computed(() => {
 </template>
 
 <style scoped>
-
 .event-view {
   display: flex;
   flex-direction: column;
@@ -213,7 +331,7 @@ const eventTitle = computed(() => {
   max-width: 1250px;
 }
 
- @media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: dark) {
   .event-view .event-title {
     color: #ffffff;
   }
@@ -223,8 +341,8 @@ const eventTitle = computed(() => {
 .event-selector {
   display: flex;
   justify-content: center;
+  gap: 10px;
   margin-bottom: 20px;
-  
 }
 
 .event-selector select {
@@ -242,5 +360,4 @@ const eventTitle = computed(() => {
   flex-wrap: wrap;
   max-width: 1250px;
 }
-
 </style>

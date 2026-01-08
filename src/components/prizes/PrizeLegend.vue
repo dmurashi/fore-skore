@@ -59,30 +59,16 @@
 
 /* SKINS STYLING (legend samples use same classes) */
 .gross-skin {
-  background-color: #c1f873;
-  background-image:
-    radial-gradient(rgba(255, 255, 255, 0.078) 1px, transparent 1px),
-    radial-gradient(rgba(0,0,0,0.12) 1px, transparent 1px);
-  background-size: 3px 3px;
-  background-position: 0 0, 1.5px 1.5px;
+  background-color: #c1f873  !important;
 }
 
 .net-skin {
-  background-color: #52b9fd80;
-  background-image:
-    radial-gradient(rgba(255, 255, 255, 0.078) 1px, transparent 1px),
-    radial-gradient(rgba(0,0,0,0.12) 1px, transparent 1px);
-  background-size: 3px 3px;
-  background-position: 0 0, 1.5px 1.5px;
+  background-color: #52b9fd80 !important;
 }
 
 .both-skins {
-  background-color: #b61604ed;
-  background-image:
-    radial-gradient(rgba(255,255,255,0.12) 1px, transparent 1px),
-    radial-gradient(rgba(0,0,0,0.12) 1px, transparent 1px);
-  background-size: 3px 3px;
-  background-position: 0 0, 1.5px 1.5px;
+  background-color: #b61604ed !important;
+ 
 }
 
 /* FINAL 4 outline sample */
