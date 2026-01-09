@@ -185,21 +185,7 @@ button:focus-visible {
 /* =========================================================
    DARK MODE
 ========================================================= */
-@media (prefers-color-scheme: dark) {
-  /* Unselected */
-  .pill-btn {
-    background: #1f2937; /* darker slate */
-    color: #ffffff;
-    border-color: #ffffff;
-  }
 
-  /* Selected — ALWAYS blue border */
-  .pill-btn.is-active {
-    background: #ffffff;
-    color: #111827;
-    border-color: #3b82f6; /* blue */
-  }
-}
 
 /* =========================================================
    Optional polish (safe)

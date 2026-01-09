@@ -6,6 +6,7 @@ import PrizeLegend from '@/components/prizes/PrizeLegend.vue'
 import FlightPrizeSummary from '@/components/prizes/FlightPrizeSummary.vue'
 import LeaderboardScroll from './LeaderboardScroll.vue'
 import LeaderboardTable from './LeaderboardTable.vue'
+import FlightStats from '@/components/stats/FlightStats.vue'
 
 /* ========================
   Props
@@ -69,6 +70,11 @@ const flightPlayerCount = computed(() => flightPlayers.value.length)
       />
     </LeaderboardScroll>
 
+    <FlightStats
+      :players="flightPlayers"
+      :score-mode="scoreMode"
+    />
+
     <!-- Separator between flights -->
     <div class="flight-separator"></div>
   </section>
@@ -83,6 +89,7 @@ const flightPlayerCount = computed(() => flightPlayers.value.length)
   background-color: #ffffff !important; /* 🔑 force white in dark mode */
   border-radius: 16px;
   padding: 16px;
+  overflow: hidden;
 }
 
 /* ========================
