@@ -13,6 +13,7 @@ import {
   receivesStrokes,
   hasCTP,
   isLowGrossWinner,
+  isLowNetWinner
 } from '@/utils/leaderboardHelpers'
 
 const props = defineProps({
@@ -54,20 +55,32 @@ const roundTotal = (p) => {
   return f == null && b == null ? null : (f ?? 0) + (b ?? 0)
 }
 
-/* ---------- SORTING (THIS WAS BROKEN) ---------- */
+/* ---------- SORTING  ---------- */
 const viewPlayers = computed(() => {
   return [...props.players].sort((a, b) => {
     const ta = roundTotal(a)
     const tb = roundTotal(b)
 
+    // Nulls last
     if (ta == null && tb == null) return a.name.localeCompare(b.name)
     if (ta == null) return 1
     if (tb == null) return -1
+
+    // Primary: total
     if (ta !== tb) return ta - tb
+
+    // 🔥 NET MODE TIEBREAK: Low Net winner first
+    if (props.scoreMode === 'net') {
+      const aLow = isLowNetWinner(a)
+      const bLow = isLowNetWinner(b)
+      if (aLow !== bLow) return aLow ? -1 : 1
+    }
 
     return a.name.localeCompare(b.name)
   })
 })
+
+
 
 /* ---------- RANK LABEL ---------- */
 const rankLabel = (p) =>

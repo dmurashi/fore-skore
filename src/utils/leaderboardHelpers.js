@@ -91,6 +91,10 @@ export function hasCTP(hole) {
 export function isLowGrossWinner(player) {
   return player?.gross_rank === 1
 }
+export function isLowNetWinner(player) {
+  return Array.isArray(player?.round_competitions)
+    && player.round_competitions.some(c => c.type === 'LOW_NET')
+}
 
 export function holeClasses(player, holeNumber, prizeView) {
   const classes = []
