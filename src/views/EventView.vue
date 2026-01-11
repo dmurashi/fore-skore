@@ -151,8 +151,11 @@ watch(selectedMonthKey, async (key) => {
       path: meta.path,
     })
 
-    const first = monthEvents.value?.[0]
-    selectedEventId.value = first ? String(first.event_id) : null
+    // only auto-select if nothing is selected yet
+if (!selectedEventId.value && monthEvents.value?.length) {
+  selectedEventId.value = String(monthEvents.value[0].event_id)
+}
+
   } catch (e) {
     console.error(e)
     error.value = true
