@@ -3,7 +3,7 @@
 /* =======================
  * Imports
  * ======================= */
-import { ref, computed, onMounted, watch } from 'vue'
+import { ref, computed, watch, onMounted, nextTick } from 'vue'
 
 import FlightSection from '@/components/event/FlightSection.vue'
 import { buildFlightPrizeSummary } from '@/utils/prizeReducer'
@@ -152,9 +152,10 @@ watch(selectedMonthKey, async (key) => {
     })
 
     // only auto-select if nothing is selected yet
-if (!selectedEventId.value && monthEvents.value?.length) {
-  selectedEventId.value = String(monthEvents.value[0].event_id)
-}
+    selectedEventId.value = null
+    await nextTick()
+    selectedEventId.value = monthEvents.value?.[0]?.event_id ?? null
+
 
   } catch (e) {
     console.error(e)
@@ -187,6 +188,7 @@ watch(selectedEventId, async (id) => {
     loading.value = false
   }
 })
+
 
 /* =======================
  * Init
