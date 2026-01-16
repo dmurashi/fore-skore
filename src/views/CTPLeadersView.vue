@@ -1,21 +1,20 @@
 <!-- src/views/CTPLeadersView.vue -->
 <script setup>
 import { ref, computed, onMounted, onBeforeUnmount } from "vue";
-import { useRoute } from "vue-router";
 import { ctpUrl } from "@/config/datasources";
 
-const route = useRoute();
-
-// ✅ event id (param-first, query fallback)
-const eventId = computed(() =>
-  String(route.params.eventId ?? route.query.event_id ?? "")
-);
-
-// TEMP: hardcode while UI settles (next step = derive from event JSON)
+// --------------------------------------------------
+// Config (temporary hardcode)
+// --------------------------------------------------
 const family = "madmen";
 const year = "2026";
 const month = "01";
 
+const POLL_MS = 15000;
+
+// --------------------------------------------------
+// State
+// --------------------------------------------------
 const data = ref(null);
 const loading = ref(false);
 const error = ref("");
@@ -24,22 +23,24 @@ const flightFilter = ref("ALL");
 const holeFilter = ref("ALL");
 const search = ref("");
 
-const POLL_MS = 15000;
 let timer = null;
 
-function norm(s) {
-  return String(s ?? "").trim();
-}
+// --------------------------------------------------
+// Utils
+// --------------------------------------------------
+const norm = (s) => String(s ?? "").trim();
 
-function matchesSearch(name) {
-  const q = norm(search.value).toLowerCase();
-  if (!q) return true;
-  return norm(name).toLowerCase().includes(q);
-}
+const searchNorm = computed(() => norm(search.value).toLowerCase());
 
+const matchesSearch = (name) => {
+  if (!searchNorm.value) return true;
+  return norm(name).toLowerCase().includes(searchNorm.value);
+};
+
+// --------------------------------------------------
+// Data load
+// --------------------------------------------------
 async function load() {
-  if (!eventId.value) return;
-
   loading.value = true;
   error.value = "";
 
@@ -48,7 +49,7 @@ async function load() {
       f: family,
       y: year,
       m: month,
-      id: eventId.value,
+      name: "ctp", // generic feed (no event_id)
     });
 
     const res = await fetch(url, { cache: "no-store" });
@@ -61,6 +62,9 @@ async function load() {
   }
 }
 
+// --------------------------------------------------
+// Derived data
+// --------------------------------------------------
 const holesList = computed(() => {
   const holes = data.value?.holes ?? {};
   return Object.keys(holes).sort((a, b) => Number(a) - Number(b));
@@ -71,47 +75,93 @@ const visibleModel = computed(() => {
   const out = [];
 
   for (const hole of Object.keys(holes)) {
-    if (holeFilter.value !== "ALL" && String(holeFilter.value) !== String(hole))
+    if (
+      holeFilter.value !== "ALL" &&
+      String(holeFilter.value) !== String(hole)
+    ) {
       continue;
+    }
 
     const flightsObj = holes[hole] ?? {};
     const flights = Object.keys(flightsObj).sort();
-
     const flightCards = [];
 
     for (const flight of flights) {
-      if (flightFilter.value !== "ALL" && flightFilter.value !== flight)
+      if (flightFilter.value !== "ALL" && flightFilter.value !== flight) {
         continue;
+      }
 
-      const block = flightsObj[flight];
-      const entries = Array.isArray(block?.entries) ? block.entries : [];
-      const filteredEntries = entries
-        .slice(1)
-        .filter((e) => matchesSearch(e?.player));
+      const raw = Array.isArray(flightsObj[flight]?.entries)
+        ? flightsObj[flight].entries
+        : [];
 
-      if (search.value.trim() && filteredEntries.length === 0) continue;
+      if (raw.length === 0) continue;
+
+      // newest → oldest
+      const sorted = [...raw].sort(
+        (a, b) => new Date(b.created_at) - new Date(a.created_at)
+      );
+
+      const leader = sorted[0];
+      const previous = sorted.slice(1);
+
+      const leaderMatches = matchesSearch(leader?.player);
+      const previousMatches = previous.filter((e) => matchesSearch(e?.player));
+
+      // if searching and nothing matches, skip
+      if (searchNorm.value && !leaderMatches && previousMatches.length === 0) {
+        continue;
+      }
 
       flightCards.push({
         flight,
-        holder: block?.holder ?? entries[0] ?? null,
-        entries: filteredEntries,
-        totalEntries: entries.length,
+        holder: !searchNorm.value || leaderMatches ? leader : null,
+        entries: previousMatches,
+        totalEntries: raw.length,
       });
     }
 
-    if (flightCards.length) out.push({ hole, flightCards });
+    if (flightCards.length) {
+      out.push({ hole, flightCards });
+    }
   }
 
   return out;
 });
 
+// --------------------------------------------------
+// Lifecycle
+// --------------------------------------------------
+function startPolling() {
+  stopPolling();
+  timer = setInterval(load, POLL_MS);
+}
+
+function stopPolling() {
+  if (timer) {
+    clearInterval(timer);
+    timer = null;
+  }
+}
+
+function handleVisibility() {
+  if (document.hidden) {
+    stopPolling();
+  } else {
+    load();
+    startPolling();
+  }
+}
+
 onMounted(async () => {
   await load();
-  timer = setInterval(load, POLL_MS);
+  startPolling();
+  document.addEventListener("visibilitychange", handleVisibility);
 });
 
 onBeforeUnmount(() => {
-  if (timer) clearInterval(timer);
+  stopPolling();
+  document.removeEventListener("visibilitychange", handleVisibility);
 });
 </script>
 
@@ -119,10 +169,9 @@ onBeforeUnmount(() => {
   <div class="ctp-page">
     <div class="ctp-header">
       <div class="ctp-title">
-        <h1>CTP Leaders</h1>
+        <h1>C2P Leaders</h1>
         <div class="ctp-sub">
-          Event {{ eventId }}
-          <span v-if="data?.updated_at">• Updated {{ data.updated_at }}</span>
+          <span v-if="data?.updated_at">Updated {{ data.updated_at }}</span>
         </div>
       </div>
 
@@ -176,7 +225,7 @@ onBeforeUnmount(() => {
           </div>
 
           <div class="holder" v-if="card.holder">
-            <div class="holder-label">Current holder</div>
+            <div class="holder-label">Current Leader</div>
             <div class="holder-name">{{ card.holder.player }}</div>
             <div class="holder-time">{{ card.holder.created_at }}</div>
           </div>
@@ -386,10 +435,46 @@ onBeforeUnmount(() => {
   padding: 6px 0;
 }
 
-@media (max-width: 480px) {
-  .hole-title span {
-    font-size: 16px;
-    padding: 8px 18px;
+/* =========================
+Mobile centering override
+========================= */
+@media (max-width: 640px) {
+  .ctp-header {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  /* force title block to center itself */
+  .ctp-title {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .ctp-title h1 {
+    text-align: center;
+  }
+
+  .ctp-sub {
+    text-align: center;
+  }
+
+  /* controls become a centered stack */
+  .ctp-controls {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .ctp-controls > * {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+  .ctp-controls .btn {
+    width: 100%;
   }
 }
 </style>
