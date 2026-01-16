@@ -262,6 +262,8 @@ onBeforeUnmount(() => {
   padding: 16px;
   max-width: 1100px;
   margin: 0 auto;
+  background: #f3f4f6; /* same neutral light gray as form */
+  min-height: 100vh;
 }
 .ctp-header {
   display: flex;
@@ -271,6 +273,7 @@ onBeforeUnmount(() => {
   flex-wrap: wrap;
 }
 .ctp-title h1 {
+  color: #111827;
   margin: 0;
   font-size: 22px;
   font-weight: 800;
@@ -292,6 +295,7 @@ onBeforeUnmount(() => {
   border-radius: 10px;
   background: #fff;
   font-size: 13px;
+  color: #111827;
 }
 .btn {
   padding: 8px 12px;

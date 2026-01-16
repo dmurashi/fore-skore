@@ -29,6 +29,7 @@ body {
   max-width: none;
   margin: 0;
   padding: 0;
+  color: #111827;
 }
 
 .app-shell {
@@ -36,6 +37,7 @@ body {
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  background-color: #f3f4f6 !important;
 }
 
 /* If EventView contains .leaderboard-page somewhere inside it */
@@ -159,9 +161,7 @@ button:focus-visible {
   border: 1.5px solid transparent;
   outline: none;
 
-  transition:
-    background-color 120ms ease,
-    border-color 120ms ease,
+  transition: background-color 120ms ease, border-color 120ms ease,
     color 120ms ease;
 }
 
@@ -185,7 +185,6 @@ button:focus-visible {
 /* =========================================================
    DARK MODE
 ========================================================= */
-
 
 /* =========================================================
    Optional polish (safe)
