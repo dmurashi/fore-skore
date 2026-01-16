@@ -210,7 +210,7 @@ onBeforeUnmount(() => {
 
     <div v-if="error" class="error">⚠️ {{ error }}</div>
 
-    <div v-if="!error && visibleModel.length === 0" class="empty">
+    <div v-if="!error && data && visibleModel.length === 0" class="empty">
       Waiting for someone to hit a damned green!
     </div>
 
