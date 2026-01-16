@@ -78,7 +78,7 @@ async function submit() {
 
     // 🔁 Redirect to generic CTP leaders
     setTimeout(() => {
-      window.location.href = "https://fore-skore.com/ctp";
+      window.location.href = `https://${family.value}.fore-skore.com/ctp`;
     }, 300);
   } catch (e) {
     err.value = String(e?.message ?? e);
