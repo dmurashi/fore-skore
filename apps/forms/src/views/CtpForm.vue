@@ -1,5 +1,37 @@
+<template>
+  <div class="page">
+    <div class="card">
+      <h1 class="title">CTP Entry — Flight {{ flight }} • Hole {{ hole }}</h1>
+
+      <div class="meta">
+        <div><b>Family:</b> {{ family }}</div>
+        <div><b>Event:</b> {{ eventId }}</div>
+        <div><b>Flight:</b> {{ flight }}</div>
+        <div><b>Hole:</b> {{ hole }}</div>
+      </div>
+
+      <label class="label">Player name</label>
+      <input
+        class="input"
+        v-model.trim="playerName"
+        type="text"
+        autocomplete="name"
+        placeholder="Enter your name"
+        :disabled="isSubmitting"
+      />
+
+      <button class="btn" :disabled="!canSubmit" @click="submit">
+        {{ isSubmitting ? "Submitting..." : "Submit" }}
+      </button>
+
+      <p v-if="err" class="msg err">{{ err }}</p>
+      <p v-if="ok" class="msg ok">Submitted ✅</p>
+    </div>
+  </div>
+</template>
+
 <script setup>
-import { computed } from "vue";
+import { computed, ref } from "vue";
 import { useRoute } from "vue-router";
 
 const route = useRoute();
@@ -13,111 +45,137 @@ const flight = computed(() =>
     .toUpperCase()
 );
 
-const valid = computed(() => {
-  if (!family.value) return false;
-  if (!/^\d+$/.test(eventId.value)) return false;
-  if (!/^\d+$/.test(hole.value)) return false;
-  if (!/^[A-Z]$/.test(flight.value)) return false;
-  const h = Number(hole.value);
-  return h >= 1 && h <= 18;
+const playerName = ref("");
+const isSubmitting = ref(false);
+const err = ref("");
+const ok = ref(false);
+
+const isValid = computed(() => {
+  const eOk = /^\d+$/.test(eventId.value);
+  const hNum = Number(hole.value);
+  const hOk = Number.isInteger(hNum) && hNum >= 1 && hNum <= 18;
+  const fOk = /^[A-Z]$/.test(flight.value);
+  const famOk = family.value.length > 0;
+  return eOk && hOk && fOk && famOk;
 });
 
-const title = computed(() =>
-  valid.value
-    ? `CTP Entry — Flight ${flight.value} • Hole ${hole.value}`
-    : "CTP Entry"
+const canSubmit = computed(
+  () => isValid.value && playerName.value.length > 0 && !isSubmitting.value
 );
+
+async function submit() {
+  err.value = "";
+  ok.value = false;
+
+  if (!isValid.value) {
+    err.value = "Bad link (missing/invalid querystring).";
+    return;
+  }
+  if (!playerName.value) {
+    err.value = "Player name required.";
+    return;
+  }
+
+  isSubmitting.value = true;
+  try {
+    const res = await fetch("https://forms.fore-skore.com/api/ctp", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        family: family.value,
+        event: Number(eventId.value),
+        hole: Number(hole.value),
+        flight: flight.value,
+        name: playerName.value,
+      }),
+    });
+
+    const data = await res.json().catch(() => ({}));
+
+    if (!res.ok || data?.ok !== true) {
+      err.value = data?.error || `Submit failed (${res.status})`;
+      return;
+    }
+
+    ok.value = true;
+    playerName.value = "";
+  } catch (e) {
+    err.value = String(e?.message ?? e);
+  } finally {
+    isSubmitting.value = false;
+  }
+}
 </script>
-
-<template>
-  <div class="page">
-    <div class="card">
-      <h1 class="title">{{ title }}</h1>
-
-      <div v-if="!valid" class="bad">
-        Missing/invalid parameters.<br />
-        Expected:
-        <code>?event=52&hole=2&flight=A&family=madmen</code>
-      </div>
-
-      <div v-else class="meta">
-        <div><b>Family:</b> {{ family }}</div>
-        <div><b>Event:</b> {{ eventId }}</div>
-        <div><b>Flight:</b> {{ flight }}</div>
-        <div><b>Hole:</b> {{ hole }}</div>
-      </div>
-
-      <label class="label">Player name</label>
-      <input class="input" placeholder="Phase 1 (not wired yet)" disabled />
-
-      <button class="btn" disabled>Submit (Phase 2)</button>
-    </div>
-  </div>
-</template>
 
 <style scoped>
 .page {
   min-height: 100vh;
   display: grid;
-  place-items: start center;
-  padding: 32px 16px;
-  background: #f6f7fb;
+  place-items: center;
+  background: #f4f6fb;
+  padding: 24px;
 }
 .card {
-  width: 100%;
-  max-width: 560px;
-  background: #fff;
-  border: 1px solid #e5e7eb;
-  border-radius: 16px;
-  padding: 20px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.06);
+  width: min(760px, 92vw);
+  background: white;
+  border-radius: 18px;
+  padding: 28px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+  border: 1px solid rgba(0, 0, 0, 0.06);
 }
 .title {
-  margin: 0 0 12px;
-  font-size: 22px;
+  margin: 0 0 16px 0;
+  font-size: 34px;
   font-weight: 800;
-  color: #111827;
-}
-.bad {
-  background: #fff1f2;
-  border: 1px solid #fecdd3;
-  color: #9f1239;
-  padding: 12px;
-  border-radius: 12px;
+  text-align: center;
 }
 .meta {
-  background: #f9fafb;
-  border: 1px solid #e5e7eb;
-  padding: 12px;
-  border-radius: 12px;
-  margin-bottom: 14px;
-  color: #374151;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  background: #fbfbfd;
+  border-radius: 14px;
+  padding: 14px 16px;
+  margin-bottom: 18px;
+  font-size: 18px;
+  line-height: 1.35;
 }
 .label {
   display: block;
-  margin: 14px 0 6px;
-  font-weight: 700;
-  color: #111827;
+  font-weight: 800;
+  font-size: 20px;
+  margin: 14px 0 8px;
 }
 .input {
   width: 100%;
-  padding: 12px;
-  border-radius: 12px;
-  border: 1px solid #e5e7eb;
-  font-size: 16px;
+  padding: 16px 18px;
+  border-radius: 14px;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  font-size: 20px;
 }
 .btn {
-  margin-top: 14px;
   width: 100%;
-  padding: 12px;
-  border-radius: 12px;
+  margin-top: 18px;
+  padding: 16px 18px;
+  border-radius: 14px;
   border: 0;
-  background: #111827;
-  color: #fff;
   font-weight: 800;
-  opacity: 0.5;
+  font-size: 20px;
+  background: #101827;
+  color: white;
+  cursor: pointer;
 }
-code {
-  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+.btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+.msg {
+  margin: 14px 0 0;
+  font-weight: 700;
+  text-align: center;
+}
+.err {
+  color: #b91c1c;
+}
+.ok {
+  color: #047857;
 }
 </style>
