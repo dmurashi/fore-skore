@@ -15,8 +15,8 @@ const routes = [
     component: EventView,
   },
   {
-    path: "/events/:eventId/ctp",
-    name: "EventCTP",
+    path: "/ctp",
+    name: "CTP",
     component: CTPLeadersView,
   },
 ];
