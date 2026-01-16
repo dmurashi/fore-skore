@@ -15,4 +15,4 @@ export const courseUrl = ({ f, y, m, id }) =>
   `${BASE}/${f}/courses/${y}/${m}/${id}.json`;
 
 // CTP now lives at: {family}/ctp/{eventId}-ctp.json
-export const ctpUrl = ({ f, id }) => `${BASE}/${f}/ctp/${id}-ctp.json`;
+export const ctpUrl = ({ f, id }) => `${BASE}/${f}/ctp/ctp.json`;
