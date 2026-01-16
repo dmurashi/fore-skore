@@ -19,11 +19,6 @@ const routes = [
     name: "EventCTP",
     component: CTPLeadersView,
   },
-  {
-    path: "/ctp",
-    name: "CtpForm",
-    component: () => import("@/views/CtpForm.vue"),
-  },
 ];
 
 export default createRouter({
