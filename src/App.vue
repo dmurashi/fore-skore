@@ -1,10 +1,6 @@
 <!-- App.vue -->
 <script setup>
-// import { ref, onMounted, computed } from 'vue'
-import EventView from '@/views/EventView.vue'
-
-import eventLogo from '@/assets/logos/madmen-mvcc.png'
-
+import eventLogo from "@/assets/logos/madmen-mvcc.png";
 </script>
 
 <template>
@@ -18,19 +14,18 @@ import eventLogo from '@/assets/logos/madmen-mvcc.png'
     </header>
 
     <main class="main-content">
-      <EventView />
+      <router-view />
     </main>
 
     <footer class="site-footer">
-      © {{ new Date().getFullYear() }} Fore-Skore Golf Solutions.
-      All rights reserved. A DGMDomains project.
+      © {{ new Date().getFullYear() }} Fore-Skore Golf Solutions. All rights
+      reserved. A DGMDomains project.
     </footer>
   </div>
 </template>
 
-
 <style scoped>
-  .site-footer {
+.site-footer {
   max-width: 1200px;
   margin: 48px auto 24px auto; /* center horizontally */
   padding: 16px 24px;
@@ -39,7 +34,7 @@ import eventLogo from '@/assets/logos/madmen-mvcc.png'
   text-align: center;
   letter-spacing: 0.02em;
 
-  color: #6b7280;              /* light mode */
+  color: #6b7280; /* light mode */
   border-top: 1px solid #e5e7eb;
 }
 
@@ -68,6 +63,4 @@ import eventLogo from '@/assets/logos/madmen-mvcc.png'
   margin: 0 auto;
   padding: 0;
 }
-
-
 </style>
