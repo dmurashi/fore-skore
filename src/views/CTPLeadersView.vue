@@ -53,10 +53,20 @@ async function load() {
     });
 
     const res = await fetch(url, { cache: "no-store" });
-    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+
+    // ✅ 404 = valid empty board
+    if (res.status === 404) {
+      data.value = { updated_at: null, holes: {} };
+      return;
+    }
+
+    if (!res.ok) {
+      throw new Error(`HTTP ${res.status}`);
+    }
+
     data.value = await res.json();
   } catch (e) {
-    error.value = e?.message ?? "Failed to load CTP feed";
+    error.value = "Failed to load CTP feed";
   } finally {
     loading.value = false;
   }
@@ -201,7 +211,7 @@ onBeforeUnmount(() => {
     <div v-if="error" class="error">⚠️ {{ error }}</div>
 
     <div v-if="!error && visibleModel.length === 0" class="empty">
-      No CTP entries yet.
+      Waiting for someone to hit a damned green!
     </div>
 
     <div
@@ -307,8 +317,8 @@ onBeforeUnmount(() => {
   border-radius: 12px;
 }
 .empty {
-  margin-top: 12px;
-  color: #6b7280;
+  margin-top: 18px;
+  color: #d5266c;
 }
 
 .hole-section {
