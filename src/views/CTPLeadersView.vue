@@ -80,6 +80,14 @@ const holesList = computed(() => {
   return Object.keys(holes).sort((a, b) => Number(a) - Number(b));
 });
 
+function fmt(ts) {
+  return new Date(ts).toLocaleTimeString([], {
+    hour: "2-digit",
+    minute: "2-digit",
+    second: "2-digit",
+  });
+}
+
 const visibleModel = computed(() => {
   const holes = data.value?.holes ?? {};
   const out = [];
@@ -211,7 +219,7 @@ onBeforeUnmount(() => {
     <div v-if="error" class="error">⚠️ {{ error }}</div>
 
     <div v-if="!error && data && visibleModel.length === 0" class="empty">
-      Waiting for someone to hit a damned green!
+      No qualifiers yet!
     </div>
 
     <div
@@ -237,14 +245,14 @@ onBeforeUnmount(() => {
           <div class="holder" v-if="card.holder">
             <div class="holder-label">Current Leader</div>
             <div class="holder-name">{{ card.holder.player }}</div>
-            <div class="holder-time">{{ card.holder.created_at }}</div>
+            <div class="holder-time">{{ fmt(card.holder.created_at) }}</div>
           </div>
 
           <div class="entries">
             <div class="entries-title">Previous</div>
             <div v-for="(e, idx) in card.entries" :key="idx" class="entry-row">
               <div class="entry-name">{{ e.player }}</div>
-              <div class="entry-time">{{ e.created_at }}</div>
+              <div class="entry-time">{{ fmt(e.created_at) }}</div>
             </div>
 
             <div v-if="card.entries.length === 0" class="entries-empty">
