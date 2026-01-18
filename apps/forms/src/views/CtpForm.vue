@@ -7,18 +7,22 @@ import eventLogo from "@/assets/logos/madmen-mvcc.png";
 
 const route = useRoute();
 
-const family = computed(() => String(route.query.family ?? "").trim());
+/**
+ * Family handling
+ * ----------------
+ * Display = as passed
+ * Key     = lowercase (API / R2 / DB safe)
+ */
+const familyDisplay = computed(() => String(route.query.family ?? "").trim());
+
+const familyKey = computed(() => familyDisplay.value.toLowerCase());
+
 const hole = computed(() => String(route.query.hole ?? "").trim());
+
 const flight = computed(() =>
   String(route.query.flight ?? "")
     .trim()
     .toUpperCase()
-);
-
-const familyLabel = computed(() =>
-  family.value
-    ? family.value.charAt(0).toUpperCase() + family.value.slice(1)
-    : ""
 );
 
 const playerName = ref("");
@@ -27,13 +31,13 @@ const err = ref("");
 const ok = ref(false);
 
 /**
- * ✅ VALIDATION — event-agnostic
+ * Validation
  */
 const isValid = computed(() => {
   const hNum = Number(hole.value);
   const hOk = Number.isInteger(hNum) && hNum >= 1 && hNum <= 18;
   const fOk = /^[A-Z]$/.test(flight.value);
-  const famOk = family.value.length > 0;
+  const famOk = familyDisplay.value.length > 0;
   return hOk && fOk && famOk;
 });
 
@@ -59,7 +63,7 @@ async function submit() {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
-        family: family.value,
+        family: familyKey.value, // 🔑 normalized for storage
         hole: Number(hole.value),
         flight: flight.value,
         name: playerName.value,
@@ -76,9 +80,9 @@ async function submit() {
     ok.value = true;
     playerName.value = "";
 
-    // 🔁 Redirect to generic CTP leaders
+    // Redirect using normalized key
     setTimeout(() => {
-      window.location.replace(`https://${family.value}.fore-skore.com/ctp`);
+      window.location.replace(`https://${familyKey.value}.fore-skore.com/ctp`);
     }, 300);
   } catch (e) {
     err.value = String(e?.message ?? e);
@@ -98,10 +102,10 @@ async function submit() {
         alt="Event logo"
         class="site-logo"
       />
-      <h1 class="title">{{ familyLabel }} CTP</h1>
+      <h1 class="title">{{ familyDisplay }} C2P</h1>
       <h2 class="title2">Hole {{ hole }} - Flight {{ flight }}</h2>
 
-      <label class="label">Enter name</label>
+      <!-- <label class="label">Enter name</label> -->
       <input
         class="input"
         v-model.trim="playerName"

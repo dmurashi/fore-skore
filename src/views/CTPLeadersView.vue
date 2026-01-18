@@ -7,6 +7,9 @@ import { ctpUrl } from "@/config/datasources";
 // Config (temporary hardcode)
 // --------------------------------------------------
 const family = "madmen";
+const familyDisplay = computed(() => String(route.query.family ?? "").trim());
+const familyKey = computed(() => familyDisplay.value.toLowerCase());
+
 const year = "2026";
 const month = "01";
 

@@ -332,7 +332,7 @@ const eventTitle = computed(() => {
 
 @media (prefers-color-scheme: dark) {
   .event-view .event-title {
-    color: #ffffff;
+    color: #1f2937;
   }
 }
 
